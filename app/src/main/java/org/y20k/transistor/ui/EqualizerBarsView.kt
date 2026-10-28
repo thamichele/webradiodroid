@@ -36,7 +36,7 @@ class EqualizerBarsView @JvmOverloads constructor(context: Context, attrs: Attri
     private val levels: FloatArray = FloatArray(barCount) { restingLevel }
     private val targets: FloatArray = FloatArray(barCount) { restingLevel }
     private val paint: Paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = MaterialColors.getColor(this@EqualizerBarsView, com.google.android.material.R.attr.colorPrimary)
+        color = MaterialColors.getColor(this@EqualizerBarsView, androidx.appcompat.R.attr.colorPrimary)
     }
     private val barRect: RectF = RectF()
     private var isAnimating: Boolean = false
