@@ -12,6 +12,9 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
     <!-- required for MediaPlaybackTemplate (Android Auto, Car App Library) -->
     <uses-permission android:name="androidx.car.app.MEDIA_TEMPLATES"/>
+    <!-- free player on Android Auto: the app draws its own player on the car screen (navigation app surface) -->
+    <uses-permission android:name="androidx.car.app.NAVIGATION_TEMPLATES"/>
+    <uses-permission android:name="androidx.car.app.ACCESS_SURFACE"/>
 
 
     <application
@@ -235,6 +238,8 @@
             <intent-filter>
                 <action android:name="androidx.car.app.CarAppService" />
                 <category android:name="androidx.car.app.category.MEDIA" />
+                <!-- needed for the free player: only navigation apps may draw on the car screen -->
+                <category android:name="androidx.car.app.category.NAVIGATION" />
             </intent-filter>
         </service>
 

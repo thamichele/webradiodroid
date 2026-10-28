@@ -18,9 +18,11 @@ import androidx.car.app.CarContext
 import androidx.car.app.Screen
 import androidx.car.app.media.model.MediaPlaybackTemplate
 import androidx.car.app.model.Action
+import androidx.car.app.model.CarIcon
 import androidx.car.app.model.Header
 import androidx.car.app.model.MessageTemplate
 import androidx.car.app.model.Template
+import androidx.core.graphics.drawable.IconCompat
 import org.y20k.transistor.R
 
 
@@ -32,9 +34,15 @@ class PlaybackScreen(carContext: CarContext, private val session: TransistorCarS
 
     /* Overrides onGetTemplate from Screen */
     override fun onGetTemplate(): Template {
+        // header action that switches to WebRadioDroid's free player
+        val freePlayerAction: Action = Action.Builder()
+            .setIcon(CarIcon.Builder(IconCompat.createWithResource(carContext, R.drawable.ic_car_free_player_24dp)).build())
+            .setOnClickListener { session.switchPlayerMode(useFreePlayer = true) }
+            .build()
         val header: Header = Header.Builder()
             .setStartHeaderAction(Action.BACK)
             .setTitle(carContext.getString(R.string.car_title_now_playing))
+            .addEndHeaderAction(freePlayerAction)
             .build()
         // the host shows an error if a MediaPlaybackTemplate is sent before the session token is registered
         if (!session.isMediaPlaybackTokenRegistered) {

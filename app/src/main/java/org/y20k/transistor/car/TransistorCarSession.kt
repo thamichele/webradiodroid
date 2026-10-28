@@ -26,6 +26,7 @@ import androidx.car.app.ScreenManager
 import androidx.car.app.Session
 import androidx.car.app.media.MediaPlaybackManager
 import androidx.core.content.ContextCompat
+import androidx.core.content.edit
 import androidx.core.os.BundleCompat
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
@@ -35,6 +36,7 @@ import androidx.media3.session.MediaController
 import androidx.media3.session.SessionCommand
 import androidx.media3.session.SessionResult
 import androidx.media3.session.SessionToken
+import androidx.preference.PreferenceManager
 import com.google.common.util.concurrent.ListenableFuture
 import org.y20k.transistor.Keys
 import org.y20k.transistor.PlayerService
@@ -81,7 +83,7 @@ class TransistorCarSession: Session() {
         if (intent.action == Keys.ACTION_SHOW_MEDIA_PLAYBACK) {
             // launched from a system media surface (e.g. the media card): open the playback screen on top of the station list
             getScreenManager().push(stationsScreen)
-            return PlaybackScreen(carContext, this)
+            return if (useFreePlayer) FreePlayerScreen(carContext, this) else PlaybackScreen(carContext, this)
         }
         return stationsScreen
     }
@@ -96,12 +98,27 @@ class TransistorCarSession: Session() {
     }
 
 
-    /* Pushes the playback screen - unless it is already on top */
+    /* Pushes the playback screen of the chosen mode - unless it is already on top */
     fun showPlaybackScreen() {
         val screenManager: ScreenManager = getScreenManager()
-        if (screenManager.top is PlaybackScreen) return
-        screenManager.push(PlaybackScreen(carContext, this))
+        if (screenManager.top is PlaybackScreen || screenManager.top is FreePlayerScreen) return
+        screenManager.push(if (useFreePlayer) FreePlayerScreen(carContext, this) else PlaybackScreen(carContext, this))
     }
+
+
+    /* Switches between the standard Android Auto player and WebRadioDroid's free player - the choice is remembered */
+    fun switchPlayerMode(useFreePlayer: Boolean) {
+        this.useFreePlayer = useFreePlayer
+        val screenManager: ScreenManager = getScreenManager()
+        if (screenManager.top is PlaybackScreen || screenManager.top is FreePlayerScreen) screenManager.pop()
+        showPlaybackScreen()
+    }
+
+
+    /* Player mode on Android Auto: false = standard player (MediaPlaybackTemplate), true = free player (drawn by the app) */
+    private var useFreePlayer: Boolean
+        get() = PreferenceManager.getDefaultSharedPreferences(carContext).getBoolean(Keys.PREF_CAR_FREE_PLAYER, false)
+        set(value) = PreferenceManager.getDefaultSharedPreferences(carContext).edit { putBoolean(Keys.PREF_CAR_FREE_PLAYER, value) }
 
 
     /* Starts playback of the station at the given position and shows the playback screen */
