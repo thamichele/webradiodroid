@@ -16,6 +16,7 @@ package org.y20k.transistor.helpers
 
 import android.content.Context
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Matrix
@@ -41,6 +42,7 @@ import com.google.android.material.snackbar.Snackbar
 import org.y20k.transistor.Keys
 import org.y20k.transistor.R
 import java.io.ByteArrayOutputStream
+import java.io.File
 
 
 /*
@@ -167,6 +169,29 @@ object UiHelper {
         val coverByteArray: ByteArray = stream.toByteArray()
         stationImageBitmap.recycle()
         return coverByteArray
+    }
+
+
+    /* Creates the artwork shown by Android Auto and the media notification: the station image filling a square,
+     * or - for stations without image - the WebRadioDroid glyph on the dark "Arancio UI" background */
+    fun createArtworkAsByteArray(context: Context, stationImageFile: File?, imageColor: Int, size: Int = 512): ByteArray {
+        val stationImage: Bitmap? = stationImageFile?.let { BitmapFactory.decodeFile(it.path) }
+        val artwork: Bitmap = if (stationImage != null) {
+            createSquareImage(stationImage, imageColor, size, adaptivePadding = false).also { stationImage.recycle() }
+        } else {
+            createBitmap(size, size).also { placeholder ->
+                val canvas = Canvas(placeholder)
+                canvas.drawColor("#FF252422".toColorInt())
+                ContextCompat.getDrawable(context, R.drawable.ic_launcher_foreground)?.apply {
+                    setBounds(0, 0, size, size)
+                    draw(canvas)
+                }
+            }
+        }
+        val stream = ByteArrayOutputStream()
+        artwork.compress(Bitmap.CompressFormat.JPEG, 90, stream)
+        artwork.recycle()
+        return stream.toByteArray()
     }
 
 
