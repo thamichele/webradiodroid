@@ -93,7 +93,6 @@
     <string name="pref_backup_summary">Salvează colecția de posturi de radio, inclusiv imagini, pe stocarea dispozitivului.</string>
     <string name="pref_restore_title">Restaurează stațiile</string>
     <string name="pref_restore_summary">Restaurează colecția de posturi de radio din copia de rezervă. Stațiile existente vor fi înlocuite.</string>
-    <string name="pref_report_issue_title">Raportează o problemă</string>
     <string name="pref_tap_anywhere_playback_summary_disabled">Atinge butonul de redare pentru a începe să asculți un post de radio.</string>
     <string name="pref_tap_anywhere_playback_title">Atinge postul de radio</string>
     <string name="descr_card_small_play_button">Redare/oprire</string>
@@ -102,7 +101,6 @@
     <string name="app_name">WebRadioDroid</string>
     <string name="pref_buffer_size_summary_disabled">Se utilizează dimensiunea implicită a tamponului pentru redarea unui flux radio.</string>
     <string name="cast_context_error">Nu s-a putut obține contextul Cast. Încearcă să actualizezi Serviciile Google Play și repornește aplicația.</string>
-    <string name="pref_report_issue_summary">Raportează erori și sugerează îmbunătățiri pentru Codeberg.</string>
     <string name="onboarding_app_import_running">Se importă posturile…</string>
     <string name="pref_tap_anywhere_playback_summary_enabled">Atinge oriunde pe cardul unui post de radio pentru a începe să îl asculți.</string>
     <string name="descr_back_icon">Navighează înapoi</string>

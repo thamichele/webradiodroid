@@ -2,7 +2,6 @@
 <resources>
     <string name="dialog_yes_no_positive_button_remove_station">삭제</string>
     <string name="dialog_edit_stream_uri">스트리밍 주소</string>
-    <string name="pref_report_issue_title">문제 보고</string>
     <string name="descr_card_station_image">방송국 이미지</string>
     <string name="onboarding_app_get_started">안녕하세요</string>
     <string name="descr_player_playback_button">재생/일시정지</string>
@@ -48,7 +47,6 @@
     <string name="onboarding_app_description">라디오 앱</string>
     <string name="notification_play">재생</string>
     <string name="descr_dialog_edit_place_on_home_screen_icon">홈 화면에 바로가기 추가</string>
-    <string name="pref_report_issue_summary">Codeberg에서 버그를 보고하고 개선 사항을 제안하세요.</string>
     <string name="dialog_yes_no_message_update_station_images">전체 방송국의 최신 이미지를 다운로드할까요?</string>
     <string name="pref_edit_station_stream_title">스트리밍 링크 수정</string>
     <string name="pref_backup_title">방송국 백업</string>

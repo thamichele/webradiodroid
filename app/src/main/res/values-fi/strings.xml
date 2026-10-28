@@ -30,7 +30,6 @@
     <string name="pref_edit_station_title">Muokkaa Asemia</string>
     <string name="pref_general_title">Yleinen</string>
     <string name="pref_maintenance_title">Huolto</string>
-    <string name="pref_report_issue_title">Ilmoita Virhe</string>
     <string name="pref_theme_selection_mode_light">Vaalea tila</string>
     <string name="pref_theme_selection_summary">Nykyinen teema:</string>
     <string name="pref_theme_selection_title">Sovelluksen Teema</string>
@@ -45,7 +44,6 @@
     <string name="pref_app_version_title">Sovelluksen versio</string>
     <string name="pref_edit_station_summary_disabled">Kanavatiedon muokkaaminen on poistettu käytöstä.</string>
     <string name="descr_expanded_player_sleep_timer_cancel_button">Peruuta uniajastin</string>
-    <string name="pref_report_issue_summary">Raportoi virheitä ja ehdota parannuksia Codebergissä.</string>
     <string name="descr_card_station_image">Kanavan kuva</string>
     <string name="descr_card_station_image_change">Vaihda kanavan kuva</string>
     <string name="pref_update_station_images_summary">Lataa viimeisimmät versiot kanavakuvista.</string>

@@ -49,10 +49,8 @@
     <string name="dialog_error_message_default">Eraro okazis</string>
     <string name="fragment_settings_title">Agordoj</string>
     <string name="toast_message_updating_collection">Ĝisdatigante kolekton de stacioj.</string>
-    <string name="pref_report_issue_summary">Raporti cimojn kaj sugesti plibonigojn ĉe Codeberg.</string>
     <string name="notification_skip_to_next">Sekva</string>
     <string name="notification_skip_to_previous">Antaŭa</string>
-    <string name="pref_report_issue_title">Raporti problemon</string>
     <string name="dialog_yes_no_message_update_station_images">Ĉu elŝuti plej novajn versiojn de ĉiuj stacioj\?</string>
     <string name="dialog_error_title_no_network">Eksterrete</string>
     <string name="toast_message_install_file_helper">Bonvolu instali dosieradministrilon.</string>

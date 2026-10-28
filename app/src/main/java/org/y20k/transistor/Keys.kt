@@ -23,7 +23,7 @@ import java.util.Date
 object Keys {
 
     // application name
-    const val APPLICATION_NAME: String = "Transistor"
+    const val APPLICATION_NAME: String = "WebRadioDroid"
 
     // version numbers
     const val CURRENT_COLLECTION_CLASS_VERSION_NUMBER: Int = 0

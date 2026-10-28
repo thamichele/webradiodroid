@@ -63,8 +63,6 @@
     <string name="dialog_error_message_no_network">Подключиться к интернету.</string>
     <string name="fragment_settings_title">Настройки</string>
     <string name="onboarding_app_import_running">Импорт ваших станций…</string>
-    <string name="pref_report_issue_title">Сообщить о проблеме</string>
-    <string name="pref_report_issue_summary">Сообщайте об ошибках и предлагайте улучшения на Codeberg.</string>
     <string name="pref_app_version_title">Версия приложения</string>
     <string name="pref_app_version_summary">Версия</string>
     <string name="pref_about_title">О приложении</string>

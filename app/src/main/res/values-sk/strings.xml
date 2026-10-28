@@ -47,8 +47,6 @@
     <string name="dialog_yes_no_positive_button_remove_station">Odstrániť</string>
     <string name="dialog_yes_no_positive_button_update_covers">Aktualizovať</string>
     <string name="pref_maintenance_title">Údržba</string>
-    <string name="pref_report_issue_summary">Nahlásiť programové chyby a navrhnúť zlepšenia na Codebergu.</string>
-    <string name="pref_report_issue_title">Nahlásiť problém</string>
     <string name="pref_tap_anywhere_playback_title">Ťuknúť rádiovú stanicu</string>
     <string name="pref_theme_selection_mode_light">Svetlý režim</string>
     <string name="descr_player_station_image">Obrázok stanice</string>

@@ -51,8 +51,6 @@
     <string name="pref_theme_selection_mode_light">Světlý režim</string>
     <string name="pref_theme_selection_mode_device_default">Stejné jako na zařízení</string>
     <string name="pref_theme_selection_mode_dark">Tmavý režim</string>
-    <string name="pref_report_issue_title">Nahlásit problém</string>
-    <string name="pref_report_issue_summary">Nahlásit chyby a navrhnout vylepšení na Codebergu.</string>
     <string name="pref_m3u_export_title">Exportovat M3U</string>
     <string name="pref_m3u_export_summary">Uložte své rozhlasové stanice do souboru M3U, který lze importovat do jiných přehrávačů.</string>
     <string name="pref_maintenance_title">Údržba</string>

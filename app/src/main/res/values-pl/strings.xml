@@ -68,8 +68,6 @@
     <string name="toast_message_error_download_error">Błąd pobierania</string>
     <string name="pref_m3u_export_title">Eksport M3U</string>
     <string name="pref_m3u_export_summary">Zapisz swoje stacje jako playlistę M3U, aby np. zaimportować ją w innym odtwarzaczu.</string>
-    <string name="pref_report_issue_title">Zgłoś problem</string>
-    <string name="pref_report_issue_summary">Zgłaszaj błędy i zaproponuj ulepszenia w usłudze Codeberg.</string>
     <string name="pref_app_version_title">Wersja aplikacji</string>
     <string name="pref_app_version_summary">Wersja</string>
     <string name="pref_about_title">O programie</string>

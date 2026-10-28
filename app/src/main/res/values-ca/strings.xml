@@ -100,7 +100,6 @@
     <string name="pref_m3u_export_title">Exporta M3U</string>
     <string name="pref_theme_selection_mode_dark">Tema fosc</string>
     <string name="pref_theme_selection_mode_light">Tema clar</string>
-    <string name="pref_report_issue_summary">Informa d\'errors i suggereix millores a Codeberg.</string>
     <string name="pref_update_station_images_summary">Baixa la darrera versió de totes les imatges d\'emissora.</string>
     <string name="descr_card_starred_station">Emissora destacada</string>
     <string name="descr_card_station_image">Imatge de l\'emissora</string>
@@ -110,7 +109,6 @@
     <string name="descr_player_station_image">Imatge de l\'emissora</string>
     <string name="descr_player_playback_button">Reprodueix/atura</string>
     <string name="pref_theme_selection_summary">Tema actual:</string>
-    <string name="pref_report_issue_title">Informa d\'un problema</string>
     <string name="notification_skip_to_next">Següent</string>
     <string name="toast_message_updating_station_images">Actualitzant imatges d\'emissores.</string>
     <string name="toast_message_updating_collection">Actualitzant les col·leccions d\'emissores.</string>

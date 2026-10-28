@@ -31,8 +31,6 @@
     <string name="pref_theme_selection_mode_light">מצב בהיר</string>
     <string name="pref_theme_selection_mode_device_default">כמו המכשיר</string>
     <string name="pref_theme_selection_mode_dark">מצב כהה</string>
-    <string name="pref_report_issue_title">דיווח על תקלה</string>
-    <string name="pref_report_issue_summary">אפשר לדווח על תקלות והצעות שיפור ב־ Codeberg.</string>
     <string name="pref_maintenance_title">תחזוקה</string>
     <string name="pref_general_title">כללי</string>
     <string name="pref_app_version_title">גרסת היישומון</string>

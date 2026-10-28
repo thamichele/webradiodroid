@@ -82,8 +82,6 @@
     <string name="pref_m3u_export_summary">Cadwa dy orsafoedd radio i ffeil rhestr chwarae M3U y gellir ei mewnforio i chwaraewyr eraill.</string>
     <string name="pref_restore_title">Adfer Gorsafoedd</string>
     <string name="pref_restore_summary">Adfer casgliad o orsafoedd radio o gopi wrth gefn. Caiff gorsafoedd sy\'n bodoli eu disodli.</string>
-    <string name="pref_report_issue_summary">Adrodd am namau a chynnig gwelliannau ar Codeberg.</string>
-    <string name="pref_report_issue_title">Adrodd problem</string>
     <string name="pref_tap_anywhere_playback_summary_disabled">Tapia ar y botwm chwarae i ddechrau gwrando ar orsaf radio.</string>
     <string name="pref_tap_anywhere_playback_summary_enabled">Tapia unrhyw le ar gerdyn gorsaf radio i ddechrau gwrando arno.</string>
     <string name="pref_tap_anywhere_playback_title">Tapia Orsaf Radio</string>

@@ -21,7 +21,6 @@
     <string name="toast_message_no_image_picker">Níl aon roghnóir íomhánna ar fáil. Smaoinigh ar fheidhmchlár Gailearaí a shuiteáil.</string>
     <string name="notification_now_playing_channel_name">Rialuithe Athsheinm</string>
     <string name="pref_edit_station_summary_enabled">Cumasaíodh eagarthóireacht faisnéise stáisiúin. Úsáid preas fada chun mód eagarthóireachta a chur isteach.</string>
-    <string name="pref_report_issue_summary">Tuairiscigh fabhtanna agus mol feabhsuithe ar Codeberg.</string>
     <string name="pref_tap_anywhere_playback_summary_disabled">Tapáil ar an gcnaipe súgartha chun tosú ag éisteacht le stáisiún raidió.</string>
     <string name="pref_tap_anywhere_playback_title">Stáisiún Raidió Beartaíonn</string>
     <string name="descr_expanded_player_sleep_timer_remaining_time">Am fágtha ar an lasc ama codlata</string>
@@ -68,7 +67,6 @@
     <string name="pref_m3u_export_title">Easpórtáil M3U</string>
     <string name="dialog_generic_button_okay">Ceart go leor</string>
     <string name="pref_restore_title">Stáisiúin Athchóirithe</string>
-    <string name="pref_report_issue_title">Eisiúint Tuairisce</string>
     <string name="pref_theme_selection_mode_dark">Mod dorcha</string>
     <string name="pref_edit_station_summary_disabled">Díchumasaíodh eagarthóireacht faisnéise an stáisiúin.</string>
     <string name="pref_edit_station_stream_summary_disabled">Díchumasaíodh eagarthóireacht na nasc sruthaithe.</string>

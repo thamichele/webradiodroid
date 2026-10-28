@@ -24,7 +24,6 @@
     <string name="toast_message_station_not_valid">La emisora nun ye válida.</string>
     <string name="toast_message_shortcut_created">Creóse l\'atayu.</string>
     <string name="pref_buffer_size_title">Usar el búfer grande</string>
-    <string name="pref_report_issue_title">Informar d\'un problema</string>
     <string name="pref_tap_anywhere_playback_title">Tocar les emisores pa reproduciles</string>
     <string name="pref_theme_selection_mode_device_default">El mesmu que del preséu</string>
     <string name="pref_update_station_images_title">Anovar les imáxenes de les emisores</string>
@@ -85,7 +84,6 @@
     <string name="pref_m3u_export_title">Esportar a un ficheru M3U</string>
     <string name="pref_restore_title">Restaurar emisores</string>
     <string name="pref_restore_summary">Restaura la coleición d\'emisores d\'una copia de seguranza. Tróquense les emisores esistentes.</string>
-    <string name="pref_report_issue_summary">Informa de fallos y suxer ameyores en Codeberg.</string>
     <string name="pref_tap_anywhere_playback_summary_disabled">Toca\'l botón «Reproducir» p\'aniciar la reproducción d\'una emisora.</string>
     <string name="pref_tap_anywhere_playback_summary_enabled">Toca la tarxeta d\'una emisora pa comenzar a reproducila.</string>
     <string name="pref_theme_selection_mode_dark">Mou escuru</string>

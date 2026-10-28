@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="toast_message_sleep_timer_unable_to_start">Najprije pokreni reprodukciju.</string>
-    <string name="pref_report_issue_title">Prijavi problem</string>
     <string name="station_list_button_add_new_station">Dodaj novu stanicu</string>
     <string name="dialog_generic_button_cancel">Odustani</string>
     <string name="notification_skip_to_next">Sljedeća</string>
@@ -47,7 +46,6 @@
     <string name="toast_message_updating_collection">Aktualiziraj zbirku stanica.</string>
     <string name="toast_message_updating_station_images">Aktualiziranje slika stanica.</string>
     <string name="pref_app_version_summary">Verzija</string>
-    <string name="pref_report_issue_summary">Prijavi greške i predloži poboljšanja na Codebergu.</string>
     <string name="toast_message_copied_to_clipboard">Kopirano u međuspremnik.</string>
     <string name="descr_card_starred_station">Favoritna stanica</string>
     <string name="descr_app_icon">Ikona programa prikazuje stari radio</string>
