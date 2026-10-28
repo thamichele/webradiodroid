@@ -114,6 +114,11 @@
     <string name="pref_user_interface_transparency_effect_summary_disabled">I controlli di riproduzione rimangono opachi durante lo scorrimento.</string>
     <string name="pref_user_interface_transparency_effect_title">Effetto di trasparenza dell\'interfaccia utente</string>
     <string name="descr_expanded_player_streaming_link_icon">Nota Icona</string>
+    <!-- Full screen player -->
+    <string name="player_fullscreen_headline">In riproduzione</string>
+    <string name="descr_player_fullscreen_close_button">Chiudi il player a schermo intero</string>
+    <string name="descr_player_fullscreen_previous_button">Stazione precedente</string>
+    <string name="descr_player_fullscreen_next_button">Stazione successiva</string>
     <!-- Android Auto -->
     <string name="car_title_now_playing">In riproduzione</string>
     <string name="car_text_on_air">In onda</string>

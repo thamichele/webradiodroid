@@ -40,7 +40,6 @@
         <!-- Main activity for radio station playback on phone -->
         <activity
             android:name=".MainActivity"
-            android:configChanges="orientation|screenSize"
             android:exported="true">
 
             <!-- react to main intents -->

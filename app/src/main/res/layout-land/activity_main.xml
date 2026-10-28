@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Landscape: split screen - station list on the left, full screen player on the right -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <!-- CONTAINER FOR STATION LIST, SETTINGS -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/main_host_container"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:navGraph="@navigation/nav_graph_main"
+            app:defaultNavHost="true" />
+
+        <!-- PLAYER CARD - not shown in split screen, the full screen player replaces it -->
+        <include
+            layout="@layout/card_player"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="bottom"
+            android:visibility="gone" />
+
+        <!-- DOWNLOAD INDICATOR -->
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/download_progress_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurface"
+            android:indeterminate="true"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="?attr/colorOutlineVariant" />
+
+    <!-- FULL SCREEN PLAYER - always visible -->
+    <include
+        layout="@layout/player_fullscreen"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="visible" />
+
+</LinearLayout>
