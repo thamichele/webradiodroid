@@ -79,6 +79,19 @@ jobs:
           ./gradlew --no-daemon assembleRelease
           AAPT2=$(ls -d "$ANDROID_HOME"/build-tools/*/aapt2 | sort -V | tail -1)
           "$AAPT2" dump badging app/build/outputs/apk/release/*.apk | grep -E "^(package|application-label:)"
+          VERSION=$("$AAPT2" dump badging app/build/outputs/apk/release/*.apk | sed -n "s/.*versionName='\([^']*\)'.*/\1/p")
+          cp app/build/outputs/apk/release/*.apk "$RUNNER_TEMP/WebRadioDroid-$VERSION.apk"
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+
+      # every build of main becomes a GitHub release with the signed APK attached
+      - name: Create GitHub release
+        if: steps.secrets.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "v$VERSION" "$RUNNER_TEMP/WebRadioDroid-$VERSION.apk" \
+            --title "WebRadioDroid $VERSION" \
+            --notes "Signed release APK. Updates are also available through the F-Droid repository https://raw.githubusercontent.com/thamichele/webradiodroid/fdroid/repo"
 
       - name: Update F-Droid repository
         if: steps.secrets.outputs.ready == 'true'
