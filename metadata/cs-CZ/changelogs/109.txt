@@ -1,0 +1,6 @@
+# v4.3.2 - The Width of a Circle
+
+**2025-10-21**
+- opravena chyba s odkazy na domovské obrazovce (přehrávání se nespustilo automaticky)
+- povoleno zobrazení od okraje k okraji také pro starší verze Androidu
+- aktualizovány překlady

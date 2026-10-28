@@ -1,0 +1,5 @@
+# v4.0.10 - Andy Warhol
+
+**2021-01-01**
+
+- naprawia błąd w funkcji Update Stations, który mógł pozostawić Transistor w dziwnym stanie, w którym odtwarzalna jest tylko jedna stacja (zobacz także: https://codeberg.org/y20k/transistor/issues/291)

@@ -1,0 +1,8 @@
+v4.3.9 - Dairenin Genişliği
+18 Eylül 2026
+
+- istasyon oynatma listeleri ve görseller artık Android sürümünü, aygıt modelini ve derleme kimliğini göstermek yerine Transistor olarak tanımlanıyor
+- Android Auto’da görünebilen gereksiz bir İptal düğmesi kaldırıldı
+- çeviriler güncellendi
+- yazılım kütüphaneleri güncellendi
+- derleme yapılandırması güncellendi

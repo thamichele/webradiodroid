@@ -1,0 +1,6 @@
+# v3.1.2 - John, I'm Only Dancing
+
+**2019-01-23**
+
+- perbaikan bug 
+- terjemahan yang diperbarui

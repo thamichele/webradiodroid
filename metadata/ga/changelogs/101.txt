@@ -1,0 +1,4 @@
+# v4.2.1 - Luaithreach go luaithreach
+
+**2024-10-08**
+- baintear spleáchas Seirbhísí Súgartha nach bhfuil ag teastáil (agus nach bhfuil ag teastáil) ó Transistor

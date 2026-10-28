@@ -1,0 +1,6 @@
+# v3.0.9 - Oh! You Pretty Things
+
+**2018-08-08**
+
+- presentation de metadatos pote tractiar characteres UTF-8 e Latin1
+- traductiones actualisate

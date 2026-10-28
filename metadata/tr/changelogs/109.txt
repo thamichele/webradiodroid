@@ -1,0 +1,6 @@
+# v4.3.2 - Dairenin Genişliği
+
+**21 Ekim 2025**
+- ana ekran kısayollarıyla ilgili bir hata düzeltildi (oynatma otomatik olarak başlamıyordu)
+- eski Android sürümleri için de kenardan kenara görüntüleme etkinleştirildi
+- çeviriler güncellendi

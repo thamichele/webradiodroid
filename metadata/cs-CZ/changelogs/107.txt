@@ -1,0 +1,8 @@
+# v4.3.0 – The Width of a Circle
+
+**2025-10-08**
+– nový plovoucí přehrávač
+– nové nastavení pro povolení dynamických barev (Android 12+)
+– vylepšené načítání obrázků v seznamu stanic
+– kompatibilita s Androidem 16 (SDK 36)
+– aktualizované překlady

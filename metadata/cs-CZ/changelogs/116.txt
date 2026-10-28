@@ -1,0 +1,8 @@
+v4.3.9 - The Width of a Circle
+2026-09-18
+
+- seznamy skladeb a obrázky stanic nyní uvádějí název „Transistor“ namísto verze systému Android, modelu zařízení a identifikátoru sestavení
+- bylo odstraněno nadbytečné tlačítko „Zrušit“, které se mohlo zobrazovat v aplikaci v Android Auto
+- byly aktualizovány překlady
+- byly aktualizovány softwarové knihovny
+- bylo modernizováno nastavení sestavení

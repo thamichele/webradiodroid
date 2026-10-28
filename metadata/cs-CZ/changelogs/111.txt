@@ -1,0 +1,5 @@
+# v4.3.4 - The Width of a Circle
+
+**2025-11-13**
+- aktualizovány překlady
+- opravena chyba, kdy si Transistor neuložil nový typ obsahu, když byla změněna adresa streamu stanice

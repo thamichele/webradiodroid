@@ -1,0 +1,8 @@
+# v3.1.0 - John, Níl Mise ach ag Rince
+
+**2018-11-19**
+
+- íocón aipe nua (thx @munadikieh)
+- láimhseáil fheabhsaithe naisc ó radio-browser.info
+- comhéadan úsáideora le scéim dathanna nua
+- ceartúcháin fhabht

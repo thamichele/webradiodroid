@@ -1,0 +1,5 @@
+# v3.0.11 - Oh! You Pretty Things
+
+**2018-10-01**
+
+- risolto un grave problema con le connessioni basate su http su Android 9

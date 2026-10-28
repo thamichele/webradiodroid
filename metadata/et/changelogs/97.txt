@@ -1,0 +1,9 @@
+# versioon 4.1.7 - Modern Love
+
+**2023-10-22**
+- et m3u ja pls failide lisamine toimiks, on uue jaama lisamise vaade on nüüd ümbertehtud (nii kohaliku kui kaugfaili puhul)
+- uuendasime ikoonikomplekti (Material Symbols)
+- uuendasime rakenduse ikooni
+- uued tõlked: bulgaaria, soome ja korea keeled
+- tõlgete uuendused
+- väiksed veaparandused

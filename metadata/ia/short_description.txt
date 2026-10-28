@@ -1,0 +1,1 @@
+Transistor es un application pro ascoltar stationes de radio via Internet.

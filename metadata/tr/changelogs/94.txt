@@ -1,0 +1,7 @@
+# v4.1.4 - Modern Love
+
+**1 Mart 2023**
+
+- M3U8 / HLS oynatımı düzeltildi
+- tek renkli uygulama simgesi çeşidi eklendi
+- ağ kaybının daha iyi ele alınması sağlandı

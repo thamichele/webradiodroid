@@ -1,0 +1,8 @@
+v4.3.9 – The Width of a Circle
+18.09.2026
+
+- In den Playlists und Bildern der Sender wird nun Transistor angezeigt, statt die Android-Version, das Gerätemodells und die Build-ID
+- Eine verirrte Abbrechen-Schaltfläche, die in Android Auto erscheinen konnte, wurde entfernt
+- Übersetzungen aktualisiert
+- Softwarebibliotheken aktualisiert
+- Build-Einrichtung modernisiert

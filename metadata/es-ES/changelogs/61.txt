@@ -1,0 +1,5 @@
+# v3.0.11 - ¡Oh! Cosas bonitas
+
+**2018-10-01**
+
+- Resuelve un grave problema con las conexiones basadas en http en Android 9

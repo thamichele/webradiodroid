@@ -1,0 +1,7 @@
+# v4.0.4 - Andy Warhol
+
+**2020-07-27**
+
+- verbeterde scrollprestaties
+
+De v4 update was vrij groot, ontdek meer: https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

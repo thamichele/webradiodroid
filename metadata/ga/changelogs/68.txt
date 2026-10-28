@@ -1,0 +1,6 @@
+# v3.2.1 - An Saol ar Mars?
+
+**2019-07-25**
+
+- Aistriúchán Seice
+- taispeánann an ghné meiteashonraí "ag imirt anois" carachtair neamh-Laidin níos fearr (gibberish nach féidir a léamh)

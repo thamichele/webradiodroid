@@ -1,0 +1,4 @@
+# v4.3.5 - The Width of a Circle
+
+**2025-11-16**
+- se ha corregido un error por el que al cambiar el nombre de una emisora la aplicación se bloqueaba (gracias, Ely)

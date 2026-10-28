@@ -1,0 +1,4 @@
+# versioon 4.2.1 - Ashes to Ashes
+
+**2024-10-08**
+- eemaldasime Transistorist mittevajalikud (ja mittesoovitud) Google Play teenused

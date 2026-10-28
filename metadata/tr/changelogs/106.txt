@@ -1,0 +1,4 @@
+# v4.2.6 - Küller Küllere
+
+**22 Temmuz 2025**
+- daha önce garip bir şekilde hiç tespit edilmeyen ilk başlatma çökmesi düzeltildi

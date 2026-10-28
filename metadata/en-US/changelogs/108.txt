@@ -1,0 +1,5 @@
+# v4.3.1 - The Width of a Circle
+
+**2025-10-10**
+- set gradlePluginVersion to 8.11.1 to stay compatible with the current F-Droid build process
+- fixed the monochrome app icon

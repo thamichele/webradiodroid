@@ -1,0 +1,7 @@
+# v4.1.6 - Modern Love
+
+**2023-07-10**
+
+- reelaborada la opción de entrada para URLs de streaming del directo a través del diálogo de la búsqueda
+- nueva opción "Usar búfer más grande" en la configuración
+- traducciones actualizadas

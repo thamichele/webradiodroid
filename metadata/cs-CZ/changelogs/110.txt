@@ -1,0 +1,5 @@
+# v4.3.3 - The Width of a Circle
+
+**2025-10-25**
+- opravena chyba s ručním nastavením obrázků stanic
+- opravena chyba v překladu s nadpisem obrazovky nastavení

@@ -1,0 +1,7 @@
+# v4.1.6 - Modern Love
+
+**2023-07-10**
+
+- verbeterde invoeroptie voor directe streaming URL's via het zoekvenster 
+- nieuwe optie "Grotere buffer gebruiken" in instellingen
+- vertalingen bijgewerkt

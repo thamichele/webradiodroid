@@ -1,0 +1,6 @@
+# versioon 4.1.3 - Modern Love
+
+**2023-01-11**
+
+- parandasime metainfo kuvamise teavitustes
+- parandasime tühjade tekstiväljade kuvamise, kui antud keelel pole täielikku tõlget

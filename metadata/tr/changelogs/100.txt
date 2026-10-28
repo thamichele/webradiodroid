@@ -1,0 +1,9 @@
+# v4.2.0 - Küller Küllere (Sürüm #100)
+
+**4 Ekim 2024**
+- istasyon değiştirme sorunu düzeltildi (bildirim ve kulaklık düğmeleri)
+- bildirimden oynatmanın devam ettirilmesi sorunu düzeltildi
+- küçük hata düzeltmeleri
+- yeni çeviri: İrlandaca (Teşekkürler Aindriú Mac Giolla Eoin)
+- yeni çeviri: Galce (Teşekkürler Aled Powell)
+- çeviriler güncellendi

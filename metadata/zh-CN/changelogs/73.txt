@@ -1,0 +1,10 @@
+# v4.0.1 - 安迪·沃霍尔
+
+**2020-07-05**
+
+- 修复了v4.0.0版本中的几个小错误
+-- 更正通知中的元数据
+-- 改进HLS支持
+-- 排序不区分大小写
+
+v4版本更新内容相当丰富，更多信息请访问：https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

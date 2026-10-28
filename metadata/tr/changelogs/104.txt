@@ -1,0 +1,7 @@
+# v4.2.4 - Küller Küllere
+
+**17 Temmuz 2025**
+- live365.com radyo istasyonlarıyla ilgili bir hata düzeltildi
+- kütüphaneler güncellendi
+- Macarca, Rumence ve Tamilce çeviriler eklendi (teşekkürler @gczdvd, @ygorigor ve @TamilNeram)
+- çeviriler güncellendi (tüm weblate çevirmenlerine teşekkürler)

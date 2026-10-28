@@ -1,0 +1,5 @@
+# versioon 4.1.9 - Modern Love
+
+**2024-05-03**
+- lisasime OGG ja HLS meediavoogude metainfo kuvamise
+- uuendasime tõlkeid

@@ -1,0 +1,6 @@
+# v4.1.5 - Modern Love
+
+**17 Mart 2023**
+
+- istasyon kapak resminin işlenmesi iyileştirildi
+- çeviriler güncellendi

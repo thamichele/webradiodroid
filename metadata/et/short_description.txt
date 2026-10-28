@@ -1,0 +1,1 @@
+Transistor on rakendus veebipõhiste raadiojaamade kuulamiseks.

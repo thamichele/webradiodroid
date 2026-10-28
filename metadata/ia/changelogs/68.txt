@@ -1,0 +1,6 @@
+# v3.2.1 - Life on Mars?
+
+**2019-07-25**
+
+- traduction in Chec
+- le functionalitate de metadatos de "reproduction in curso" monstra melior le caracteres non-latin (minus nonsenso non legibile)

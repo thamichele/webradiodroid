@@ -1,0 +1,7 @@
+# v4.2.4 - Ashes to Ashes
+
+**2025-07-17**
+- opravena chyba u rádiových stanic live365.com
+- aktualizovány knihovny
+- přidány maďarské, rumunské a tamilské překlady (díky @gczdvd, @ygorigor a @TamilNeram)
+- aktualizovány překlady (díky všem překladatelům na Weblate)

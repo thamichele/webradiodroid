@@ -1,0 +1,10 @@
+# v4.0.1 - Andy Warhol
+
+**2020-07-05**
+
+- corrige varios pequeños errores con v4.0.0
+-- los metadatos de las notificaciones se actualizan correctamente
+-- mejora de la compatibilidad con HLS
+-- la ordenación no distingue entre mayúsculas y minúsculas
+
+La actualización de la v4 ha sido bastante grande, más información en: https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

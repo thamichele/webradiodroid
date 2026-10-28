@@ -1,0 +1,8 @@
+# v3.1.1 - John, Níl Mise ach ag Rince
+
+**2019-01-16**
+
+- tacaíonn sé le cothromóir fuaime an chórais Android
+- ceartúcháin fhabht
+- aistriúcháin nuashonraithe
+- tacaíocht feabhsaithe mód dorcha

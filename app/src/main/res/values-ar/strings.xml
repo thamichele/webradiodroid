@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ترانزستور</string>
+    <!-- please do not translate app_name - transcription into different alphabet types is fine though -->
+    <string name="shortcut_last_station_short_label">آخِر محطة</string>
+    <string name="shortcut_last_station_long_label">تشغيل آخِر محطة</string>
+    <string name="shortcut_last_station_disabled_message">اختصار تشغيل المحطة الأخيرة مُعطّل.</string>
+    <string name="descr_app_icon">أيقونة التطبيق يصور راديو قديم</string>
+    <string name="player_sheet_h2_stream_url">رابط البث</string>
+    <string name="dialog_generic_button_okay">حسنًا</string>
+    <string name="dialog_generic_button_cancel">إلغاء</string>
+    <string name="dialog_error_message_default">حدث خطأ</string>
+    <string name="toast_message_shortcut_created">تم إنشاء الإختصار.</string>
+    <string name="notification_play">تشغيل</string>
+    <string name="notification_now_playing_channel_name">ضوابط التشغيل</string>
+    <string name="station_list_button_add_new_station">أضف محطة جديدة</string>
+    <string name="toast_message_updating_station_images">تحديث صور المحطة.</string>
+    <string name="toast_message_updating_collection">تحديث مجموعة المحطات.</string>
+    <string name="toast_message_station_not_valid">المحطة غير صالحة.</string>
+    <string name="toast_message_station_duplicate">محطة مكررة.</string>
+    <string name="toast_message_error_restart_playback_failed">غير قادر على إعادة التشغيل.</string>
+    <string name="toast_message_error_missing_storage_permission">امنح إذن \"قراءة التخزين\" لفتح هذا الملف.</string>
+    <string name="toast_message_error_download_error">فشل التحميل</string>
+    <string name="dialog_yes_no_positive_button_update_covers">تحديث</string>
+    <string name="dialog_yes_no_positive_button_remove_station">إزالة</string>
+    <string name="dialog_yes_no_positive_button_default">نعم</string>
+    <string name="dialog_yes_no_negative_button_cancel">إلغاء</string>
+    <string name="dialog_yes_no_message_update_station_images">تنزيل أحدث إصدار لجميع صور المحطة؟</string>
+    <string name="dialog_rename_station_input_hint">أدخل اسمًا جديدًا</string>
+    <string name="dialog_yes_no_message_remove_station">إزالة هذه المحطة؟</string>
+    <string name="dialog_opml_import_details_default">لا توجد تفاصيل متاحة</string>
+    <string name="dialog_generic_details_button">اظهر التفاصيل</string>
+    <string name="dialog_find_station_title">ابحث عن محطة</string>
+    <string name="dialog_find_station_no_results">لم يتم العثور على نتائج.</string>
+    <string name="dialog_find_station_hint">الاسم أو عنوان البث</string>
+    <string name="dialog_find_station_button_add">أضف</string>
+    <string name="dialog_error_title_no_network">غير متصل</string>
+    <string name="dialog_error_message_no_network">اتصل بالإنترنت.</string>
+    <string name="fragment_settings_title">إעعدادات</string>
+    <string name="notification_skip_to_previous">سابق</string>
+    <string name="pref_general_title">عام</string>
+    <string name="dialog_edit_save_changes">https://hosted.weblate.org/translate/transistor/strings/ar/?checksum=9bd7c9409a29a130</string>
+    <string name="notification_stop">قف</string>
+    <string name="notification_skip_to_next">التالي</string>
+</resources>

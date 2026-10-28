@@ -1,0 +1,11 @@
+# versioon 4.1.8 - Modern Love
+
+**2024-04-19**
+- uus keel: Interlingua
+- uuendatud tõlked
+- väikesed täiendused ja veaparandused:
+ - näitame bitikiirust jaamade otsingus (@SecT0uch)
+ - jaama vahetamisel unetaimer jätkab tööd
+ - jaamavaates joondub eraldaja keskele (@polttopull006)
+ - jaama kustutamisel kuvame taasesitusnuppu korrektses olekus (@dustin23)
+ - töötleme htmlis lisatud metainfot korrektselt (@gege)

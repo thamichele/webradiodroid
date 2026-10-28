@@ -1,0 +1,5 @@
+# versioon 3.0.11 - Oh! You Pretty Things
+
+**2018-10-01**
+
+- parandasime Android 9's tekkinud tõsise vea http-põhiste ühendustega

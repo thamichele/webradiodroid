@@ -1,0 +1,5 @@
+# v4.3.3 - The Width of a Circle
+
+**2025-10-25**
+- risolto un bug con l'impostazione manuale delle immagini delle stazioni
+- risolto un bug di traduzione con il titolo della schermata impostazioni

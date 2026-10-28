@@ -1,0 +1,8 @@
+# v4.0.8 - Andy Warhol
+
+**2020-11-25**
+
+- Wersja w języku hebrajskim
+- Zaktualizowane tłumaczenia
+- Naprawiono wyświetlanie obrazu stacji w Android Auto
+- Naprawiono ręczny wybór obrazu stacji w Android 11

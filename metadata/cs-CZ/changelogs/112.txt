@@ -1,0 +1,4 @@
+# v4.3.5 - The Width of a Circle
+
+**2025-11-16**
+- opravena chyba, kdy přejmenování stanice způsobilo pád aplikace (díky Ely)

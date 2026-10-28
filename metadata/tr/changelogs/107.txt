@@ -1,0 +1,8 @@
+# v4.3.0 - Dairenin Genişliği
+
+**8 Ekim 2025**
+- yeni kayan oynatıcı
+- değişken rengi etkinleştirmek için yeni ayar (Android 12+)
+- istasyon listesinde görsel yükleme iyileştirildi
+- Android 16 uyumluluğu (SDK 36)
+- çeviriler güncellendi

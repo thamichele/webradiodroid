@@ -1,0 +1,21 @@
+Transistor es una aplicación de radio con un enfoque minimalista, que puede no ser del agrado de todos. No tiene función de búsqueda de emisoras de radio. Transistor solo ofrece una opción de búsqueda muy simple e importa enlaces de transmisión de audio, cuando los reproduce en un navegador web.
+
+Transistor es software libre. Se publica bajo la licencia de código abierto del MIT.
+
+VERIFY APK
+----------
+
+Los APK publicados en Codeberg. Las versiones se firman con el siguiente certificado.
+SHA-256: 61:05:14:5F:84:E5:CB:D6:97:F0:F6:E1:2C:97:77:04:2E:9B:2D:B6:67:A7:FF:0D:A4:12:F6:74:35:31:6D:D8
+
+PREGUNTAS FRECUENTES
+----------------------------------
+
+¿CÓMO PUEDO AGREGAR UNA EMISORA DE RADIO?
+Hay tres formas de agregar una emisora de radio a Transistor: usar la búsqueda, agregar la dirección del archivo de la lista de reproducción (M3U, PLS), ingresa la dirección de la transmisión sin procesar.
+
+¿DE DÓNDE PROVIENE LOS RESULTADOS DE LA BÚSQUEDA DE LAS EMISORAS DE RADIO?
+Transistor busca en la base de datos en línea de radio-browser.info. Puedes ayudar a la comunidad de radio-browser.info agregando la estación que falta (http://www.radio-browser.info/gui/#!/add) a tu base de datos.
+
+¿CÓMO PUEDO CURAR LA LISTA DE ESTACIONES DE RADIO?
+Utiliza el gesto de deslizar para eliminar una estación de radio de la lista. Se pueden habilitar más opciones de edición en los Ajustes. Si está habilitado, toca y mantén presionado una estación de radio para editar su nombre, imagen o enlace de la transmisión.

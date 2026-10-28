@@ -1,0 +1,5 @@
+# v4.3.4 - Leithead Ciorcail
+
+**2025-11-13**
+- aistriúcháin nuashonraithe
+- fabht socraithe inar stóráladh an cineál ábhair nua ag Transistor nuair a athraíodh seoladh sruthú stáisiúin

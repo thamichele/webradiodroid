@@ -1,0 +1,6 @@
+# v4.0.13 - Andy Warhol
+
+**2021-03-16**
+
+- adjusta le schermo "reproduction in curso"
+- corrige un fallimento rar

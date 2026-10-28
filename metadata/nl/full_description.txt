@@ -1,0 +1,14 @@
+<p><i>Transistor</i> is een radio-app met minimalistisch ontwerp, wellicht niet naar ieders de smaak. Het detecteert niet zelf zenders. <i>Transistor</i> heeft slechts een heel eenvoudige zoekoptie en kan audiostreamlinks importeren, als je in een webbrowser erop tikt.
+
+
+</p><p><br><b>VEEL GESTELDE VRAGEN
+
+</b></p><dl><dt>HOE KAN IK EEN ZENDER TOEVOEGEN?
+</dt><dd>Er zijn drie manieren om zenders toe te voegen: Gebruik zoeken, voet een speellijst to (M3U, PLS), geef een streamadres op.
+
+</dd><dt>VANWAAR KOMEN DE ZENDER ZOEKRESULTATEN?
+</dt><dd>Transistor raadpleegt de online database van radio-browser.info. Je kan de radio-browser.info gemeenschap helpen door ontbrekende zenders aan hun database toe te voegen (http://www.radio-browser.info/gui/#!/add).
+
+</dd><dt> HOE KAN IK DE ZENDERLIJST ONDERHOUDEN?
+
+</dt><dd> Gebruik een veegbeweging om een radiostation uit de lijst te verwijderen. Andere mogelijkheden om te bewerken kunnen ingeschakeld worden in de Instellingen. Tik na inschakelen op een radiozender en houd deze vast om de naam, logo of streaming-link te bewerken.</dd></dl>

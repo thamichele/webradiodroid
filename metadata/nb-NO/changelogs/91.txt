@@ -1,0 +1,8 @@
+# v4.1.1 - Modern Love
+
+**12.05 2022**
+
+- Nye alternativer for sikkerhetskopiering (og gjenoppretting) av alle radiostasjoner, inkl. bilder
+- Fiks for uklart forvalgt stasjonsbilde
+- Indonesisk språk fikset
+- Oppdaterte oversettelser

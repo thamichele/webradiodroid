@@ -1,0 +1,7 @@
+# v4.0.2 - Andy Warhol
+
+**2020-07-08**
+
+- corrige un defecto in le importation de URLs de fluxo (tu poterea besoniar le actualisation del station)
+- recupera le visualisation de metadatos pro Android Auto
+Le actualisation de v4 esseva bastante grande, trova plus: https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

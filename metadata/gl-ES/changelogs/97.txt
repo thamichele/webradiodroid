@@ -1,0 +1,9 @@
+# v4.1.7 - Modern Love
+
+**2023-10-22**
+- melloramos o diálogo de Engadir Nova Emisora para que funcione con ficheiros m3u e pls (local e remoto)
+- actualizadas as iconas (Material Symbols)
+- actualizada a icona da app
+- novas traducións: Búlgaro, Finés e Koreano
+- actualizadas as traducións
+- arranxo de problemiñas

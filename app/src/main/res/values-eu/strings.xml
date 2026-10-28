@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Transistor</string>
+    <!-- please do not translate app_name - transcription into different alphabet types is fine though -->
+    <string name="shortcut_last_station_short_label">Azken irratia</string>
+    <string name="shortcut_last_station_long_label">Jo azken irratia</string>
+    <string name="shortcut_last_station_disabled_message">Azken irratia erreproduzitzeko laster-marka desgaituta.</string>
+    <string name="descr_app_icon">Irrati zahar baten ikonoa</string>
+    <string name="player_sheet_h2_station_metadata">Orain entzuten</string>
+    <string name="player_sheet_h2_stream_url">Jario URLa</string>
+    <string name="dialog_generic_button_okay">Ados</string>
+    <string name="dialog_generic_button_cancel">Utzi</string>
+    <string name="dialog_error_message_default">Errore bat gertatu da</string>
+    <string name="toast_message_shortcut_created">Lasterbidea sortu da.</string>
+    <string name="toast_message_shortcut_not_created">Ez da lasterbidea sortu. Gailu honek ez du lasterbideak sortzea ahalbidetzen.</string>
+    <string name="toast_message_copied_to_clipboard">Jarioaren esteka arbelera kopiatu da.</string>
+    <string name="toast_message_no_image_picker">Ez dago irudiak hautatzeko aplikaziorik eskuragarri. Galeria bat instalatu zenezake.</string>
+    <string name="notification_play">Erreproduzitu</string>
+    <string name="notification_stop">Stop</string>
+    <string name="onboarding_app_description">Irrati aplikazioa</string>
+    <string name="onboarding_app_get_started">Hasi</string>
+    <string name="dialog_find_station_no_results">Emaitzarik ez.</string>
+    <string name="dialog_generic_details_button">Erakutsi xehetasunak</string>
+    <string name="dialog_yes_no_message_update_station_images">Deskargatu irratiaren irudien azken bertsioa\?</string>
+    <string name="toast_message_error_download_error">Deskargaren errorea</string>
+    <string name="dialog_yes_no_positive_button_default">Bai</string>
+    <string name="dialog_yes_no_positive_button_remove_station">Ezabatu</string>
+    <string name="toast_message_error_restart_playback_failed">Ezin da erreprodukzioa berrabiarazi.</string>
+    <string name="toast_message_install_file_helper">Mesedez, instala ezazu fitxategi-kudeatzaile bat.</string>
+    <string name="toast_message_station_not_valid">Irratiak ez du balio.</string>
+    <string name="dialog_find_station_button_add">Gehitu</string>
+    <string name="dialog_yes_no_negative_button_cancel">Utzi</string>
+    <string name="dialog_find_station_title">Bilatu irratia</string>
+    <string name="dialog_yes_no_positive_button_update_covers">Eguneratu</string>
+    <string name="fragment_settings_title">Ezarpenak</string>
+    <string name="dialog_error_title_no_network">Konexiorik gabe</string>
+    <string name="toast_message_error_missing_storage_permission">Eman \"Irakurri Biltegiratzea\" baimena fitxategi hau irekitzeko.</string>
+    <string name="dialog_opml_import_details_default">Xehetasunik ez</string>
+    <string name="dialog_edit_station_name">Irratiaren izena</string>
+    <string name="toast_message_save_m3u">Irratiak M3U gisa gordetzen…</string>
+    <string name="dialog_edit_save_changes">Gorde Aldaketak</string>
+    <string name="dialog_edit_stream_uri">Jarioaren helbidea</string>
+    <string name="dialog_error_message_no_network">Konektatu Internetera.</string>
+    <string name="dialog_rename_station_input_hint">Sartu izen berri bat</string>
+    <string name="dialog_yes_no_message_remove_station">Ezabatu irrati hau\?</string>
+    <string name="toast_message_station_duplicate">Bikoiztutako irratia.</string>
+    <string name="dialog_find_station_hint">Izena edo jarioaren helbidea</string>
+</resources>

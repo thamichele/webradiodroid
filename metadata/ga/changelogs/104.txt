@@ -1,0 +1,7 @@
+# v4.2.4 - Ashes to Ashes
+
+**2025-07-17**
+- fabht socraithe le stáisiúin raidió live365.com
+- leabharlanna nuashonraithe
+- aistriúcháin Ungáirise, Rómáinise agus Tamailise curtha leis (go raibh maith agat @gczdvd, @ygorigor agus @TamilNeram)
+- aistriúcháin nuashonraithe (go raibh maith agat do gach aistritheoir weblate)

@@ -1,0 +1,10 @@
+# v4.0.1 - Andy Warhol
+
+**2020-07-05**
+
+- roinnt bugs beaga a shocrú le v4.0.0
+-- meiteashonraí i nuashonruithe fógraí i gceart
+-- tacaíocht fheabhsaithe HLS
+-- ní bhíonn an sórtáil cás-íogair
+
+Bhí an nuashonrú v4 sách mór, faigh tuilleadh eolais: https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

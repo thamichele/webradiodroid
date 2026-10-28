@@ -1,0 +1,6 @@
+# v3.0.12 - ¡Oh! Cosas bonitas
+
+**2018-10-08**
+
+- versión actualizada en japonés
+- cambios menores

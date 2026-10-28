@@ -1,0 +1,6 @@
+v4.3.8 - Leithead Ciorcail
+2026-08-05
+
+- socraíodh an fhadhb nárbh fhéidir stáisiúin a athrú idir an chéad cheann eile/an chéad cheann eile ar Android Auto agus trí chnaipí meán
+- socraíodh stáisiúin Live365 nárbh fhéidir a chur leis ná a sheinm
+- aistriúcháin nuashonraithe

@@ -1,0 +1,7 @@
+# v4.1.4 - An Nua-Ghrá
+
+**2023-03-01**
+
+- athsheinm M3U8 / HLS seasta
+- malairt deilbhín app monacrómach curtha leis
+- déantar caillteanas líonra a láimhseáil níos fearr

@@ -1,0 +1,5 @@
+# v4.1.9 - Amor Moderno
+
+**2024-05-03**
+- ahora reproduce metadatos para flujos OGG y HLS
+- traducciones actualizadas

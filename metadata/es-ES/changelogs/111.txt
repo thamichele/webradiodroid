@@ -1,0 +1,5 @@
+# v4.3.4 - The Width of a Circle
+
+**2025-11-13**
+- Traducciones actualizadas
+- Se ha corregido un error por el que Transistor no guardaba el nuevo tipo de contenido cuando se cambiaba la dirección de transmisión de una emisora

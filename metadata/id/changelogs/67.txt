@@ -1,0 +1,7 @@
+# v3.2.0 - Kehidupan di Mars?
+
+**2019-06-26**
+
+- Terjemahan bahasa Italia 
+- daftar stasiun radio memiliki ikon yang lebih besar 
+- warna ikon aplikasi utama berubah menjadi merah

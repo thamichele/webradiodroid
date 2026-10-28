@@ -1,0 +1,6 @@
+# v4.1.3 - Modern Love
+
+**2023-01-11**
+
+- Corrección de la visualización de metadatos en las notificaciones.
+- se corrigen los campos de texto vacíos en las versiones lingüísticas que aún no están traducidas al 100%

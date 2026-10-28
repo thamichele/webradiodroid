@@ -1,0 +1,6 @@
+# v4.0.18 - Andy Warhol
+
+**2022-01-14**
+
+- mionathruithe ar leagan amach chun luí níos fearr leis an téama "Dearadh Ábhar 3" a tugadh isteach in Android 12
+- aistriúcháin nuashonraithe

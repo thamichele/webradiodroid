@@ -1,0 +1,7 @@
+# v3.2.0 - Life on Mars?
+
+**2019-06-26**
+
+- traduction in Italian
+- lista del stationes de radio ha icones longe
+- color del icone principal del app cambiate a rubie

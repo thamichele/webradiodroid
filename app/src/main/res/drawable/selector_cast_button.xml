@@ -1,0 +1,21 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:state_checked="true"
+        android:state_enabled="true"
+        android:drawable="@drawable/ic_cast_connected_24dp" />
+
+    <item
+        android:state_checkable="true"
+        android:state_enabled="true"
+        android:drawable="@drawable/ic_cast_connected_24dp" />
+
+    <item
+        android:state_enabled="true"
+        android:drawable="@drawable/ic_cast_24dp" />
+
+    <item
+        android:drawable="@drawable/ic_cast_24dp"
+        android:tint="?attr/colorOnPrimary"/> <!-- todo: replace with a fitting color -->
+
+</selector>

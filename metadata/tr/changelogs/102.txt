@@ -1,0 +1,7 @@
+# v4.2.2 - Küller Küllere
+
+**1 Kasım 2024**
+- oynatıcı ögesindeki görüntüleme hatası düzeltildi
+- oynat düğmesi animasyonu değiştirildi
+- yeni çeviriler eklendi: Estonca, Hintçe, Kürtçe (Teşekkürler: @jrthwlate, @Scrambled777, @halbast)
+- çeviriler güncellendi

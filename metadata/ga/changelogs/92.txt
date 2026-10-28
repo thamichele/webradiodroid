@@ -1,0 +1,10 @@
+# v4.1.2 - An Nua-Ghrá
+
+**2023-01-03**
+
+Nóta: Sa nuashonrú seo tá an tseirbhís cúlra athsheinm leasaithe go hiomlán. Úsáideann trasraitheoir media3 anois (https://developer.android.com/jetpack/androidx/releases/media3). Bhain mé úsáid as an atógáil chun fáil réidh le "réitigh speisialta" atá neamhchoitianta do na meáin chumarsáide ar an ardán Android: Níl aon chnaipe cealaithe (x) san fhógra a thuilleadh. Ní thosaíonn stáisiúin raidió Scáileán Baile Trasraitheoir sa chúlra a thuilleadh. Ár leithscéal má bhí meas agat ar cheann de na gnéithe seo. Tá sé tábhachtach domsa go n-iompraíonn Transistor comhlíontach ardáin. Déanann sé seo i bhfad níos éasca an aip raidió is fearr liom a chothabháil.
+
+Athruithe sa leagan seo:
+- Úsáideann trasraitheoir an leabharlann athsheinm media3
+- aistriúcháin nuashonraithe
+- Cumasaigh an ghné rogha teanga in aghaidh an aip (Android 13)

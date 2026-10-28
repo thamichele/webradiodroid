@@ -1,0 +1,9 @@
+# v4.1.7 - Modern Love
+
+**22 Ekim 2023**
+- Yeni İstasyon Ekle seçeneği m3u ve pls dosyalarıyla (yerel ve uzak) çalışacak şekilde gözden geçirildi
+- simge kümesi güncellendi (Material Simgeleri)
+- uygulama simgesi güncellendi
+- yeni çeviriler: Bulgarca, Fince, Korece
+- çeviriler güncellendi
+- küçük hata düzeltmeleri

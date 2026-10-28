@@ -1,0 +1,7 @@
+# v4.0.15 - Andy Warhol
+
+**2021-07-28**
+
+- nowy język: fryzyjski
+- zaktualizowane tłumaczenia
+- Transistor teraz natychmiast przestaje buforować, gdy odtwarzanie zostanie zatrzymane

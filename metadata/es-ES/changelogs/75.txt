@@ -1,0 +1,9 @@
+# v4.0.3 - Andy Warhol
+
+**2020-07-22**
+
+- Android Auto reanuda la reproducción de la última emisora reproducida
+- actualizado y nuevas traducciones
+- un par de pequeñas correcciones de errores
+
+La actualización v4 era bastante grande, encontrar más información: https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

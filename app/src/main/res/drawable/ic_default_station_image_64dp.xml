@@ -1,0 +1,25 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="1280"
+    android:viewportHeight="1280">
+
+    <!-- This is a modified version of music cast. The original icon is scaled
+         and centered. Changes:
+         - width & width are increased to 64dp
+         - viewport is increased from 960 to 1280 to scale down the icon
+         - the paths are translated by 160 to keep them centered -->
+    <path
+        android:fillColor="?attr/colorSecondary"
+        android:pathData="M0,0h1280v1280h-1280z" />
+
+    <group
+        android:translateX="160"
+        android:translateY="160">
+
+        <path
+            android:fillColor="?attr/colorOnSecondary"
+            android:pathData="M554.62,759.77Q506.58,759.77 473.63,726.83Q440.69,693.88 440.69,645.85Q440.69,597.04 473.63,564.1Q506.58,531.15 554.62,531.15Q579.08,531.15 599.96,540.19Q620.85,549.23 637.77,567.85L637.77,187.69L843.85,187.69L843.85,275.38L668.54,275.38L668.54,645.85Q668.54,693.88 635.6,726.83Q602.65,759.77 554.62,759.77ZM116.15,645.85Q116.15,552.46 150.15,472.65Q184.15,392.85 243,333.62Q301.85,274.38 381.88,240.88Q461.91,207.38 554.62,207.38L554.62,238.15Q468.85,238.15 394.28,269.28Q319.72,300.4 264.46,355.62Q209.21,410.83 178.07,484.95Q146.92,559.06 146.92,645.85L116.15,645.85ZM263.85,645.85Q263.85,582.85 286.03,529.59Q308.22,476.32 347.12,437.44Q386.02,398.55 439.23,376.81Q492.44,355.08 554.62,355.08L554.62,385.85Q441.62,385.85 368.12,459.1Q294.62,532.36 294.62,645.85L263.85,645.85Z" />
+    </group>
+
+</vector>

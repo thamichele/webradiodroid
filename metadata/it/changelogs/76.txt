@@ -1,0 +1,7 @@
+# v4.0.4 - Andy Warhol
+
+**2020-07-27**
+
+- prestazioni di scorrimento migliorate
+
+L'aggiornamento v4 è stato piuttosto grande, scopri di più: https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

@@ -1,0 +1,7 @@
+# v4.1.6 - Modern Love
+
+**10 Temmuz 2023**
+
+- arama iletişim kutusu üzerinden doğrudan yayın URL'leri için giriş seçeneği gözden geçirildi
+- ayarlara yeni "Daha Büyük Ara Bellek Kullan" seçeneği eklendi
+- çeviriler güncellendi

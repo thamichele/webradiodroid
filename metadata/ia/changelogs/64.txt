@@ -1,0 +1,8 @@
+# v3.1.0 - John, I’m Only Dancing
+
+**2018-11-19**
+
+- nove icone de app (gratias @munadikieh)
+- manipulation meliorate de ligamines ab radio-browser.info
+- interfacie de usator con un nove schema de color
+- correctiones de defectos

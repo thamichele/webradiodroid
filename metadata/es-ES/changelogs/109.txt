@@ -1,0 +1,6 @@
+# v4.3.2 - The Width of a Circle
+
+**2025-10-21**
+- Se ha corregido un error relacionado con los accesos directos de la pantalla de inicio (la reproducción no se iniciaba automáticamente)
+- Se ha habilitado la pantalla de borde a borde también para versiones anteriores de Android
+- Se han actualizado las traducciones

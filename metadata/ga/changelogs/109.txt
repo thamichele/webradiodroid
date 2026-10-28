@@ -1,0 +1,6 @@
+# v4.3.2 - Leithead Ciorcail
+
+**2025-10-21**
+- fabht socraithe le haicearraí scáileáin bhaile (níor thosaigh an athsheinm go huathoibríoch)
+- taispeántas imeall-go-imeall cumasaithe do leaganacha níos sine de Android freisin
+- aistriúcháin nuashonraithe

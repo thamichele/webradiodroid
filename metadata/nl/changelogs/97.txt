@@ -1,0 +1,9 @@
+# v4.1.7 - Modern Love
+
+**2023-10-22**
+- dialoogvenster Nieuwe zender toevoegen herwerkt om te werken met m3u- en pls-bestanden (lokaal en op afstand)
+- pictogrammenset bijgewerkt (Material Symbols)
+- app-pictogram bijgewerkt
+- nieuwe vertalingen: Bulgaars, Fins, Koreaans
+- vertalingen bijgewerkt
+- kleine bugfixes

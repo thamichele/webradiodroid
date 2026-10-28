@@ -1,0 +1,6 @@
+# v4.1.5 - Modern Love
+
+**2023-03-17**
+
+- ulepszona obsługa obrazów okładek stacji
+- zaktualizowane tłumaczenia

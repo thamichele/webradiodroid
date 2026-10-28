@@ -1,0 +1,4 @@
+# v4.2.1 - De cenizas a cenizas
+
+**08-10-2024**
+- elimina la dependencia innecesaria (y no deseada) a Play Services de Transistor

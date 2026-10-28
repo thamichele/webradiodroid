@@ -1,0 +1,8 @@
+# v4.0.2 - Andy Warhol
+
+**2020-07-08**
+
+- corrige un error al importar URLs de streaming (es posible que tenga que actualizar la emisora)
+- recupera la visualización de metadatos para Android Auto
+
+La actualización de la v4 fue bastante grande, descubre más: https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

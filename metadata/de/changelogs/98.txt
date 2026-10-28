@@ -1,0 +1,11 @@
+# v4.1.8 – Modern Love
+
+**19.04.2024**
+- neue Sprache: Interlingua
+- verbesserte Übersetzungen
+- kleine Fehlerkorrekturen:
+ - Bit-Rate in Sendersuche anzeigen (@SecT0uch)
+ - Sleeptimer läuft bei Senderwechsel weiter
+ - Trenner in der Senderübersicht zentrieren (@polttopull006)
+ - korrekte Anzeige des Status der Wiedergabetaste, wenn ein Sender gelöscht wird (@dustin23)
+ - korrekte Verarbeitung HTML-kodierter Metadaten (@gege)

@@ -1,0 +1,7 @@
+# v4.1.6 - Modern Love
+
+**2023-07-10**
+
+- démoslle unha volta ao xeito de escribir o enderezo URL nas buscas
+- nova opción "Usar Buffer máis Grande" nos axustes
+- actualizadas as traducións

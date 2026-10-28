@@ -1,0 +1,5 @@
+# v4.3.4 - The Width of a Circle
+
+**2025-11-13**
+- updated translations
+- fixed a bug where Transistor did not store the new content-type when the streaming address of a station was changed

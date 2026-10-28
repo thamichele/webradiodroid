@@ -1,0 +1,6 @@
+# v3.1.2 - Juan, Sólo Estoy Bailando
+
+**2019-01-23**
+
+- corrección de errores
+- traducciones actualizadas

@@ -1,0 +1,11 @@
+# v4.1.8 - Modern Love
+
+**2024-04-19**
+- novo idioma: Interlingua
+- traducións actualizadas
+- arranxo de problemiñas:
+ - mostra taxa de bits na busca de emisoras (@SecT0uch)
+ - o temporizador sigue contando ao cambiar de emisora
+ - centrar o divisor na tarxeta que mostra a emisora (@polttopull006)
+ - mostrar correctamente o botón de reprodución ao eliminar unha emisora (@dustin23)
+ - xestionar correctamente os metadatos html (@gege)

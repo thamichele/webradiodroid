@@ -1,0 +1,4 @@
+# v4.2.1 - Ashes to Ashes
+
+**2024-10-08**
+- removes unneeded (and unwanted) Play Services dependency from Transistor

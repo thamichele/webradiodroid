@@ -1,0 +1,6 @@
+# v3.2.1 - Life on Mars?
+
+**2019-07-25**
+
+- tłumaczenie na język czeski
+- funkcja metadanych „teraz odtwarzane” lepiej wyświetla znaki niełacińskie (mniej nieczytelnego bełkotu)

@@ -1,0 +1,4 @@
+# v4.2.6 – Ashes to Ashes
+
+**22.07.2025**
+- behebt einen Absturz beim ersten Start, der seltsamerweise zuvor nie entdeckt wurde

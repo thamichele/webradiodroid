@@ -1,0 +1,6 @@
+# v4.3.7 - The Width of a Circle
+
+**2026-06-24**
+
+- aktualizovány překlady
+- aktualizovány softwarové knihovny

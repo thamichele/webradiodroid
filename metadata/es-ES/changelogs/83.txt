@@ -1,0 +1,5 @@
+# v4.0.12 - Andy Warhol
+
+**2021-03-10**
+
+- corrige la reproducción rota desde el acceso directo de la pantalla de inicio

@@ -1,0 +1,9 @@
+# versioon 4.2.0 - Ashes to Ashes (väljalase #100)
+
+**2024-10-04**
+- tegime korda jaamade vahetamise (teavitusest ja kõrvaklappide nuppudest)
+- tegime korda kuulamise jätkamise teavitusest
+- väikesed veaparandused
+- uus tõlge: iiri keel (THX Aindriú Mac Giolla Eoin)
+- uus tõlge: kõmri keel (THX Aled Powell)
+- tõlgete uuendused

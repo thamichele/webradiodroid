@@ -1,0 +1,7 @@
+# v3.2.0 - Life on Mars?
+
+**2019-06-26**
+
+- tłumaczenie włoskie
+- lista stacji radiowych ma większe ikony
+- kolor ikony głównej aplikacji został zmieniony na czerwony

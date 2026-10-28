@@ -1,0 +1,8 @@
+# v4.0.5 - Andy Warhol
+
+**2020-07-29**
+
+- se corrige la búsqueda en dispositivos en los que el idioma es el griego
+- traducciones actualizadas
+
+La actualización v4 fue bastante grande, encontrar más información: https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

@@ -1,0 +1,5 @@
+# v4.0.10 - Andy Warhol
+
+**2021-01-01**
+
+- se corrige un error en la función Actualizar estaciones, que podía dejar a Transistor en un estado cansado, en el que sólo se podía jugar a una estación (véase también: https://codeberg.org/y20k/transistor/issues/291)

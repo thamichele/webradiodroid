@@ -1,0 +1,7 @@
+# v4.0.17 - Andy Warhol
+
+**2021-11-05**
+
+- le thema de app ora usa "colores dynamic" (Material You) sur Android 12
+- correctiones de defectos minor
+- traductiones actualisate

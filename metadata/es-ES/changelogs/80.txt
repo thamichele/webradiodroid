@@ -1,0 +1,8 @@
+# v4.0.8 - Andy Warhol
+
+**2020-11-25**
+
+- Versión en idioma hebreo
+- Traducciones actualizadas
+- Se corrigió la visualización del logotipo de la estación en Android Auto
+- Se corrigió la selección manual del logotipo del canal en Android 11

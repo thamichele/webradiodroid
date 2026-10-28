@@ -1,0 +1,4 @@
+# v4.3.5 - The Width of a Circle
+
+**2025-11-16**
+- fixed a bug where renaming a station would cause the app to crash (THX Ely)

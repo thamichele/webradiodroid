@@ -1,0 +1,8 @@
+# v4.0.8 - Andy Warhol
+
+**2020-11-25**
+
+- version in lingua hebree
+- traductiones actualisate
+- fixate le presentation de imagine de station in Android Auto
+- fixate le selection manuan del imagine de station sur Android 11

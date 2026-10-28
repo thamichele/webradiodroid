@@ -1,0 +1,6 @@
+# v4.3.6 - Leithead Ciorcail
+
+**2026-02-14**
+
+- aistriúcháin nuashonraithe
+- leabharlanna bogearraí nuashonraithe

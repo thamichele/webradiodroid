@@ -1,0 +1,12 @@
+# v4.0.0 - Andy Warhol
+
+**2020-07-03**
+
+- is nuashonrú ollmhór é seo
+- Athscríobhadh trasraitheoir ón tús in Kotlin
+- cúpla gné nua atá dírithe ar úsáideoirí:
+-- cuardach stáisiúin raidió (trí radio-browser.info)
+-- is féidir leat stáisiún raidió a mharcáil mar an ceann is fearr leat
+-- scáileán Socruithe tiomnaithe
+
+Tuilleadh eolais: https://codeberg.org/y20k/transistor/issues/251

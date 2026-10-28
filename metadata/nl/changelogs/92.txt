@@ -1,0 +1,10 @@
+# v4.1.2 - Modern Love
+
+**2023-01-03**
+
+Opmerking: In deze update is de afspeelachtergronddienst volledig herzien. Transistor gebruikt nu media3 (https://developer.android.com/jetpack/androidx/releases/media3). Ik heb de herbouw gebruikt om me te ontdoen van "speciale oplossingen" die ongebruikelijk zijn voor mediaspelers op het Android platform: Er is geen annuleringsknop (x) meer in de melding. Zenders op het beginscherm starten Transistor niet meer op de achtergrond. Sorry als u een van deze functies waardeerde. Ik vind het belangrijk dat Transistor zich platform-conform gedraagt. Dit maakt het onderhoud van mijn favoriete radio-app veel gemakkelijker.
+
+Veranderingen in deze versie:
+- Transistor gebruikt de media3-bibliotheek
+- vertalingen bijgewerkt
+- de functie taalvoorkeur per app inschakelen (Android 13)

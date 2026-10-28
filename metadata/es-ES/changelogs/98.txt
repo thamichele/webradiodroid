@@ -1,0 +1,11 @@
+# v4.1.8 - Modern Love
+
+**2024-04-19**
+- nuevo idioma: Interlingua
+- traducciones actualizadas
+- pequeñas correcciones de errores:
+ - mostrar bitrate en la búsqueda de emisoras (@SecT0uch)
+ - el temporizador de apagado sigue funcionando cuando se cambia de emisora
+ - centrar el divisor en el diseño de la tarjeta de estación (@polttopull006)
+ - mostrar correctamente el estado del botón de reproducción cuando se borra una emisora (@dustin23)
+ - manejar los metadatos codificados en html (@gege)

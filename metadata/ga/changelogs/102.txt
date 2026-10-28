@@ -1,0 +1,7 @@
+# v4.2.2 - Luaithreach go luaithreach
+
+**2024-11-01**
+- socraíonn sé fabht taispeána san eilimint imreora
+- athraíodh beochan an chnaipe súgartha
+- aistriúcháin nua curtha leis: Eastóinis, Hiondúis, Coirdis (Go raibh maith agat: @jrthwlate, @Scrambled777, @halbast)
+- aistriúcháin nuashonraithe

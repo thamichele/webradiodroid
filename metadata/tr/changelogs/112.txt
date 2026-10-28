@@ -1,0 +1,4 @@
+# v4.3.5 - Dairenin Genişliği
+
+**16 Kasım 2025**
+- Bir istasyonun adını değiştirmenin uygulamanın çökmesine neden olduğu bir hata düzeltildi (Teşekkürler Ely)

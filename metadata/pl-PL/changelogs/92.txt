@@ -1,0 +1,10 @@
+# v4.1.2 - Modern Love
+
+**2023-01-03**
+
+Uwaga: W tej aktualizacji usługa odtwarzania w tle została całkowicie zmieniona. Transistor używa teraz media3 (https://developer.android.com/jetpack/androidx/releases/media3). Użyłem przebudowy, aby pozbyć się „specjalnych rozwiązań”, które są nietypowe dla odtwarzaczy multimedialnych na platformie Android: Nie ma już przycisku anulowania (x) w powiadomieniu. Stacje radiowe na ekranie głównym nie uruchamiają już Transistor w tle. Przepraszam, jeśli doceniłeś jedną z tych funkcji. Ważne jest dla mnie, aby Transistor zachowywał się zgodnie z platformą. Dzięki temu utrzymanie mojej ulubionej aplikacji radiowej jest znacznie łatwiejsze.
+
+Zmiany w tej wersji:
+- Transistor używa biblioteki odtwarzania media3
+- zaktualizowane tłumaczenia
+- włącz funkcję preferencji języka dla poszczególnych aplikacji (Android 13)

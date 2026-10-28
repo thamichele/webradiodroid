@@ -1,0 +1,9 @@
+# v4.1.7 - Modern Love
+
+**2023-10-22**
+- przerobiono okno dialogowe Dodaj nową stację, aby działało z plikami m3u i pls (lokalnymi i zdalnymi)
+- zaktualizowano zestaw ikon (symbole materiałów)
+- zaktualizowano ikonę aplikacji
+- nowe tłumaczenia: bułgarski, fiński, koreański
+- zaktualizowano tłumaczenia
+- drobne poprawki błędów

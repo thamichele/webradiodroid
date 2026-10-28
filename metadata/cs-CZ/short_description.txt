@@ -1,0 +1,1 @@
+Transistor je aplikace pro poslech rádiových stanic přes internet.

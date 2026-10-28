@@ -1,0 +1,7 @@
+# v4.1.6 - Modern Love
+
+**2023-07-10**
+
+- re-worked the input option for direct streaming URLs via the search dialog
+- new "Use Larger Buffer" option in settings
+- updated translations

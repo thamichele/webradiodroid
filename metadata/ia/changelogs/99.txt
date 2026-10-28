@@ -1,0 +1,5 @@
+# v4.1.9 - Modern Love
+
+**2024-05-03**
+- metadatos de reproduction in curso pro fluxos OGG e HLS 
+- traductiones actualisate

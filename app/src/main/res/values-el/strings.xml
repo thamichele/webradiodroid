@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Το Τρανζιστοράκι</string>
+    <!-- please do not translate app_name - transcription into different alphabet types is fine though -->
+    <string name="shortcut_last_station_short_label">Τελευταίος σταθμός</string>
+    <string name="shortcut_last_station_long_label">Παίξε τον τελευταίο σταθμό</string>
+    <string name="shortcut_last_station_disabled_message">Η συντόμευση για την αναπαραγωγή του τελευταίου σταθμού έχει απενεργοποιηθεί.</string>
+    <string name="descr_app_icon">Εικονίδιο εφαρμογής που απεικονίζει παλιό ραδιόφωνο</string>
+    <string name="player_sheet_h2_station_metadata">Παίζει Τώρα</string>
+    <string name="player_sheet_h2_stream_url">Ο δεσμός της ροής</string>
+    <string name="dialog_generic_button_okay">Εντάξει</string>
+    <string name="dialog_generic_button_cancel">Άκυρο</string>
+    <string name="dialog_error_message_default">Συνέβη ένα σφάλμα</string>
+    <string name="dialog_rename_station_input_hint">Προσθήκη ενός νέου ονόματος</string>
+    <string name="toast_message_shortcut_created">Δημιουργήθηκε συντόμευση.</string>
+    <string name="toast_message_shortcut_not_created">Δεν δημιουργήθηκε συντόμευση. Αυτή η συσκευή δεν επιτρέπει τη δημιουργία συντομεύσεων.</string>
+    <string name="toast_message_copied_to_clipboard">Ο δεσμός της ροής αντιγράφηκε στο πρόχειρο.</string>
+    <string name="toast_message_no_image_picker">Δεν υπάρχει διαθέσιμη εφαρμογή επιλογής εικόνας. Παρακαλώ εγκαταστήστε μια εφαρμογή Γκαλερί.</string>
+    <string name="notification_play">Παίξε</string>
+    <string name="notification_stop">Σταμάτημα</string>
+    <string name="dialog_generic_details_button">Εμφάνιση των λεπτομερειών</string>
+    <string name="dialog_find_station_button_add">Προσθήκη</string>
+    <string name="dialog_error_title_no_network">Εκτός σύνδεσης</string>
+    <string name="fragment_settings_title">Ρυθμίσεις</string>
+</resources>

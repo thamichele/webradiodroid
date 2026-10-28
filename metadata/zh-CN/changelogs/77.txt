@@ -1,0 +1,8 @@
+#v4.0.5-安迪·沃霍尔
+
+**2020-07-29**
+
+- 修复了语言设置为希腊语的设备上的搜索问题
+- 更新翻译
+
+v4更新相当大，了解更多：https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

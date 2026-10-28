@@ -1,0 +1,8 @@
+# v4.1.1 - Modern Love
+
+**2022-05-12**
+
+- nove option pro facer un copia de securitate (e restaurar) tote le stationes de radio, incluse le imagines
+- correction pro le imagine indistincte del station predefinite
+- correction al lingua indonesian
+- traductiones actualisate

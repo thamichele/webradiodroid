@@ -1,0 +1,11 @@
+# v4.1.8 - Modern Love
+
+**2024-04-19**
+- new language: Interlingua
+- updated translations
+- small bug fixes:
+ - show bitrate in station search (@SecT0uch)
+ - sleep timer keeps running when station is changed
+ - center the divider in the station card layout (@polttopull006)
+ - correctly display the playback button state when a station is deleted (@dustin23)
+ - handle html encoded metadata correctly (@gege)

@@ -1,0 +1,8 @@
+# v4.0.8 - Andy Warhol
+
+**2020-11-25**
+
+- Leagan teanga Eabhrais
+- aistriúcháin nuashonraithe
+- Taispeántas íomhá stáisiún Android Auto seasta
+- roghnú íomhá stáisiúin láimhe ar Android 11 seasta

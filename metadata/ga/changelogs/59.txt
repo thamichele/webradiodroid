@@ -1,0 +1,6 @@
+# v3.0.9 - Ó! Maith sibh Rudaí
+
+**2018-08-08**
+
+- Is féidir le taispeáint meiteashonraí carachtair UTF-8 agus Latin1 a láimhseáil
+- aistriúcháin nuashonraithe

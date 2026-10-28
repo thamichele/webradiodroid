@@ -1,0 +1,6 @@
+# v4.1.5 - Modern Love
+
+**2023-03-17**
+
+- meliorate le gestion de imagine de copertura de station
+- traductiones actualisate

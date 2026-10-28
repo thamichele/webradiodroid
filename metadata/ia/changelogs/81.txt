@@ -1,0 +1,5 @@
+# v4.0.10 - Andy Warhol
+
+**2021-01-01**
+
+- corrige un defecto in le function de Actualisar Station, que poteva lassar Transistor in un stato estranie, ubi un sol station es poteva reproducer (vide etiam: https://codeberg.org/y20k/transistor/issues/291)

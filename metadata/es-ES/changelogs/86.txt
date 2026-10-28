@@ -1,0 +1,7 @@
+# v4.0.15 - Andy Warhol
+
+**2021-07-28**
+
+- nuevo idioma: frisio
+- traducciones actualizadas
+- Transistor ahora deja de almacenar inmediatamente cuando se detiene la reproducción

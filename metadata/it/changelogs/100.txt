@@ -1,0 +1,8 @@
+# v4.2.0 - Ashes to Ashes (Versione n. 100)
+**04/10/2024**
+- Corretto il cambio di stazione (pulsanti di notifica e cuffie)
+- Corretto il ripristino della riproduzione dalla notifica
+- Correzioni di bug minor
+- Nuova traduzione: irlandese (grazie ad Aindriú Mac Giolla Eoin)
+- Nuova traduzione: gallese (grazie ad Aled Powell)
+- Traduzioni aggiornate

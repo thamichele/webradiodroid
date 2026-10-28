@@ -1,0 +1,11 @@
+# v4.1.8 - An Nua-Ghrá
+
+**2024-04-19**
+- teanga nua: Interlingua
+- aistriúcháin nuashonraithe
+- ceartúcháin bheaga ar fhabht:
+ - taispeáin ráta giotán i gcuardach stáisiúin (@SecT0uch)
+ - coinníonn an t-amadóir codlata ag rith nuair a athraítear an stáisiún
+ - lár an roinnteora i leagan amach an chárta stáisiúin (@polttopull006)
+ - taispeáin i gceart an staid cnaipe athsheinm nuair a scriostar stáisiún (@dustin23)
+ - meiteashonraí ionchódaithe html a láimhseáil i gceart (@gege)

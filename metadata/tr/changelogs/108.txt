@@ -1,0 +1,5 @@
+# v4.3.1 - Dairenin Genişliği
+
+**10 Ekim 2025**
+- geçerli F-Droid derleme süreciyle uyumluluğu korumak için gradlePluginVersion değeri 8.11.1 olarak ayarlandı
+- tek renkli uygulama simgesi düzeltildi

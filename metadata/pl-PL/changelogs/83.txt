@@ -1,0 +1,5 @@
+# v4.0.12 - Andy Warhol
+
+**2021-03-10**
+
+- naprawiono zepsute odtwarzanie ze skrótu ekranu głównego

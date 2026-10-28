@@ -1,0 +1,5 @@
+# v4.3.4 - Dairenin Genişliği
+
+**13 Kasım 2025**
+- çeviriler güncellendi
+- bir istasyonun yayın adresi değiştirildiğinde Transistor'un yeni içerik türünü kaydetmemesi sorunu düzeltildi

@@ -1,0 +1,7 @@
+# v4.2.4 - Ashes to Ashes
+
+**2025-07-17**
+- fixes a bug with live365.com radio stations
+- updated libraries
+- added Hungarian, Romanian and Tamil translations (thx @gczdvd, @ygorigor and @TamilNeram)
+- updated translations (thx to all weblate translators)

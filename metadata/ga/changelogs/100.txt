@@ -1,0 +1,9 @@
+# v4.2.0 - Luaithreach go luaithreach (Scaoileadh #100)
+
+**2024-10-04**
+- socraíonn sé athrú stáisiúin (cnaipí fógra agus cluasáin)
+- socraíonn sé athsheinm ón bhfógra
+- mioncheartúcháin ar fhabht
+- aistriúchán nua: Gaeilge (THX Aindriú Mac Giolla Eoin)
+- aistriúchán nua: Breatnais (THX Aled Powell)
+- aistriúcháin nuashonraithe

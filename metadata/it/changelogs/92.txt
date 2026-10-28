@@ -1,0 +1,10 @@
+# v4.1.2 - Modern Love
+
+**2023-01-03**
+
+Nota: in questo aggiornamento il servizio in background per la riproduzione è stato completamente rivisto. Transistor ora utilizza media3 (https://developer.android.com/jetpack/androidx/releases/media3). Ho sfruttato la riscrittura per eliminare alcune "soluzioni speciali" poco comuni per i lettori multimediali su Android: non c'è più il pulsante di annullamento (x) nella notifica. Le stazioni radio sulla schermata Home non avviano più Transistor in background. Mi dispiace se apprezzavi una di queste funzionalità. Per me è importante che Transistor si comporti in modo conforme alla piattaforma. Questo rende molto più semplice la manutenzione della mia app radio preferita.
+
+**Modifiche in questa versione:**
+- Transistor utilizza la libreria di riproduzione media3
+- traduzioni aggiornate
+- abilitata la funzionalità di preferenza lingua per singola app (Android 13)

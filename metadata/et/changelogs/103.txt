@@ -1,0 +1,5 @@
+# versioon 4.2.3 - Ashes to Ashes
+
+**2025-02-10**
+- muutsime alusplatvormi (targetSdkVersion) versiooniks 35 (Android 15)
+- uuendasime tõlkeid

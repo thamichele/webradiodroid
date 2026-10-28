@@ -1,0 +1,9 @@
+# v4.0.3 - Andy Warhol
+
+**2020-07-22**
+
+- Android Auto가 마지막으로 재생된 스테이션의 재생을 재개합니다
+- 최신 번역 및 새로운 번역
+- 작은 버그 수정 몇 개
+
+v4 업데이트가 꽤 컸는데, 자세히 알아보세요: https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

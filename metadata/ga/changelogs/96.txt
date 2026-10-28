@@ -1,0 +1,7 @@
+# v4.1.6 - An Nua-Ghrá
+
+**2023-07-10**
+
+- d’athoibrigh an rogha ionchuir le haghaidh URLanna sruthú díreach tríd an dialóg chuardaigh
+- rogha nua "Úsáid Maolán Níos Mó" i socruithe
+- aistriúcháin nuashonraithe

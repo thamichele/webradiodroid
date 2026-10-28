@@ -1,0 +1,5 @@
+# v4.3.1 - Leithead Ciorcail
+
+**2025-10-10**
+- socraíodh gradlePluginVersion go 8.11.1 chun fanacht comhoiriúnach leis an bpróiseas tógála reatha F-Droid
+- socraíodh an deilbhín aip monacrómach

@@ -1,0 +1,12 @@
+# v4.0.0 - Andy Warhol
+
+**2020-07-03**
+
+- esta es una gran actualización
+- Transistor ha sido reescrito desde cero en Kotlin
+- un par de nuevas características para el usuario:
+-- búsqueda de emisoras de radio (vía radio-browser.info)
+-- puedes marcar una emisora de radio como favorita
+-- una pantalla de configuración dedicada
+
+Más información: https://codeberg.org/y20k/transistor/issues/251

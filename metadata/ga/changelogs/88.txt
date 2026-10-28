@@ -1,0 +1,7 @@
+# v4.0.17 - Andy Warhol
+
+**2021-11-05**
+
+- úsáideann téama app anois "dathanna dinimiciúla" (Ábhar Tú) ar Android 12
+- ceartúcháin bheaga ar fhabht
+- aistriúcháin nuashonraithe

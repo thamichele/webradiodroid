@@ -1,0 +1,6 @@
+# versioon 4.1.5 - Modern Love
+
+**2023-03-17**
+
+- parandasime veebiraadiojaamade kaanepiltide kuvamist
+- uuendasime tõlkeid

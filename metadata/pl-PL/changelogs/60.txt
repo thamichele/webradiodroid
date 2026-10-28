@@ -1,0 +1,6 @@
+# v3.0.10 - Oh! You Pretty Things
+
+**2018-09-27**
+
+- Wersja w języku arabskim
+- Ulepszona obsługa TalkBack

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Customizations to the base theme -->
+    <style name="AppTheme" parent="AppTheme.Base">
+
+        <!-- show light status bar -->
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!--        <item name="mediaRouteTheme">@style/CustomMediaRouterTheme</item>-->
+
+    </style>
+
+</resources>

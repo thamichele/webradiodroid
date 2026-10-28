@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<paths>
+    <!-- Represents files in the root of external storage. Same as Context#getExternalFilesDir(String) Context.getExternalFilesDir(null) -->
+    <external-files-path name="files" path="." />
+</paths>

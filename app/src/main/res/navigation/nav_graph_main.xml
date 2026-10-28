@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/player_destination">
+
+    <!-- PLAYER -->
+    <!-- player_destination has no label attribute because it is not needed for the navigation -->
+    <fragment
+        android:id="@+id/player_destination"
+        android:name="org.y20k.transistor.MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_player_destination_to_settings_destination"
+            app:destination="@id/settings_destination"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+
+    <!-- SETTINGS -->
+    <fragment
+        android:id="@+id/settings_destination"
+        android:name="org.y20k.transistor.SettingsFragment"
+        android:label="@string/fragment_settings_title"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation>

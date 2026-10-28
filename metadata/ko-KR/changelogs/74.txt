@@ -1,0 +1,8 @@
+# v4.0.2 - Andy Warhol
+
+**2020-07-08**
+
+- 스트림 URL을 가져오는 버그 수정(스테이션 업데이트가 필요할 수 있음)
+- Android Auto용 메타데이터 디스플레이를 가져옵니다
+
+v4 업데이트가 꽤 컸는데, 자세히 알아보세요: https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

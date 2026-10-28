@@ -1,0 +1,9 @@
+# v4.2.0 - Cenizas a las cenizas (Versión #100)
+
+**2024-10-04**
+- Corrige la conmutación de estaciones (botones de notificación y auriculares)
+- corrige la reanudación de reproducción desde la notificación
+- correcciones de errores menores
+- nueva traducción: irlandés (THX Aindriú Mac Giolla Eoin)
+- nueva traducción: Galés (THX Aled Powell)
+- traducciones actualizadas

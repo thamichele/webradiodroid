@@ -1,0 +1,8 @@
+# v4.1.0 - Grá Nua-Aimseartha
+
+**2022-03-08**
+
+- ollchóiriú dearaidh a bhaineann úsáid as eilimintí agus dathanna "Dearadh Ábhar 3".
+- fógra athsheinm ar Android 11 a shocrú
+- Leagan teanga Gailísis
+- aistriúcháin nuashonraithe

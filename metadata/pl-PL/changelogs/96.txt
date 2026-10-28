@@ -1,0 +1,7 @@
+# v4.1.6 - Modern Love
+
+**2023-07-10**
+
+- przerobiono opcję wprowadzania dla bezpośrednich adresów URL strumieniowych za pomocą okna dialogowego wyszukiwania
+- nowa opcja „Użyj większego bufora” w ustawieniach
+- zaktualizowano tłumaczenia

@@ -1,0 +1,7 @@
+# V4.0.4 - ஆண்டி வார்ஓல்
+
+ ** 2020-07-27 **
+
+ - மேம்படுத்தப்பட்ட ச்க்ரோலிங் செயல்திறன்
+
+ வி 4 புதுப்பிப்பு மிகவும் பெரியது, மேலும் அறியவும்: https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-us/changelogs/72.txt

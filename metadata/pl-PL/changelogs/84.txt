@@ -1,0 +1,6 @@
+# v4.0.13 - Andy Warhol
+
+**2021-03-16**
+
+- poprawia wyświetlanie „aktualnie odtwarzane”
+- naprawia rzadki błąd awarii

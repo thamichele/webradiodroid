@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    strings.xml
+    Launcher name of the debug build.
+-->
+<resources>
+    <string name="app_name_debug" translatable="false">Transistor (debug)</string>
+</resources>

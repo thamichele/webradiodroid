@@ -1,0 +1,5 @@
+# v4.3.1 - The Width of a Circle
+
+**2025-10-10**
+- gradlePluginVersion nastavena na 8.11.1 pro udržení kompatibility s aktuálním procesem sestavování F-Droid
+- opravena monochromnatická ikona aplikace

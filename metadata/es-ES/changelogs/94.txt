@@ -1,0 +1,7 @@
+# v4.1.4 - Modern Love
+
+**2023-03-01**
+
+- Corregida la reproducción M3U8 / HLS
+- Se ha añadido una variante monocroma del icono de la aplicación.
+- la pérdida de red se maneja mejor

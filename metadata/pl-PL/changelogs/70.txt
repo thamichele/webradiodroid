@@ -1,0 +1,6 @@
+# v3.2.3 - Life on Mars?
+
+**2020-02-04**
+
+- Wersja w języku indonezyjskim
+- drobne poprawki błędów

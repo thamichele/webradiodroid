@@ -1,0 +1,5 @@
+# v4.3.4 - The Width of a Circle
+
+**2025-11-13**
+- actualizadas as traducións
+- arranxo do problema que facía que Transistor non gardase o novo content-type cando cambia o enderezo do fluxo da emisora

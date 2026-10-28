@@ -1,0 +1,8 @@
+# v4.3.0 - Leithead Ciorcail
+
+**2025-10-08**
+- seinnteoir snámhach nua
+- socrú nua chun dath dinimiciúil a chumasú (Android 12+)
+- luchtú íomhá feabhsaithe i liosta stáisiún
+- comhoiriúnacht Android 16 (SDK 36)
+- aistriúcháin nuashonraithe

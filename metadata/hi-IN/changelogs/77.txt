@@ -1,0 +1,8 @@
+#v4.0.5 - एंडी वारहोल
+
+**2020-07-29**
+
+- उन उपकरणों पर खोज को ठीक करता है, जिन पर भाषा ग्रीक पर सेट है
+- अद्यतन अनुवाद
+
+V4 अपडेट काफी बड़ा था, और अधिक जानें: https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

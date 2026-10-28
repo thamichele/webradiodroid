@@ -1,0 +1,10 @@
+# v4.1.2 - Modern Love
+
+**3 Ocak 2023**
+
+Not: Bu güncellemede oynatma arka plan hizmeti tamamen yenilendi. Transistor artık media3 (https://developer.android.com/jetpack/androidx/releases/media3) kullanıyor. Android platformundaki medya oynatıcılar için yaygın olmayan "özel çözümlerden" kurtulmak için yeniden derledim: Artık bildirimde iptal düğmesi (x) yok. Ana Ekran radyo istasyonları artık Transistor'u arka planda başlatmıyor. Bu özelliklerden birini kullanıyorsanız üzgünüm. Transistor'un platform uyumlu davranması benim için önemli. Bu, en sevdiğim radyo uygulamasını geliştirmeyi sürdürmeyi çok daha kolay hale getiriyor.
+
+Bu sürümdeki değişiklikler:
+- Transistor, media3 oynatım kütüphanesini kullanıyor
+- çeviriler güncellendi
+- uygulama başına dil tercihi özelliği etkinleştirildi (Android 13)

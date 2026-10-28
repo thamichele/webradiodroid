@@ -1,0 +1,7 @@
+# versioon 4.2.2 - Ashes to Ashes
+
+**2024-11-01**
+- parandasime meediamängija kuvamisvea
+- muutsime meediamängija esitusnupu animatsiooni
+- lisasime uued tõlked: eesti, hindi ja kurdi keeled (täname teid: @jrthwlate, @Scrambled777, @halbast)
+- uuendasime tõlkeid

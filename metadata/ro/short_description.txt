@@ -1,0 +1,1 @@
+Transistor este o aplicație pentru ascultarea posturilor de radio prin internet.

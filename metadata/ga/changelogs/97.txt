@@ -1,0 +1,9 @@
+# v4.1.7 - Grá Nua-Aimseartha
+
+**2023-10-22**
+- athoibrigh an dialóg Cuir Stáisiún Nua leis chun oibriú le comhaid m3u agus pls (áitiúil agus iargúlta)
+- nuashonraigh an tacar deilbhíní (Siombailí Ábhar)
+- nuashonraigh an deilbhín app
+- aistriúcháin nua: Bulgáiris, Fionlainnis, Cóiréis
+- aistriúcháin nuashonraithe
+- ceartúcháin bheaga ar fhabht

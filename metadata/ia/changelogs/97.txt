@@ -1,0 +1,9 @@
+# v4.1.7 - Modern Love
+
+**2023-10-22**
+- refacite le dialogo Adder Nove Stationes pro travaliar con files m3u e pls (local e remote)
+- actualisate le set de icones (Material Symbols)
+- actualisate le icone de application
+- nove traductiones: Bulgare, Finnese, Corean
+- traductiones actualisate
+- correctiones de defectos minor

@@ -1,0 +1,7 @@
+# v4.0.15 - Andy Warhol
+
+**2021-07-28**
+
+- nove lingua: Frison
+- traductiones actualisate
+- Transistor ora stoppa le carga in buffer automaticamente, quando le reproduction es stoppate

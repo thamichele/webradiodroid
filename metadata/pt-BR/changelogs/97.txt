@@ -1,0 +1,9 @@
+# v4.1.7 - Modern Love
+
+**2023-10-22**
+- retrabalho da caixa de diálogo Adicionar Nova Estação para trabalhar com arquivos m3u e pls (local e remoto)
+- atualização do conjunto de ícones (Material Symbols)
+- atualização do ícone do aplicativo
+- novas traduções: Búlgaro, finlandês, coreano
+- traduções atualizadas
+- pequenas correções de bugs

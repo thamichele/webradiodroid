@@ -1,0 +1,10 @@
+# v4.1.2 - Modern Love
+
+**2023-01-03**
+
+Nota: En esta actualización se ha revisado el servicio de reproducción en segundo plano. Transistor utiliza ahora media3 (https://developer.android.com/jetpack/androidx/releases/media3). He utilizado la reconstrucción para deshacerme de "soluciones especiales" que son poco comunes para los reproductores en Android: no hay botón de cancelación (x) en la notificación. Las emisoras de radio de la pantalla de inicio ya no inician Transistor en segundo plano. Lo siento si apreciabas alguna de estas características. Es importante que Transistor se comporte conforme a la plataforma. Esto hace que mantener mi aplicación de radio favorita sea mucho más fácil.
+
+Cambios en esta versión:
+- Transistor utiliza la biblioteca de reproducción media3
+- traducciones actualizadas
+- habilitar la función de preferencia de idioma (Android 13)

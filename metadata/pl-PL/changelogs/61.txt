@@ -1,0 +1,5 @@
+# v3.0.11 - Oh! You Pretty Things
+
+**2018-10-01**
+
+- Rozwiązuje poważny problem z połączeniami opartymi na protokole http w systemie Android 9

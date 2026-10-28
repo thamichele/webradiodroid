@@ -1,0 +1,11 @@
+# v4.1.8 - Modern Love
+
+**2024-04-19**
+- nowy język: Interlingua
+- zaktualizowane tłumaczenia
+- drobne poprawki błędów:
+- wyświetlanie bitrate'u w wyszukiwaniu stacji (@SecT0uch)
+- timer uśpienia działa, gdy stacja jest zmieniana
+- wyśrodkowanie separatora w układzie karty stacji (@polttopull006)
+- prawidłowe wyświetlanie stanu przycisku odtwarzania, gdy stacja jest usuwana (@dustin23)
+- prawidłowa obsługa metadanych zakodowanych w formacie html (@gege)

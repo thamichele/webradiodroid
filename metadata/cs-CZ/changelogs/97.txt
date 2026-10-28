@@ -1,0 +1,9 @@
+# v4.1.7 - Modern Love
+
+**2023-10-22**
+- reworked the Add New Station dialog to work with m3u and pls files (local and remote)
+- updated the icons set (Material Symbols)
+- updated the app icon
+- new translations: Bulgarian, Finnish, Korean
+- updated translations
+- small bug fixes

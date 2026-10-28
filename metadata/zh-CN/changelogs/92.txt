@@ -1,0 +1,10 @@
+# v4.1.2 - 现代爱情
+
+**2023-01-03**
+
+注意：在此更新中，播放后台服务已被完全修改。Transistor现在使用media3播放库(https://developer.android.com/jetpack/androidx/releases/media3)。我通过重建来摆脱安卓平台媒体播放器少见的“特殊解决方案”：通知中不再有取消按钮（x）。主屏幕广播电台不再后台启动Transistor。如果你喜欢这些特性，我很抱歉。因为对我来说，Transistor的行为符合平台要求非常重要。这使得维护我最喜欢的收音机app变得更加容易。
+
+此版本中的更改：
+- Transistor使用media3播放库
+- 更新翻译
+- 支持指定app的语言偏好功能（Android 13）

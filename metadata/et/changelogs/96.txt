@@ -1,0 +1,7 @@
+# versioon 4.1.6 - Modern Love
+
+**2023-07-10**
+
+- tegime ümber veebiaadresside lisamise otsinguvaatest
+- uus „Kasuta suuremat puhvrit“ valik seadistustes
+- uuendatud tõlked

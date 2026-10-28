@@ -1,0 +1,6 @@
+# v3.0.10 -
+
+*2018-09-27* Sitemap
+
+- Versi bahasa Arab
+- meningkatkan dukungan TalkBack

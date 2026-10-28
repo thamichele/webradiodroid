@@ -1,0 +1,12 @@
+# v4.0.0 - Andy Warhol
+
+**2020-07-03**
+
+- 이것은 엄청난 업데이트입니다
+- Transistor가 Kotlin에서 처음부터 다시 프로그래밍 되었습니다
+- 몇 가지 새로운 사용자 대면 기능:
+-- 라디오 방송국 검색 (radio-browser.info 경유)
+-- 당신은 라디오 방송국을 즐겨찾기로 표시할 수 있다
+-- 전용 설정 화면
+
+더 알아보기: https://codeberg.org/y20k/transistor/issues/251

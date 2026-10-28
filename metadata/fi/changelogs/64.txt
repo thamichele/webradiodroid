@@ -1,0 +1,8 @@
+# v3.1.0 - John, Minä ainoastaan tanssin
+
+**2018-11-19**
+
+- uusi sovelluskuvake (kiitos @munadikieh)
+- radio-browser.info linkkien käsittelyn parantaminen
+- käyttöliittymä uudella värimaailmalla
+- bugien korjausta

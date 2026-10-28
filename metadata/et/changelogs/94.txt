@@ -1,0 +1,7 @@
+# versioon 4.1.4 - Modern Love
+
+**2023-03-01**
+
+- M3U8 / HLS taasesitus toimib jälle
+- lisasime rakenduse mustvalge ikooni
+- võrguühenduse kadumisel haldame olukorda paremini

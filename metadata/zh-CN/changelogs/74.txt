@@ -1,0 +1,8 @@
+# v4.0.2 - 安迪·沃霍尔
+
+**2020-07-08**
+
+- 修复了导入流媒体URL时的一个错误（您可能需要更新电台）
+- 恢复Android Auto元数据显示功能
+
+v4更新内容相当丰富，更多信息请访问：https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

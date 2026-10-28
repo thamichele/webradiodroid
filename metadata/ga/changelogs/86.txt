@@ -1,0 +1,7 @@
+# v4.0.15 - Andy Warhol
+
+**2021-07-28**
+
+- teanga nua: Freaslainnis Iartharach
+- aistriúcháin nuashonraithe
+- Stopann an trasraitheoir maolán anois láithreach, nuair a bhíonn athsheinm stoptha

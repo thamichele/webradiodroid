@@ -1,0 +1,4 @@
+# v4.2.5 - Luaithreach go luaithreach
+
+**2025-07-18**
+- socraíonn sé fabht a thug an bugfix live365.com isteach v4.2.4 ¯\_(ツ)_/¯

@@ -1,0 +1,6 @@
+# v4.1.3 - Modern Love
+
+**2023-01-11**
+
+- corrige le visualisation de metadatos in le notificationes
+- corrige le campos de texto vacue in linguas non traducite al 100%

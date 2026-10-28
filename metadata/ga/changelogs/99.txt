@@ -1,0 +1,5 @@
+# v4.1.9 - An Nua-Ghrá
+
+**2024-05-03**
+- meiteashonraí á n-imirt anois le haghaidh sruthanna OGG agus HLS
+- aistriúcháin nuashonraithe

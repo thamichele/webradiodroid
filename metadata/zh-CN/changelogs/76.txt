@@ -1,0 +1,7 @@
+#v4.0.4-安迪·沃霍尔
+
+**2020-07-27**
+
+- 改进了滚动性能
+
+v4更新相当大，了解更多：https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

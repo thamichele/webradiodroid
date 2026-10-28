@@ -1,0 +1,6 @@
+# v3.2.1 - ¿Vida en Marte?
+
+**2019-07-25**
+
+- Traducción al checo
+- la función de metadatos "Ahora suena" muestra mejor los caracteres no latinos (menos galimatías ilegible)

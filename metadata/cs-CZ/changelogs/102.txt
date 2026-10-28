@@ -1,0 +1,7 @@
+# v4.2.2 - Ashes to Ashes
+
+**2024-11-01**
+- fixes a display bug in the player element
+- play button animation changed
+- new translations added: Estonian, Hindi, Kurdish (Thank you: @jrthwlate, @Scrambled777, @halbast)
+- updated translations

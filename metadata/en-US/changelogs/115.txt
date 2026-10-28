@@ -1,0 +1,6 @@
+v4.3.8 - The Width of a Circle
+2026-08-05
+
+- fixed next/previous not switching stations on Android Auto and via media buttons
+- fixed Live365 stations that could not be added or played
+- updated translations

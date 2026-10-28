@@ -1,0 +1,10 @@
+# v4.1.2 - Modern Love
+
+**2023-01-03**
+
+Note: In this update the playback background service has been completely revised. Transistor now uses media3 (https://developer.android.com/jetpack/androidx/releases/media3). I used the rebuild to get rid of "special solutions" that are uncommon for media players on the Android platform: There is no cancel button (x) in the notification anymore. Home Screen radio stations no longer start Transistor in the background. Sorry if you appreciated one of these features. It is important to me that Transistor behaves platform compliant. This makes maintaining my favorite radio app much easier.
+
+Changes in this version:
+- Transistor uses the media3 playback library
+- updated translations
+- enable the per-app language preference feature (Android 13)

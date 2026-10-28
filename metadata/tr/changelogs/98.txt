@@ -1,0 +1,11 @@
+# v4.1.8 - Modern Love
+
+**19 Nisan 2024**
+- yeni dil: İnterlingua
+- çeviriler güncellendi
+- küçük hata düzeltmeleri:
+ - istasyon aramasında bit hızını göster (@SecT0uch)
+ - istasyon değiştirildiğinde uyku zamanlayıcısı çalışmaya devam eder
+ - istasyon kartı düzeninde ayırıcıyı ortala (@polttopull006)
+ - bir istasyon silindiğinde oynatma düğmesi durumunu doğru şekilde görüntüle (@dustin23)
+ - html kodlu üst verileri doğru şekilde işle (@gege)

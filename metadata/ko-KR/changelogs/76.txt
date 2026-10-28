@@ -1,0 +1,7 @@
+# v4.0.4 - Andy Warhol
+
+**2020-07-27**
+
+- 스크롤 성능 향상
+
+v4 업데이트가 꽤 컸습니다. 자세한 내용은 : https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

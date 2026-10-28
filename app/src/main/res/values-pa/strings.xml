@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ਟਰਾਂਜ਼ਿਸਟਰ</string>
+    <!-- please do not translate app_name - transcription into different alphabet types is fine though -->
+    <string name="shortcut_last_station_short_label">ਪਿਛਲਾ ਸਟੇਸ਼ਨ</string>
+    <string name="shortcut_last_station_long_label">ਪਿਛਲਾ ਸਟੇਸ਼ਨ ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string name="shortcut_last_station_disabled_message">ਪਿਛਲਾ ਸਟੇਸ਼ਨ ਸ਼ੁਰੂ ਕਰਨ ਵਾਲਾ ਸ਼ਾਰਟਕਟ ਬੰਦ ਹੈ ।</string>
+    <string name="descr_app_icon">ਪੁਰਾਣਾ ਰੇਡੀਓ ਦਰਸਾਉਂਦਾ ਹੋਇਆ ਐਪ ਆਇਕੌਨ</string>
+    <string name="dialog_rename_station_input_hint">ਇੱਕ ਨਵਾਂ ਨਾਮ ਦਰਜ ਕਰੋ</string>
+    <string name="player_sheet_h2_station_metadata">ਵਰਤਮਾਨ ਵਿੱਚ ਚਲ ਰਿਹਾ ਹੈ</string>
+    <string name="player_sheet_h2_stream_url">ਸਟ੍ਰੀਮਿੰਗ ਲਿੰਕ</string>
+    <string name="dialog_generic_button_okay">ਠੀਕ ਹੈ</string>
+    <string name="dialog_generic_button_cancel">ਰੱਦ ਕਰੋ</string>
+    <string name="dialog_error_message_default">ਇੱਕ ਗਲਤੀ ਆਈ ਹੈ</string>
+
+</resources>

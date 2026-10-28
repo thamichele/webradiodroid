@@ -1,0 +1,6 @@
+v4.3.10 - The Width of a Circle
+2026-10-14
+
+- fixed third-party widgets and launcher media controls that could no longer control playback
+- updated translations
+- updated software libraries

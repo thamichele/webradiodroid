@@ -1,0 +1,8 @@
+# v4.1.1 - Modern Love
+
+**2022-05-12**
+
+- nowa opcja tworzenia kopii zapasowej (i przywracania) wszystkich stacji radiowych, w tym obrazów
+- poprawka rozmazanego obrazu domyślnej stacji
+- poprawka języka indonezyjskiego
+- zaktualizowane tłumaczenia

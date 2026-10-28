@@ -1,0 +1,12 @@
+# v4.0.0 - 安迪·沃霍尔
+
+**2020-07-03**
+
+- 这是一个重大更新
+- Transistor已使用Kotlin语言重写
+- 几个面向用户的新功能：
+-- 电台搜索（通过radio-browser.info网站）
+-- 你可以收藏某个电台
+-- 一个专门的设置界面
+
+了解更多信息：https://codeberg.org/y20k/transistor/issues/251

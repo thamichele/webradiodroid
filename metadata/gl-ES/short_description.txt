@@ -1,0 +1,1 @@
+Transistor é unha app para escoitar emisoras de radio en internet.

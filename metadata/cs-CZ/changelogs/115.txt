@@ -1,0 +1,6 @@
+v4.3.8 - The Width of a Circle
+2026-08-05
+
+- opravena chyba, kvůli které tlačítka „další“ a „předchozí“ v Android Auto a pomocí tlačítek na ovládání přehrávače nepřepínala stanice
+- opravena chyba, kvůli které nebylo možné přidávat ani přehrávat stanice Live365
+- aktualizovány překlady

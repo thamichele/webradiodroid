@@ -1,0 +1,276 @@
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- required for MediaPlaybackTemplate (Android Auto, Car App Library) -->
+    <uses-permission android:name="androidx.car.app.MEDIA_TEMPLATES"/>
+
+
+    <application
+        android:name=".Transistor"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="${appLabel}"
+        android:localeConfig="@xml/locales_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- ANDROID AUTO SUPPORT -->
+        <!--  https://developer.android.com/training/auto/audio/ -->
+        <meta-data android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc"/>
+        <meta-data android:name="com.google.android.gms.car.notification.SmallIcon"
+            android:resource="@drawable/ic_notification_app_icon_white_24dp" />
+        <!-- MediaPlaybackTemplate requires Car App API level 8 -->
+        <meta-data android:name="androidx.car.app.minCarApiLevel"
+            android:value="8"/>
+
+        <!-- Main activity for radio station playback on phone -->
+        <!-- Main activity for radio station playback on phone -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true">
+
+            <!-- react to main intents -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- react to voice searches, like "Byte FM" -->
+            <intent-filter>
+                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- Filter 1: HTTP/HTTPS with file extensions -->
+            <!-- Note to self: pathPattern is tricky - focusing on MIME types is more reliable -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="*" />
+                <data android:pathPattern=".*\\.m3u" />
+                <data android:pathPattern=".*\\.m3u8" />
+                <data android:pathPattern=".*\\.pls" />
+            </intent-filter>
+
+            <!-- Filter 2: HTTP/HTTPS by MIME type - audio/x-scpls -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:mimeType="audio/x-scpls" />
+            </intent-filter>
+
+            <!-- Filter 3: HTTP/HTTPS by MIME type - audio/mpegurl -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:mimeType="audio/mpegurl" />
+            </intent-filter>
+
+            <!-- Filter 4: HTTP/HTTPS by MIME type - audio/x-mpegurl -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:mimeType="audio/x-mpegurl" />
+            </intent-filter>
+
+            <!-- Filter 5: HTTP/HTTPS by MIME type - application/pls+xml -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:mimeType="application/pls+xml" />
+            </intent-filter>
+
+            <!-- Filter 6: HTTP/HTTPS by MIME type - application/x-mpegurl -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:mimeType="application/x-mpegurl" />
+            </intent-filter>
+
+            <!-- Filter 7: HTTP/HTTPS by MIME type - application/vnd.apple.mpegurl -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:mimeType="application/vnd.apple.mpegurl" />
+            </intent-filter>
+
+            <!-- Filter 8: HTTP/HTTPS by MIME type - application/vnd.apple.mpegurl.audio -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:mimeType="application/vnd.apple.mpegurl.audio" />
+            </intent-filter>
+
+            <!-- Filter 9: Local files (content://) by MIME type - audio/x-scpls -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:mimeType="audio/x-scpls" />
+            </intent-filter>
+
+            <!-- Filter 10: Local files (content://) by MIME type - audio/mpegurl -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:mimeType="audio/mpegurl" />
+            </intent-filter>
+
+            <!-- Filter 11: Local files (content://) by MIME type - audio/x-mpegurl -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:mimeType="audio/x-mpegurl" />
+            </intent-filter>
+
+            <!-- Filter 12: Local files (content://) by MIME type - application/pls+xml -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:mimeType="application/pls+xml" />
+            </intent-filter>
+
+            <!-- Filter 13: Local files (content://) by MIME type - application/x-mpegurl -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:mimeType="application/x-mpegurl" />
+            </intent-filter>
+
+            <!-- Filter 14: Local files (content://) by MIME type - application/vnd.apple.mpegurl -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:mimeType="application/vnd.apple.mpegurl" />
+            </intent-filter>
+
+            <!-- Filter 15: Local files (content://) by MIME type - application/vnd.apple.mpegurl.audio -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content" />
+                <data android:mimeType="application/vnd.apple.mpegurl.audio" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+
+            <!-- react to "start player service" intents -->
+            <intent-filter>
+                <action android:name="org.y20k.transistor.action.START_PLAYER_SERVICE" />
+            </intent-filter>
+
+            <!-- App Shortcuts -->
+            <meta-data android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+
+        </activity>
+
+
+        <!-- Player Service -->
+        <service
+            android:name=".PlayerService"
+            android:foregroundServiceType="mediaPlayback"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="androidx.media3.session.MediaSessionService"/>
+                <action android:name="android.media.browse.MediaBrowserService"/>
+                <action android:name="org.y20k.transistor.action.START_PLAYER_SERVICE" />
+            </intent-filter>
+        </service>
+
+
+        <!-- Android Auto: templated media app (Car App Library) -->
+        <!-- https://developer.android.com/training/cars/apps/media -->
+        <service
+            android:name=".car.TransistorCarAppService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="androidx.car.app.CarAppService" />
+                <category android:name="androidx.car.app.category.MEDIA" />
+            </intent-filter>
+        </service>
+
+
+        <!-- handles completed downloads -->
+        <receiver
+            android:name=".helpers.DownloadFinishedReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- handles media buttons -->
+        <receiver
+            android:name="androidx.media3.session.MediaButtonReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <!-- file provider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+    </application>
+
+
+</manifest>

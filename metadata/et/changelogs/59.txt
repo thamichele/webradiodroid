@@ -1,0 +1,6 @@
+# versioon 3.0.9 - Oh! You Pretty Things
+
+**2018-08-08**
+
+- metainfo kuvamine saab nüüd hakkama UTF-8 ja Latin1 märgistikega
+- uuendasime tõlkeid

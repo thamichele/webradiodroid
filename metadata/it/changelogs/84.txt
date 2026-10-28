@@ -1,0 +1,6 @@
+# v4.0.13 - Andy Warhol
+
+**2021-03-16**
+
+- ottimizzata la visualizzazione di "in riproduzione"
+- corretto un crash raro

@@ -1,0 +1,10 @@
+# v4.0.1 - Andy Warhol
+
+**2020-07-05**
+
+- v4.0.0으로 몇 가지 작은 버그를 수정합니다
+-- 알림 업데이트의 메타데이터가 올바르게 표시됨
+-- 향상된 HLS 지원
+-- 정렬이 대소문자를 구분하지 않습니다
+
+v4 업데이트가 꽤 컸는데, 자세히 알아보세요 : https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

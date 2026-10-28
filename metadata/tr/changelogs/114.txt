@@ -1,0 +1,6 @@
+# v4.3.7 - Dairenin Genişliği
+
+**24 Haziran 2026**
+
+- çeviriler güncellendi
+- yazılım kütüphaneleri güncellendi

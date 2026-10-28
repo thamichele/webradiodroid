@@ -1,0 +1,1 @@
+A Transistor egy alkalmazás internetes rádiók hallgatásához.

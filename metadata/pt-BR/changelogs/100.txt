@@ -1,0 +1,9 @@
+# v4.2.0 - Ashes to Ashes (Lançamento #100)
+
+**2024-10-04**
+- fixes station switching (notification and headphone buttons)
+- fixes playback resumption from the notification
+- minor bug fixes
+- new translation: Irish (THX Aindriú Mac Giolla Eoin)
+- new translation: Welsh (THX Aled Powell)
+- updated translations

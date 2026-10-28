@@ -1,0 +1,5 @@
+#v3.0.11 - Ó! Maith sibh Rudaí
+
+**2018-10-01**
+
+- Réitíonn sé ceist thromchúiseach le naisc bunaithe ar http ar Android 9

@@ -1,0 +1,5 @@
+# v4.3.3 - The Width of a Circle
+
+**2025-10-25**
+- fixed a bug with manually setting station images
+- fixed a translation bug with the title of the settings screen

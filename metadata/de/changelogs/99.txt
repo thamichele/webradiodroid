@@ -1,0 +1,5 @@
+# v4.1.9 - Modern Love
+
+**03.05.2024**
+- gibt jetzt Metadaten für OGG- und HLS-Streams wieder
+- verbesserte Übersetzungen

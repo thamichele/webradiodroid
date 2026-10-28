@@ -1,0 +1,6 @@
+# v4.0.14 - Andy Warhol
+
+**2021-03-20**
+
+- athrú beag ar fhógra
+- socraíonn tuairteáil annamh eile

@@ -1,0 +1,7 @@
+# v3.2.0 - ¿Vida en Marte?
+
+**2019-06-26**
+
+- traducción al italiano
+- lista de emisoras de radio tiene iconos más grandes
+- icono de la aplicación principal de color cambiado a rojo

@@ -1,0 +1,8 @@
+# v4.0.2 - Andy Warhol
+
+**2020-07-08**
+
+- naprawiono błąd importowania adresów URL strumieni (może być konieczna aktualizacja stacji)
+- przywrócono wyświetlanie metadanych dla Android Auto
+
+Aktualizacja v4 była dość duża, dowiedz się więcej: https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

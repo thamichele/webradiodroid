@@ -1,0 +1,6 @@
+# v4.1.3 - An Nua-Ghrá
+
+**2023-01-11**
+
+- socraíonn sé taispeáint meiteashonraí san fhógra
+- socraíonn sé réimsí téacs folamh ar leaganacha teanga nach bhfuil 100% aistrithe fós

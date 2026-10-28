@@ -1,0 +1,6 @@
+# v3.0.10 - ¡Oh! Cosas bonitas
+
+**2018-09-27**
+
+- versión en árabe
+- soporte mejorado de TalkBack

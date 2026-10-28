@@ -1,0 +1,4 @@
+# v4.2.5 - Küller Küllere
+
+**18 Temmuz 2025**
+- v4.2.4 sürümündeki live365.com hata düzeltmesi ile ortaya çıkan bir hata düzeltildi ¯\_(ツ)_/¯

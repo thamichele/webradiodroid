@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Transistor</string>
+    <string name="fragment_settings_title">Arventennoù</string>
+    <string name="dialog_edit_station_name">Anv savlec\'h</string>
+    <string name="dialog_edit_stream_uri">Chomlec\'h ar froud</string>
+    <string name="dialog_error_message_default">Ur fazi zo c\'hoarvezet</string>
+    <string name="dialog_error_message_no_network">Kevreit ouzh ar genrouedad.</string>
+    <string name="dialog_error_title_no_network">Ezlinenn</string>
+    <string name="dialog_find_station_button_add">Ouzhpennañ</string>
+    <string name="dialog_find_station_hint">Anv pe chomlec\'h ar froud</string>
+    <string name="dialog_find_station_no_results">Disoc\'h ebet.</string>
+    <string name="dialog_find_station_title">Klask un arsav</string>
+    <string name="dialog_generic_button_cancel">Nullañ</string>
+    <string name="dialog_generic_button_okay">OK</string>
+    <string name="dialog_generic_details_button">Diskouez ar munudoù</string>
+    <string name="dialog_opml_import_details_default">N\'eus titour ebet hegerz</string>
+    <string name="dialog_rename_station_input_hint">Skrivañ un anv nevez</string>
+    <string name="dialog_yes_no_message_remove_station">Dilemel an arsav-mañ?</string>
+    <string name="dialog_yes_no_negative_button_cancel">Nullañ</string>
+    <string name="dialog_yes_no_positive_button_default">Ya</string>
+    <string name="dialog_yes_no_positive_button_remove_station">Dilemel</string>
+    <string name="dialog_yes_no_positive_button_update_covers">Hizivaat</string>
+    <string name="toast_message_error_download_error">Fazi pellgargañ</string>
+    <string name="toast_message_error_restart_playback_failed">N\'heller ket adloc\'hañ al lenn.</string>
+    <string name="toast_message_error_station_not_found">Arsav digavus.</string>
+    <string name="toast_message_install_file_helper">Stalit ur merer restroù, mar plij.</string>
+    <string name="toast_message_save_m3u">Oc\'h enrollañ an arsav evel M3U…</string>
+    <string name="toast_message_station_duplicate">Arsav e doubl.</string>
+    <string name="toast_message_station_not_valid">N\'eo ket reizh an arsav.</string>
+    <string name="toast_message_updating_collection">Oc\'h hizivaat dastumad an arsavioù.</string>
+    <string name="toast_message_updating_station_images">Oc\'h hizivaat skeudenn an arsavioù.</string>
+</resources>

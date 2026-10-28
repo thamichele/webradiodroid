@@ -1,0 +1,9 @@
+# v4.0.3 - 安迪·沃霍尔
+
+**2020-07-22**
+
+- Android Auto会继续播放上一个播放过的电台
+- 更新和新增翻译
+- 修复了几个小错误
+
+v4更新内容相当丰富，更多信息请访问：https://codeberg.org/y20k/transistor/src/branch/master/metadata/en-US/changelogs/72.txt

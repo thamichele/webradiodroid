@@ -1,0 +1,8 @@
+v4.3.9 - Leithead Ciorcail
+2026-09-18
+
+- aithníonn seinmliostaí agus íomhánna stáisiúin Transistor anois, seachas an leagan Android, múnla na feiste agus an t-aitheantóir tógála a nochtadh
+- baineadh cnaipe 'Cealaigh' breise a d’fhéadfadh a bheith le feiceáil in Android Auto
+- nuashonraíodh aistriúcháin
+- nuashonraíodh leabharlanna bogearraí
+- nuachóiríodh an socrú tógála

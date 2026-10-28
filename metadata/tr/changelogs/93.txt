@@ -1,0 +1,6 @@
+# v4.1.3 - Modern Love
+
+**11 Ocak 2023**
+
+- bildirimdeki üst veri gösterimini düzeltildi
+- henüz %100 çevrilmeyen dil sürümlerindeki boş metin alanları düzeltildi

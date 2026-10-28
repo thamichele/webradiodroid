@@ -1,0 +1,8 @@
+# v4.1.0 - Modern Love
+
+**2022-03-08**
+
+- revisión del diseño que hace uso de los elementos y colores de "Material Design 3
+- corrección de la reaparición de la notificación de reproducción en Android 11
+- versión en gallego
+- traducciones actualizadas

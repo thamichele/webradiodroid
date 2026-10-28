@@ -1,0 +1,4 @@
+# v4.3.5 - The Width of a Circle
+
+**2025-11-16**
+- arranxo do problema que estragaba a app ao cambiarlle o nome a unha emisora (THX Ely)

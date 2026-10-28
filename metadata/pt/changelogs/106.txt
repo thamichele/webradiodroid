@@ -1,0 +1,4 @@
+# v4.2.6 - Ashes to Ashes
+
+**2025-07-22**
+- fixes a first launch crash that strangely was never detected before

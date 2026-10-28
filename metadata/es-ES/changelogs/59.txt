@@ -1,0 +1,6 @@
+# v3.0.9 - ¡Oh! Tus cosas bonitas
+
+**2018-08-08**
+
+- la visualización de los metadatos puede manejar caracteres UTF-8 y Latin1
+- traducciones actualizadas

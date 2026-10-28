@@ -1,0 +1,8 @@
+# v4.3.0 - The Width of a Circle
+
+**2025-10-08**
+- new floating player
+- new setting to enable dynamic color (Android 12+)
+- improved image loading in station list
+- Android 16 compatibility (SDK 36)
+- updated translations
