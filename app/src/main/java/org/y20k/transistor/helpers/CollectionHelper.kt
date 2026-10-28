@@ -339,11 +339,8 @@ object CollectionHelper {
             setIsBrowsable(false)
             setIsPlayable(true)
             /* check for "file://" prevents a crash when an old backup was restored */
-            if (station.image.isNotEmpty() && station.image.startsWith("file://") && station.image.toUri().toFile().exists()) {
-                setArtworkData(station.image.toUri().toFile().readBytes(), MediaMetadata.PICTURE_TYPE_FRONT_COVER)
-            } else {
-                setArtworkData(UiHelper.getDefaultStationImageAsByteArray(context), MediaMetadata.PICTURE_TYPE_FRONT_COVER)
-            }
+            val stationImageFile: File? = if (station.image.isNotEmpty() && station.image.startsWith("file://") && station.image.toUri().toFile().exists()) station.image.toUri().toFile() else null
+            setArtworkData(UiHelper.createArtworkAsByteArray(context, stationImageFile, station.imageColor), MediaMetadata.PICTURE_TYPE_FRONT_COVER)
             // keep original artwork URI for being included in Cast metadata
             val extras = Bundle()
             extras.putString(Keys.KEY_ORIGINAL_ARTWORK_URI, station.remoteImageLocation)
