@@ -36,3 +36,89 @@ jobs:
           name: webradiodroid-debug-apk
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+
+  # Builds the signed release APK and publishes it to WebRadioDroid's own F-Droid repository
+  # (branch "fdroid", served at https://raw.githubusercontent.com/thamichele/webradiodroid/fdroid/repo).
+  # Needs the repository secrets RELEASE_KEYSTORE_BASE64 and RELEASE_KEYSTORE_PASSWORD; skipped without them.
+  fdroid:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      RELEASE_KEYSTORE_BASE64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
+      RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+    steps:
+      - name: Check signing secrets
+        id: secrets
+        run: |
+          if [ -z "$RELEASE_KEYSTORE_BASE64" ] || [ -z "$RELEASE_KEYSTORE_PASSWORD" ]; then
+            echo "::notice::Release secrets not set - F-Droid repository not updated"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v5
+        if: steps.secrets.outputs.ready == 'true'
+
+      - uses: actions/setup-java@v5
+        if: steps.secrets.outputs.ready == 'true'
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - uses: gradle/actions/setup-gradle@v5
+        if: steps.secrets.outputs.ready == 'true'
+
+      - name: Build release APK
+        if: steps.secrets.outputs.ready == 'true'
+        run: |
+          export RELEASE_KEYSTORE_FILE="$RUNNER_TEMP/release.p12"
+          echo "$RELEASE_KEYSTORE_BASE64" | base64 -d > "$RELEASE_KEYSTORE_FILE"
+          ./gradlew --no-daemon assembleRelease
+          AAPT2=$(ls -d "$ANDROID_HOME"/build-tools/*/aapt2 | sort -V | tail -1)
+          "$AAPT2" dump badging app/build/outputs/apk/release/*.apk | grep -E "^(package|application-label:)"
+
+      - name: Update F-Droid repository
+        if: steps.secrets.outputs.ready == 'true'
+        run: |
+          python3 -m venv "$RUNNER_TEMP/venv"
+          "$RUNNER_TEMP/venv/bin/pip" install --quiet fdroidserver
+          mkdir -p fdroid-repo/repo/icons fdroid-repo/metadata
+          cp "$RUNNER_TEMP/release.p12" fdroid-repo/keystore.p12
+          cp app/src/main/res/mipmap-xxxhdpi/ic_launcher.png fdroid-repo/repo/icons/icon.png
+          cp app/build/outputs/apk/release/*.apk fdroid-repo/repo/
+          cd fdroid-repo
+          cat > config.yml <<CONFIG
+          sdk_path: $ANDROID_HOME
+          repo_url: https://raw.githubusercontent.com/thamichele/webradiodroid/fdroid/repo
+          repo_name: WebRadioDroid
+          repo_description: Personal F-Droid repository of WebRadioDroid
+          repo_icon: icon.png
+          archive_older: 0
+          keystore: keystore.p12
+          repo_keyalias: repo
+          keystorepass: $RELEASE_KEYSTORE_PASSWORD
+          keypass: $RELEASE_KEYSTORE_PASSWORD
+          keydname: CN=WebRadioDroid F-Droid repo, O=thamichele
+          CONFIG
+          chmod 600 config.yml
+          "$RUNNER_TEMP/venv/bin/fdroid" update --create-metadata --pretty
+          echo "== repo fingerprint"
+          keytool -list -v -storetype pkcs12 -keystore keystore.p12 -storepass "$RELEASE_KEYSTORE_PASSWORD" -alias repo | grep "SHA256:"
+
+      - name: Publish F-Droid repository
+        if: steps.secrets.outputs.ready == 'true'
+        run: |
+          # only the public repo/ folder is published - never keystore.p12 or config.yml
+          mkdir publish && cp -r fdroid-repo/repo publish/repo
+          cd publish
+          git init -q -b fdroid
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add repo
+          git commit -q -m "F-Droid repository: WebRadioDroid build ${GITHUB_RUN_NUMBER}"
+          git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" fdroid
+        env:
+          GH_TOKEN: ${{ github.token }}

@@ -9,7 +9,7 @@
         android:shortcutDisabledMessage="@string/shortcut_last_station_disabled_message">
         <intent
             android:action="org.y20k.transistor.action.START"
-            android:targetPackage="org.y20k.transistor"
+            android:targetPackage="io.github.thamichele.webradiodroid"
             android:targetClass="org.y20k.transistor.MainActivity" >
             <extra android:name="START_LAST_PLAYED_STATION" android:value="true" />
         </intent>
