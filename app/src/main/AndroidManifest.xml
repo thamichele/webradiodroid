@@ -238,7 +238,16 @@
             <intent-filter>
                 <action android:name="androidx.car.app.CarAppService" />
                 <category android:name="androidx.car.app.category.MEDIA" />
-                <!-- needed for the free player: only navigation apps may draw on the car screen -->
+            </intent-filter>
+        </service>
+
+        <!-- Android Auto: WebRadioDroid's free player - a separate car app, because only navigation apps may draw on the car screen -->
+        <service
+            android:name=".car.FreePlayerCarAppService"
+            android:label="@string/car_free_player_name"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="androidx.car.app.CarAppService" />
                 <category android:name="androidx.car.app.category.NAVIGATION" />
             </intent-filter>
         </service>

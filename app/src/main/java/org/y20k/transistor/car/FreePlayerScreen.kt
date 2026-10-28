@@ -129,11 +129,11 @@ class FreePlayerScreen(carContext: CarContext, private val session: TransistorCa
             .build()
         val standardPlayerAction: Action = Action.Builder()
             .setIcon(carIcon(R.drawable.ic_car_standard_player_24dp))
-            .setOnClickListener { session.switchPlayerMode(useFreePlayer = false) }
+            .setOnClickListener { session.openStandardPlayer() }
             .build()
         val stationsAction: Action = Action.Builder()
             .setIcon(carIcon(R.drawable.ic_car_list_24dp))
-            .setOnClickListener { screenManager.pop() }
+            .setOnClickListener { session.openStations() }
             .build()
         val actionStrip: ActionStrip = ActionStrip.Builder()
             .addAction(stationsAction)

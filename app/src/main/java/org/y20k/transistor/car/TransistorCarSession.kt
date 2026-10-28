@@ -26,7 +26,6 @@ import androidx.car.app.ScreenManager
 import androidx.car.app.Session
 import androidx.car.app.media.MediaPlaybackManager
 import androidx.core.content.ContextCompat
-import androidx.core.content.edit
 import androidx.core.os.BundleCompat
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
@@ -36,7 +35,6 @@ import androidx.media3.session.MediaController
 import androidx.media3.session.SessionCommand
 import androidx.media3.session.SessionResult
 import androidx.media3.session.SessionToken
-import androidx.preference.PreferenceManager
 import com.google.common.util.concurrent.ListenableFuture
 import org.y20k.transistor.Keys
 import org.y20k.transistor.PlayerService
@@ -47,7 +45,7 @@ import org.y20k.transistor.extensions.play
 /*
  * TransistorCarSession class
  */
-class TransistorCarSession: Session() {
+class TransistorCarSession(private val freeMode: Boolean = false): Session() {
 
 
     /* Define log tag */
@@ -79,11 +77,13 @@ class TransistorCarSession: Session() {
 
     /* Overrides onCreateScreen from Session */
     override fun onCreateScreen(intent: Intent): Screen {
+        // free player session (started as navigation app): the free player is the only screen
+        if (freeMode) return FreePlayerScreen(carContext, this)
         val stationsScreen = StationsScreen(carContext, this)
         if (intent.action == Keys.ACTION_SHOW_MEDIA_PLAYBACK) {
             // launched from a system media surface (e.g. the media card): open the playback screen on top of the station list
             getScreenManager().push(stationsScreen)
-            return if (useFreePlayer) FreePlayerScreen(carContext, this) else PlaybackScreen(carContext, this)
+            return PlaybackScreen(carContext, this)
         }
         return stationsScreen
     }
@@ -92,33 +92,48 @@ class TransistorCarSession: Session() {
     /* Overrides onNewIntent from Session */
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
-        if (intent.action == Keys.ACTION_SHOW_MEDIA_PLAYBACK) {
+        if (!freeMode && intent.action == Keys.ACTION_SHOW_MEDIA_PLAYBACK) {
             showPlaybackScreen()
         }
     }
 
 
-    /* Pushes the playback screen of the chosen mode - unless it is already on top */
+    /* Pushes the playback screen - unless it is already on top */
     fun showPlaybackScreen() {
+        if (freeMode) return
         val screenManager: ScreenManager = getScreenManager()
-        if (screenManager.top is PlaybackScreen || screenManager.top is FreePlayerScreen) return
-        screenManager.push(if (useFreePlayer) FreePlayerScreen(carContext, this) else PlaybackScreen(carContext, this))
+        if (screenManager.top is PlaybackScreen) return
+        screenManager.push(PlaybackScreen(carContext, this))
     }
 
 
-    /* Switches between the standard Android Auto player and WebRadioDroid's free player - the choice is remembered */
-    fun switchPlayerMode(useFreePlayer: Boolean) {
-        this.useFreePlayer = useFreePlayer
-        val screenManager: ScreenManager = getScreenManager()
-        if (screenManager.top is PlaybackScreen || screenManager.top is FreePlayerScreen) screenManager.pop()
-        showPlaybackScreen()
+    /* Opens WebRadioDroid's free player - a separate car app session that runs as navigation app (only those may draw on the car screen) */
+    fun openFreePlayer() {
+        startOwnCarApp(Intent().setComponent(ComponentName(carContext, FreePlayerCarAppService::class.java)))
     }
 
 
-    /* Player mode on Android Auto: false = standard player (MediaPlaybackTemplate), true = free player (drawn by the app) */
-    private var useFreePlayer: Boolean
-        get() = PreferenceManager.getDefaultSharedPreferences(carContext).getBoolean(Keys.PREF_CAR_FREE_PLAYER, false)
-        set(value) = PreferenceManager.getDefaultSharedPreferences(carContext).edit { putBoolean(Keys.PREF_CAR_FREE_PLAYER, value) }
+    /* Opens the standard Android Auto player of the media app session */
+    fun openStandardPlayer() {
+        startOwnCarApp(Intent(Keys.ACTION_SHOW_MEDIA_PLAYBACK).setComponent(ComponentName(carContext, TransistorCarAppService::class.java)))
+    }
+
+
+    /* Opens the station list of the media app session */
+    fun openStations() {
+        startOwnCarApp(Intent().setComponent(ComponentName(carContext, TransistorCarAppService::class.java)))
+    }
+
+
+    /* Asks the host to switch to one of WebRadioDroid's own car app sessions */
+    private fun startOwnCarApp(intent: Intent) {
+        try {
+            carContext.startCarApp(intent)
+        } catch (e: Exception) {
+            Log.e(TAG, "Unable to switch car app session.", e)
+            CarToast.makeText(carContext, R.string.car_toast_switch_failed, CarToast.LENGTH_SHORT).show()
+        }
+    }
 
 
     /* Starts playback of the station at the given position and shows the playback screen */
@@ -146,7 +161,8 @@ class TransistorCarSession: Session() {
         future.addListener({
             val mediaController: MediaController = controller ?: return@addListener
             mediaController.addListener(playerListener)
-            requestAndRegisterMediaPlaybackToken(mediaController)
+            // only the media app session may register as media playback source
+            if (!freeMode) requestAndRegisterMediaPlaybackToken(mediaController)
         }, ContextCompat.getMainExecutor(carContext))
     }
 

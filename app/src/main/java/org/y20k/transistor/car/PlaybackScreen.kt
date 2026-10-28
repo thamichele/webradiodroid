@@ -37,7 +37,7 @@ class PlaybackScreen(carContext: CarContext, private val session: TransistorCarS
         // header action that switches to WebRadioDroid's free player
         val freePlayerAction: Action = Action.Builder()
             .setIcon(CarIcon.Builder(IconCompat.createWithResource(carContext, R.drawable.ic_car_free_player_24dp)).build())
-            .setOnClickListener { session.switchPlayerMode(useFreePlayer = true) }
+            .setOnClickListener { session.openFreePlayer() }
             .build()
         val header: Header = Header.Builder()
             .setStartHeaderAction(Action.BACK)

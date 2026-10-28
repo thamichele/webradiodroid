@@ -111,7 +111,6 @@ object Keys {
     const val PREF_LARGE_BUFFER_SIZE: String = "LARGE_BUFFER_SIZE"
     const val PREF_EDIT_STATIONS: String = "EDIT_STATIONS"
     const val PREF_EDIT_STREAMS_URIS: String = "EDIT_STREAMS_URIS"
-    const val PREF_CAR_FREE_PLAYER: String = "CAR_FREE_PLAYER"
 
 
     // states

@@ -123,5 +123,7 @@
     <string name="car_message_connecting_to_player">Connessione al lettore…</string>
     <string name="car_message_no_stations">Nessuna stazione. Aggiungi le stazioni in WebRadioDroid sul telefono.</string>
     <string name="car_toast_player_not_ready">Il lettore non è ancora pronto</string>
+    <string name="car_free_player_name">WebRadioDroid Libero</string>
+    <string name="car_toast_switch_failed">Impossibile cambiare lettore</string>
 
 </resources>
