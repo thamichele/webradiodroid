@@ -23,6 +23,14 @@ jobs:
       - name: Build debug APK
         run: ./gradlew --no-daemon assembleDebug
 
+      - name: Show APK name, id and version
+        run: |
+          AAPT2=$(ls -d "$ANDROID_HOME"/build-tools/*/aapt2 | sort -V | tail -1)
+          for apk in app/build/outputs/apk/debug/*.apk; do
+            echo "== $apk"
+            "$AAPT2" dump badging "$apk" | grep -E "^(package|application-label|application-icon-160|launchable-activity)"
+          done
+
       - uses: actions/upload-artifact@v4
         with:
           name: webradiodroid-debug-apk
