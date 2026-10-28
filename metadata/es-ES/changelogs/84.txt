@@ -1,6 +1,0 @@
-# v4.0.13 - Andy Warhol
-
-**2021-03-16**
-
-- Ajusta la pantalla "reproducción actual"
-- arregla un fallo raro

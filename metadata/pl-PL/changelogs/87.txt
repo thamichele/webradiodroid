@@ -1,5 +1,0 @@
-# v4.0.16 - Andy Warhol
-
-**2021-08-12**
-
-- naprawiono przyciski poprzedni i następny w powiadomieniu o odtwarzaniu

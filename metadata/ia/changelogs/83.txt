@@ -1,5 +1,0 @@
-# v4.0.12 - Andy Warhol
-
-**2021-03-10**
-
-- corrige le reproduction rupte ab le accesso directe del schermo de initio

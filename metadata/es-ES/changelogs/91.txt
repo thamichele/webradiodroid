@@ -1,8 +1,0 @@
-# v4.1.1 - Modern Love
-
-**2022-05-12**
-
-- nueva opción para respaldar (y restaurar) todas las estaciones de radio incluyendo imágenes
-- corrección de la imagen borrosa de la emisora por defecto
-- corrección del idioma indonesio
-- traducciones actualizadas

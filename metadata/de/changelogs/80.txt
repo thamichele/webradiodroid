@@ -1,8 +1,0 @@
-# v4.0.8 – Andy Warhol
-
-**25.11.2020**
-
-- Hebräische Sprachversion
-- Übersetzungen aktualisiert
-- Anzeige des Senderlogos in Android Auto behoben
-- manuelle Senderlogoauswahl unter Android 11 behoben

@@ -1,6 +1,0 @@
-# v3.0.12
-
-***2018-10-08**
-
-- Pembaruan versi bahasa Jepang
-- perubahan kecil

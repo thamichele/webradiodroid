@@ -1,6 +1,0 @@
-v4.3.8 – The Width of a Circle
-05.08.2026
-
-- Fehler behoben, der für „Nächster/Vorheriger“ bei Android Auto und über die Medientasten nicht zwischen den Sendern umschaltete
-- Fehler behoben, durch den Live365-Sender nicht hinzugefügt oder abgespielt werden konnten
-- Übersetzungen aktualisiert

@@ -1,8 +1,0 @@
-### v4.3.9 - The Width of a Circle
-**18-09-2026**
-
-- le playlist e le immagini delle stazioni ora identificano Transistor invece di divulgare versione Android, modello del dispositivo e id build
-- rimosso un pulsante Annulla spurio che poteva comparire in Android Auto
-- aggiornate le traduzioni
-- aggiornate le librerie software
-- modernizzato il setup di build

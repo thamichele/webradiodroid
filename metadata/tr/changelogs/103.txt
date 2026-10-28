@@ -1,5 +1,0 @@
-# v4.2.3 - Küller Küllere
-
-**10 Şubat 2025**
-- targetSdkVersion 35'e (Android 15) güncellendi
-- çeviriler güncellendi

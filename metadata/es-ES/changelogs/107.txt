@@ -1,8 +1,0 @@
-# v4.3.0 - The Width of a Circle
-
-**2025-10-08**
-- nuevo reproductor flotante
-- nueva opción para activar el color dinámico (Android 12+)
-- mejora en la carga de imágenes en la lista de emisoras
-- compatibilidad con Android 16 (SDK 36)
-- traducciones actualizadas

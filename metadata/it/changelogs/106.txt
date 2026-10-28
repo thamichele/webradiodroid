@@ -1,4 +1,0 @@
-# v4.2.6 - Ashes to Ashes
-
-**2025-07-22**
-- risolto un crash al primo avvio che stranamente non era mai stato rilevato prima

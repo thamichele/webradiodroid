@@ -1,1 +1,0 @@
-Transistor adalah aplikasi untuk mendengarkan stasiun radio di internet.

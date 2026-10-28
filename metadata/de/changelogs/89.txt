@@ -1,6 +1,0 @@
-# v4.0.18 – Andy Warhol
-
-**14.01.2022**
-
-- kleinere Layoutänderungen zur besseren Anpassung an das in Android 12 eingeführte "Material Design 3" Design
-- aktualisierte Übersetzungen

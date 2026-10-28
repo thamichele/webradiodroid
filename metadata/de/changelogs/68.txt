@@ -1,6 +1,0 @@
-# v3.2.1 – Life on Mars?
-
-**25.07.2019**
-
-- Tschechische Übersetzung
-- die "now playing" Metadaten-Funktion zeigt nicht-lateinische Zeichen besser an (weniger unlesbares Kauderwelsch)

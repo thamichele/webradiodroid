@@ -1,6 +1,0 @@
-# v4.3.8 - The Width of a Circle
-**2026-08-05**
-
-- risolto il problema per cui avanti/indietro non cambiava stazione su Android Auto e tramite i pulsanti multimediali
-- risolto il problema delle stazioni Live365 che non potevano essere aggiunte o riprodotte
-- traduzioni aggiornate

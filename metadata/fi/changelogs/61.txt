@@ -1,5 +1,0 @@
-# v3.0.11 - Voi! Te ihanuudet
-
-**2018-10-01**
-
-- Korjaa vakavan ongelman http-pohjaisisa yhteyksissä Android 9:lle

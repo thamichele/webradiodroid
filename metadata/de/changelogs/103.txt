@@ -1,5 +1,0 @@
-# v4.2.3 – Ashes to Ashes
-
-**10.02.2025**
-- Ziel-SDK-Version jetzt 35 (Android 15)
-- aktualisierte Übersetzungen

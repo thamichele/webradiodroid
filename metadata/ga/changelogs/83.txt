@@ -1,5 +1,0 @@
-# v4.0.12 - Andy Warhol
-
-**2021-03-10**
-
-- socraíonn athsheinm briste ó aicearra an scáileáin baile

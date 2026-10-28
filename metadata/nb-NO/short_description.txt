@@ -1,1 +1,0 @@
-Transistor er et program for å lytte til radiostasjoner på Internett.

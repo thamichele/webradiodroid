@@ -1,6 +1,0 @@
-# v4.0.14 - Andy Warhol
-
-**2021-03-20**
-
-- pequeño cambio en la notificación
-- corrige otro fallo raro

@@ -1,6 +1,0 @@
-# v4.3.2 - The Width of a Circle
-
-**2025-10-21**
-- risolto un bug con i collegamenti nella schermata Home (la riproduzione non partiva automaticamente)
-- abilitata la visualizzazione edge-to-edge anche per le versioni Android più vecchie
-- traduzioni aggiornate

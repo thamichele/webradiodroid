@@ -1,6 +1,0 @@
-# v4.3.2 – The Width of a Circle
-
-**21.10.2025**
-- Fehler bei den Verknüpfungen auf dem Startbildschirm behoben (Wiedergabe startete nicht automatisch)
-- Randlose Anzeige auch für ältere Android-Versionen aktiviert
-- Übersetzungen aktualisiert

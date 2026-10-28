@@ -1,5 +1,0 @@
-# v4.2.3 - Luaithreach go luaithreach
-
-**2025-02-10**
-- targetSdkVersion nuashonraithe go 35 (Android 15)
-- aistriúcháin nuashonraithe
