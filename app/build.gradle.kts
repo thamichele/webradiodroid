@@ -11,7 +11,8 @@ android {
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "org.y20k.transistor"
+        // WebRadioDroid's own application id: installs next to the original Transistor without conflicts
+        applicationId = "io.github.thamichele.webradiodroid"
         minSdk = 25
         targetSdk = 37
         // WebRadioDroid's own version (based on Transistor 4.3.10): MAJOR.MINOR.<GitHub Actions build number>,
@@ -48,6 +49,17 @@ android {
             keyAlias = "androiddebugkey"
             keyPassword = "android"
         }
+        // release key: never committed - GitHub Actions decodes it from the repository secrets (see .github/workflows/build-apk.yml)
+        val releaseKeystore: String? = System.getenv("RELEASE_KEYSTORE_FILE")
+        if (releaseKeystore != null) {
+            create("release") {
+                storeFile = file(releaseKeystore)
+                storeType = "pkcs12"
+                storePassword = System.getenv("RELEASE_KEYSTORE_PASSWORD")
+                keyAlias = "webradiodroid"
+                keyPassword = System.getenv("RELEASE_KEYSTORE_PASSWORD")
+            }
+        }
     }
 
     buildTypes {
@@ -55,6 +67,7 @@ android {
             optimization {
                 enable = true
             }
+            signingConfig = signingConfigs.findByName("release")
         }
         debug {
             applicationIdSuffix = ".debug"

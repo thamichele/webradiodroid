@@ -51,8 +51,6 @@
     <string name="pref_edit_station_stream_title">Editar Ligazón das emisoras</string>
     <string name="pref_edit_station_summary_enabled">Activada a edición da información da emisora. Pulsación longa para editar.</string>
     <string name="pref_m3u_export_title">Exportar M3U</string>
-    <string name="pref_report_issue_summary">Informar de fallos e suxerir melloras en Codeberg.</string>
-    <string name="pref_report_issue_title">Informar de fallo</string>
     <string name="pref_theme_selection_summary">Decorado actual:</string>
     <string name="pref_theme_selection_title">Decorado da App</string>
     <string name="descr_app_icon">Icona da app como unha radio antiga</string>

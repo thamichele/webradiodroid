@@ -89,7 +89,6 @@
     <string name="descr_player_station_image">स्टेशन छवि</string>
     <string name="toast_message_error_missing_storage_permission">इस फाइल को खोलने के लिए \"स्टोरेज पढ़ें\" की अनुमति दें।</string>
     <string name="toast_message_updating_collection">स्टेशनों का संग्रह अद्यतन किया जा रहा है।</string>
-    <string name="pref_report_issue_summary">Codeberg पर बग की रिपोर्ट करें और सुधार का सुझाव दें।</string>
     <string name="descr_player_playback_button">चलाएं/रोकें</string>
     <string name="dialog_restore_collection_replace_existing">रेडियो स्टेशनों के वर्तमान संग्रह को बैकअप के रेडियो स्टेशन से बदलें?</string>
     <string name="dialog_yes_no_message_update_station_images">सभी स्टेशन छवियों का नवीनतम संस्करण डाउनलोड करें?</string>
@@ -97,7 +96,6 @@
     <string name="pref_edit_station_stream_summary_enabled">स्ट्रीमिंग लिंक का संपादन सक्षम किया गया। सुनिश्चित करें कि आपने सही स्ट्रीम पता दर्ज किया है।</string>
     <string name="pref_edit_station_stream_summary_disabled">स्ट्रीमिंग लिंक का संपादन अक्षम किया गया।</string>
     <string name="pref_restore_summary">बैकअप से रेडियो स्टेशनों का संग्रह पुनर्स्थापित करें। मौजूदा स्टेशनों को बदला जाएगा।</string>
-    <string name="pref_report_issue_title">मामले की रिपोर्ट करें</string>
     <string name="pref_tap_anywhere_playback_summary_enabled">रेडियो स्टेशन कार्ड को सुनना शुरू करने के लिए उस पर कहीं भी टैप करें।</string>
     <string name="pref_update_station_images_summary">सभी स्टेशन छवियों का नवीनतम संस्करण डाउनलोड करें।</string>
     <string name="descr_app_icon">एक पुराने रेडियो को दर्शाने वाला ऐप आइकन</string>

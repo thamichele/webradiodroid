@@ -65,8 +65,6 @@
     <string name="toast_message_error_download_error">Gagal mengunduh</string>
     <string name="toast_message_updating_station_images">Memperbarui gambar stasiun.</string>
     <string name="toast_message_error_restart_playback_failed">Tidak bisa memulai ulang pemutaran.</string>
-    <string name="pref_report_issue_title">Laporkan Masalah</string>
-    <string name="pref_report_issue_summary">Laporkan kesalahan dan sarankan fitur di Codeberg.</string>
     <string name="pref_app_version_title">Versi Apl</string>
     <string name="pref_app_version_summary">Versi</string>
     <string name="pref_about_title">Tentang</string>

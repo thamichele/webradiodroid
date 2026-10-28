@@ -14,9 +14,7 @@
     <string name="dialog_edit_station_name">Ime postaje</string>
     <string name="station_list_button_settings">Nastavitve</string>
     <string name="pref_edit_station_summary_enabled">Urejanje informacij o postajah je omogočeno. Uporabite dolgi dotik za urejanje.</string>
-    <string name="pref_report_issue_summary">Sporoči napake in predlagaj izboljšave na Codebergu.</string>
     <string name="pref_m3u_export_title">Izvozi M3U</string>
-    <string name="pref_report_issue_title">Sporoči napako</string>
     <string name="descr_card_station_image_change">Spremeni podobo postaje</string>
     <string name="descr_dialog_edit_place_on_home_screen_icon">Dodaj na začetni zaslon</string>
     <string name="onboarding_app_get_started">Začnimo</string>

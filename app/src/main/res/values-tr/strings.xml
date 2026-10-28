@@ -66,8 +66,6 @@
     <string name="fragment_settings_title">Ayarlar</string>
     <string name="toast_message_updating_station_images">İstasyon görselleri güncelleniyor.</string>
     <string name="toast_message_error_restart_playback_failed">Oynatma yeniden başlatılamadı.</string>
-    <string name="pref_report_issue_title">Sorun Bildir</string>
-    <string name="pref_report_issue_summary">Codeberg\'da hataları bildirin ve iyileştirmeler önerin.</string>
     <string name="pref_app_version_title">Uygulama Sürümü</string>
     <string name="pref_app_version_summary">Sürüm</string>
     <string name="pref_about_title">Hakkında</string>

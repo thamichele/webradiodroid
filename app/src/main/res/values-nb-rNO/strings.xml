@@ -66,8 +66,6 @@
     <string name="toast_message_error_download_error">Nedlastingsfeil</string>
     <string name="toast_message_error_restart_playback_failed">Kunne ikke starte avspilling igjen.</string>
     <string name="toast_message_updating_station_images">Oppdaterer stasjonsbilder.</string>
-    <string name="pref_report_issue_title">Innrapporter feil</string>
-    <string name="pref_report_issue_summary">Innrapporter feil og foreslå forbedringer på Codeberg.</string>
     <string name="pref_app_version_title">Programversjon</string>
     <string name="pref_app_version_summary">Versjon</string>
     <string name="pref_about_title">Om</string>

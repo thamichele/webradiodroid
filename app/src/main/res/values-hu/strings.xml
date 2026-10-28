@@ -35,7 +35,6 @@
     <string name="pref_edit_station_summary_enabled">Állomásadatok szerkesztése engedélyezve. Tartsa hosszan lenyomva a szerkesztéshez.</string>
     <string name="pref_edit_station_title">Állomások szerkesztése</string>
     <string name="pref_edit_station_stream_summary_enabled">Adatfolyamcímek szerkesztése engedélyezve. Ellenőrizze, hogy megfelelő-e az adatfolyamcím.</string>
-    <string name="pref_report_issue_title">Hiba jelentése</string>
     <string name="pref_theme_selection_mode_device_default">Eszközzel megegyező</string>
     <string name="pref_theme_selection_mode_light">Világos mód</string>
     <string name="dialog_edit_save_changes">Változtatások mentése</string>
@@ -93,7 +92,6 @@
     <string name="pref_m3u_export_summary">Mentse el rádióállomásait egy M3U lejátszási listába, amelyet más lejátszókba is importálhat.</string>
     <string name="pref_m3u_export_title">Exportálás M3U formátumba</string>
     <string name="pref_restore_summary">A rádióállomások gyűjteményének visszaállítása a biztonsági mentésből. A meglévő állomások felül lesznek írva.</string>
-    <string name="pref_report_issue_summary">Jelentse a hibákat és javasoljon fejlesztéseket a Codebergen.</string>
     <string name="pref_tap_anywhere_playback_summary_disabled">Koppintson a lejátszás gombra a rádióállomás hallgatásának megkezdéséhez.</string>
     <string name="pref_tap_anywhere_playback_summary_enabled">Koppintson a rádióállomás kártyájára bárhol a lejátszás elindításához.</string>
     <string name="pref_tap_anywhere_playback_title">Koppintson a rádióállomásra</string>

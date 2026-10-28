@@ -21,8 +21,6 @@
     <string name="pref_m3u_export_title">M3U ஏற்றுமதி</string>
     <string name="pref_restore_title">நிலையங்களை மீட்டமை</string>
     <string name="pref_restore_summary">வானொலி நிலையங்களின் தொகுப்பை காப்புப்பிரதியிலிருந்து மீட்டமை. தற்போதுள்ள நிலையங்கள் மாற்றப்படும்.</string>
-    <string name="pref_report_issue_summary">பிழைகளைப் புகாரளித்து, கோட்பெர்க்கில் மேம்பாடுகளை பரிந்துரைக்கவும்.</string>
-    <string name="pref_report_issue_title">சிக்கல் அறிக்கை</string>
     <string name="pref_tap_anywhere_playback_summary_enabled">அதைக் கேட்கத் தொடங்க வானொலி நிலைய அட்டையில் எங்கும் தட்டவும்.</string>
     <string name="pref_theme_selection_mode_dark">இருண்ட முறை</string>
     <string name="pref_theme_selection_mode_device_default">சாதனம் அதே</string>

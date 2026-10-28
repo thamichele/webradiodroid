@@ -66,8 +66,6 @@
     <string name="pref_theme_selection_mode_light">Ljochte modus</string>
     <string name="pref_theme_selection_mode_device_default">Selde as apparaat</string>
     <string name="pref_theme_selection_mode_dark">Tsjustere modus</string>
-    <string name="pref_report_issue_title">Flater Oanjaan</string>
-    <string name="pref_report_issue_summary">Flaters oanjaan en ferbetteringen foarstelle op Codeberg.</string>
     <string name="pref_m3u_export_summary">Slach jo radio stasjon op as M3U ôfspyl list bestân die troch oare ôfspyl applikaasjes iepene wurde kin.</string>
     <string name="notification_now_playing_channel_name">Ôfspyl Betsjinning</string>
     <string name="toast_message_updating_station_images">Stasjon ôfbyldingen fernije.</string>

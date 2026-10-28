@@ -53,7 +53,6 @@
     <string name="pref_edit_station_title">Muuda veebiraadiojaamu</string>
     <string name="pref_maintenance_title">Hooldus</string>
     <string name="pref_restore_summary">Taasta veebiraadiojaamade kogu varukoopiast. Olemasolevad jaamad asendatakse.</string>
-    <string name="pref_report_issue_summary">Teata vigadest ja tee ettepanekuid meie arenduskeskkonnas Codebergis.</string>
     <string name="pref_tap_anywhere_playback_summary_disabled">Veebiraadio kuulamiseks klõpsi nuppu „Esita“.</string>
     <string name="pref_theme_selection_mode_light">Hele kujundus</string>
     <string name="pref_theme_selection_summary">Hetkel kasutusel:</string>
@@ -86,7 +85,6 @@
     <string name="pref_m3u_export_title">Ekspordi m3u-failina</string>
     <string name="pref_restore_title">Taasta veebiraadiojaamade loend</string>
     <string name="pref_m3u_export_summary">Salvesta oma veebiraadiote loend m3u-vormingus esitusloendina, mida saad teistesse meediamängijatesse importida.</string>
-    <string name="pref_report_issue_title">Teata veast või problemist</string>
     <string name="pref_theme_selection_mode_device_default">Seadme kujundus</string>
     <string name="pref_update_station_images_summary">Laadime alla veebiraadiojaamade piltide viimased variandid.</string>
     <string name="pref_tap_anywhere_playback_summary_enabled">Veebiraadio kuulamiseks klõpsi loendis jaama rea peal.</string>

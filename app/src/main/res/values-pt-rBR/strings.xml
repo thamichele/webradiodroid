@@ -62,8 +62,6 @@
     <string name="fragment_settings_title">Configurações</string>
     <string name="onboarding_app_import_running">Importando suas estações…</string>
     <string name="descr_dialog_edit_place_on_home_screen_icon">Colocar na tela inicial</string>
-    <string name="pref_report_issue_title">Relatar bugs</string>
-    <string name="pref_report_issue_summary">Relatar bugs e sugerir melhorias no Codeberg.</string>
     <string name="pref_app_version_title">Versão de App</string>
     <string name="pref_app_version_summary">Versão</string>
     <string name="pref_about_title">Sobre</string>

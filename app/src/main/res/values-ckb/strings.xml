@@ -63,8 +63,6 @@
     <string name="pref_m3u_export_title">ھەناردەکردن وەک M3U</string>
     <string name="pref_restore_title">وێستگەکان بگەڕێنەرەوە</string>
     <string name="pref_restore_summary">کۆکراوەی وێستگە ڕادیۆیییەکان لە پاشەکەوتێکەوە بگەڕێنەرەوە. ئەمە جێی وێستگەکان دەگرێتەوە کە بوونیان ھەیە.</string>
-    <string name="pref_report_issue_summary">ئاگادارمان بکەرەوە لە کەلێن و پێشنیارەکانت لە کۆدبێرگ.</string>
-    <string name="pref_report_issue_title">سکاڵای کێشە</string>
     <string name="pref_tap_anywhere_playback_summary_enabled">پەنجە بنێ بە ھەرکوێیەکی کارتی وێستگەیەکی ڕادیۆیی بۆ گوێگرتن لێی.</string>
     <string name="pref_tap_anywhere_playback_title">پەنجە بە وێستگە ڕادیۆیییەکەدا</string>
     <string name="pref_theme_selection_mode_dark">شێوازی تاریک</string>

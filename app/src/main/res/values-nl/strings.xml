@@ -54,8 +54,6 @@
     <string name="pref_theme_selection_mode_light">Lichte modus</string>
     <string name="pref_theme_selection_mode_device_default">Zelfde als toestel</string>
     <string name="pref_theme_selection_mode_dark">Donkere modus</string>
-    <string name="pref_report_issue_title">Probleem melden</string>
-    <string name="pref_report_issue_summary">Meld bugs en stel verbeteringen voor op Codeberg.</string>
     <string name="pref_m3u_export_title">Zenderlijst archiveren</string>
     <string name="pref_m3u_export_summary">Bewaar de zenders in een M3U-afspeellijst voor import in andere speler.</string>
     <string name="pref_maintenance_title">Onderhoud</string>

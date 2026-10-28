@@ -66,8 +66,6 @@
     <string name="toast_message_error_download_error">Erreur de téléchargement</string>
     <string name="toast_message_updating_station_images">Mise à jour des images de la station.</string>
     <string name="toast_message_error_restart_playback_failed">Impossible de relancer la lecture.</string>
-    <string name="pref_report_issue_title">Signaler un problème</string>
-    <string name="pref_report_issue_summary">Signalez des problèmes ou proposez des améliorations sur Codeberg.</string>
     <string name="pref_app_version_title">Version de l\'application</string>
     <string name="pref_app_version_summary">Version</string>
     <string name="pref_about_title">À propos</string>

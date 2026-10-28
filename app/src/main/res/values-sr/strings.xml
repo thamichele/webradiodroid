@@ -46,7 +46,6 @@
     <string name="pref_app_version_title">Верзија апликације</string>
     <string name="pref_update_station_images_summary">Преузмите најновију верзију слика свих станица.</string>
     <string name="descr_expanded_player_metadata_copy_button">Копирај информације о тренутно пуштеном</string>
-    <string name="pref_report_issue_summary">Пријавите грешке и предложите побољшања на Codeberg-у.</string>
     <string name="dialog_error_message_no_network">Повежите се на интернет.</string>
     <string name="toast_message_collection_backup">Прављење резервне копије радио станица у:</string>
     <string name="toast_message_save_m3u">Чување радио станица као M3U…</string>
@@ -101,7 +100,6 @@
     <string name="pref_tap_anywhere_playback_summary_disabled">Додирните дугме за пуштање да бисте почели да слушате радио станицу.</string>
     <string name="descr_card_station_image">Слика станице</string>
     <string name="descr_expanded_player_metadata_previous_button">Претходни унос метаподатака тренутно пуштеног</string>
-    <string name="pref_report_issue_title">Пријава проблема</string>
     <string name="pref_tap_anywhere_playback_summary_enabled">Додирните било где на картици радио станице да бисте почели да слушате радио станицу.</string>
     <string name="pref_tap_anywhere_playback_title">Додирни радио станицу</string>
     <string name="pref_update_station_images_title">Ажурирање слика станица</string>

@@ -44,7 +44,6 @@
     <string name="toast_message_collection_restore">バックアップから放送局を復元しています。</string>
     <string name="pref_backup_summary">放送局のコレクションを画像を含めてデバイスのストレージに保存します。</string>
     <string name="toast_message_collection_backup">次に放送局を保存中:</string>
-    <string name="pref_report_issue_summary">Codebergでバグを報告し、改善を提案する。</string>
     <string name="dialog_yes_no_positive_button_remove_station">削除</string>
     <string name="dialog_edit_station_name">放送局の名前</string>
     <string name="pref_about_title">アプリについて</string>
@@ -80,7 +79,6 @@
     <string name="dialog_find_station_hint">名前またはストリーム住所</string>
     <string name="dialog_yes_no_positive_button_update_covers">更新</string>
     <string name="pref_theme_selection_title">アプリのテーマ</string>
-    <string name="pref_report_issue_title">問題を報告</string>
     <string name="dialog_find_station_button_add">追加</string>
     <string name="pref_theme_selection_summary">現在のテーマ:</string>
     <string name="pref_edit_station_stream_summary_disabled">ストリーミングリンクの編集は無効です。</string>

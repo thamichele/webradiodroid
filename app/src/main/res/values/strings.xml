@@ -3,7 +3,6 @@
     <!-- App Name -->
     <string name="app_name">WebRadioDroid</string>
     <!-- please do not translate app_name - transcription into different alphabet types is fine though -->
-    <string name="app_version_name" translatable="false">\"The Width of a Circle\"</string>
     <!-- Fragment -->
     <string name="fragment_settings_title">Settings</string>
     <!-- Dialogs -->
@@ -86,8 +85,6 @@
     <string name="pref_m3u_export_title">Export M3U</string>
     <string name="pref_restore_title">Restore Stations</string>
     <string name="pref_restore_summary">Restore collection of radio stations from backup. Existing stations will be replaced.</string>
-    <string name="pref_report_issue_summary">Report bugs and suggest improvements on Codeberg.</string>
-    <string name="pref_report_issue_title">Report Issue</string>
     <string name="pref_tap_anywhere_playback_summary_disabled">Tap on the play button to start listening to a radio station.</string>
     <string name="pref_tap_anywhere_playback_summary_enabled">Tap anywhere on a radio station card to start listening to it.</string>
     <string name="pref_tap_anywhere_playback_title">Tap Radio Station</string>

@@ -65,8 +65,6 @@
     <string name="toast_message_updating_station_images">Aggiornamento delle immagini stazione.</string>
     <string name="toast_message_error_restart_playback_failed">Impossibile riavviare la riproduzione.</string>
     <string name="toast_message_error_download_error">Errore di scaricamento</string>
-    <string name="pref_report_issue_title">Segnala problema</string>
-    <string name="pref_report_issue_summary">Segnala errori e suggerisci miglioramenti su Codeberg.</string>
     <string name="pref_app_version_title">Versione dell\'applicazione</string>
     <string name="pref_app_version_summary">Versione</string>
     <string name="pref_about_title">Informazioni</string>
