@@ -84,6 +84,21 @@ data class MainActivityLayoutHolder (var rootView: View) : MainFragmentLayoutHol
     private var metadataHistoryPosition: Int
     private var isBuffering: Boolean
     var userInterfaceTransparencyEffectActive: Boolean
+    private val fullscreenPlayerView: View
+    private val fullscreenSplitScreen: Boolean
+    private val fullscreenCloseButtonView: ImageButton
+    private val fullscreenStationImageView: ImageView
+    private val fullscreenEqualizerView: EqualizerBarsView
+    private val fullscreenTitleView: TextView
+    private val fullscreenArtistView: TextView
+    private val fullscreenStationNameView: TextView
+    var fullscreenPlayButtonView: ImageButton
+    private val fullscreenBufferingIndicator: ProgressBar
+    var fullscreenPreviousButtonView: ImageButton
+    var fullscreenNextButtonView: ImageButton
+    var fullscreenSleepTimerButtonView: ImageButton
+    var fullscreenSleepTimerRemainingView: TextView
+    private var currentStationName: String = String()
 
 
     /* Init block */
@@ -109,6 +124,20 @@ data class MainActivityLayoutHolder (var rootView: View) : MainFragmentLayoutHol
         playerSleepTimerStartButtonView = rootView.findViewById(R.id.sleep_timer_start_button)
         playerSleepTimerCancelButtonView = rootView.findViewById(R.id.sleep_timer_cancel_button)
         sheetSleepTimerRemainingTimeView = rootView.findViewById(R.id.sleep_timer_remaining_time)
+        fullscreenPlayerView = rootView.findViewById(R.id.player_fullscreen)
+        fullscreenCloseButtonView = rootView.findViewById(R.id.player_fullscreen_close_button)
+        fullscreenStationImageView = rootView.findViewById(R.id.player_fullscreen_station_image)
+        fullscreenEqualizerView = rootView.findViewById(R.id.player_fullscreen_equalizer)
+        fullscreenTitleView = rootView.findViewById(R.id.player_fullscreen_title)
+        fullscreenArtistView = rootView.findViewById(R.id.player_fullscreen_artist)
+        fullscreenStationNameView = rootView.findViewById(R.id.player_fullscreen_station_name)
+        fullscreenPlayButtonView = rootView.findViewById(R.id.player_fullscreen_play_button)
+        fullscreenBufferingIndicator = rootView.findViewById(R.id.player_fullscreen_buffering_indicator)
+        fullscreenPreviousButtonView = rootView.findViewById(R.id.player_fullscreen_previous_button)
+        fullscreenNextButtonView = rootView.findViewById(R.id.player_fullscreen_next_button)
+        fullscreenSleepTimerButtonView = rootView.findViewById(R.id.player_fullscreen_sleep_timer_button)
+        fullscreenSleepTimerRemainingView = rootView.findViewById(R.id.player_fullscreen_sleep_timer_remaining)
+        fullscreenSplitScreen = rootView.resources.getBoolean(R.bool.player_split_screen)
 
         // set up variables
         metadataHistory = PreferencesHelper.loadMetadataHistory()
@@ -178,6 +207,9 @@ data class MainActivityLayoutHolder (var rootView: View) : MainFragmentLayoutHol
 
         // update name
         stationNameView.text = station.name
+        currentStationName = station.name
+        fullscreenStationNameView.text = station.name
+        updateFullscreenMetadata(metadataView.text.toString())
 
         // update cover
         val stationImageFile = File(station.image.toUri().path ?: "")
@@ -190,6 +222,15 @@ data class MainActivityLayoutHolder (var rootView: View) : MainFragmentLayoutHol
             stationImageView.setBackgroundColor(station.imageColor)
         }
         stationImageView.contentDescription = "${context.getString(R.string.descr_player_station_image)}: ${station.name}"
+        Glide.with(context)
+            .load(station.image)
+            .signature(ObjectKey(stationImageFile.lastModified()))
+            .error(R.drawable.ic_default_station_image_64dp)
+            .into(fullscreenStationImageView)
+        if (station.imageColor != -1) {
+            fullscreenStationImageView.setBackgroundColor(station.imageColor)
+        }
+        fullscreenStationImageView.contentDescription = stationImageView.contentDescription
 
         // update streaming link
         playerStreamingLinkView.text = station.getStreamUri()
@@ -235,6 +276,7 @@ data class MainActivityLayoutHolder (var rootView: View) : MainFragmentLayoutHol
                 metadataView.text = metadataString
                 playerMetadataHistoryView.text = metadataString
                 playerMetadataHistoryView.isSelected = true
+                updateFullscreenMetadata(metadataString)
             }
         }
     }
@@ -245,11 +287,13 @@ data class MainActivityLayoutHolder (var rootView: View) : MainFragmentLayoutHol
         when (timeRemaining) {
             0L -> {
                 sleepTimerRunningViews.isGone = true
+                fullscreenSleepTimerRemainingView.text = String()
             }
             else -> {
                 if (playerExtendedViews.isVisible) sleepTimerRunningViews.isVisible = true
                 val sleepTimerTimeRemaining = DateTimeHelper.convertToMinutesAndSeconds(timeRemaining)
                 sheetSleepTimerRemainingTimeView.text = sleepTimerTimeRemaining
+                fullscreenSleepTimerRemainingView.text = sleepTimerTimeRemaining
                 sheetSleepTimerRemainingTimeView.contentDescription = "${context.getString(R.string.descr_expanded_player_sleep_timer_remaining_time)}: ${sleepTimerTimeRemaining}"            }
         }
     }
@@ -264,12 +308,16 @@ data class MainActivityLayoutHolder (var rootView: View) : MainFragmentLayoutHol
             playButtonView.setImageResource(R.drawable.ic_player_play_symbol_48dp)
             bufferingIndicator.isVisible = isBuffering
         }
+        fullscreenPlayButtonView.setImageResource(if (isPlaying) R.drawable.ic_player_stop_symbol_48dp else R.drawable.ic_player_play_symbol_48dp)
+        fullscreenBufferingIndicator.isVisible = !isPlaying && isBuffering
+        fullscreenEqualizerView.setPlaying(isPlaying)
     }
 
 
     /* Toggles buffering indicator */
     fun showBufferingIndicator(buffering: Boolean) {
         bufferingIndicator.isVisible = buffering
+        fullscreenBufferingIndicator.isVisible = buffering
         isBuffering = buffering
     }
 
@@ -296,6 +344,8 @@ data class MainActivityLayoutHolder (var rootView: View) : MainFragmentLayoutHol
 
     /* Initiates the rotation animation of the play button  */
     fun animatePlaybackButtonStateTransition(context: Context, isPlaying: Boolean) {
+        fullscreenPlayButtonView.setImageResource(if (isPlaying) R.drawable.ic_player_stop_symbol_48dp else R.drawable.ic_player_play_symbol_48dp)
+        fullscreenEqualizerView.setPlaying(isPlaying)
         when (isPlaying) {
             true -> {
                 // rotate and morph to stop icon
@@ -329,8 +379,56 @@ data class MainActivityLayoutHolder (var rootView: View) : MainFragmentLayoutHol
     }
 
 
+    /* Shows the full screen player (portrait: overlay, landscape: always visible) */
+    fun showFullscreenPlayer() {
+        if (fullscreenSplitScreen || fullscreenPlayerView.isVisible) return
+        fullscreenPlayerView.alpha = 0f
+        fullscreenPlayerView.translationY = fullscreenPlayerView.resources.displayMetrics.heightPixels * 0.1f
+        fullscreenPlayerView.isVisible = true
+        fullscreenPlayerView.animate()
+            .alpha(1f)
+            .translationY(0f)
+            .setDuration(Keys.DEFAULT_TRANSITION_ANIMATION_DURATION)
+            .start()
+    }
+
+
+    /* Hides the full screen player overlay - returns true if it was visible */
+    fun hideFullscreenPlayerIfVisible(): Boolean {
+        if (fullscreenSplitScreen || !fullscreenPlayerView.isVisible) return false
+        fullscreenPlayerView.animate()
+            .alpha(0f)
+            .translationY(fullscreenPlayerView.height * 0.1f)
+            .setDuration(Keys.DEFAULT_TRANSITION_ANIMATION_DURATION)
+            .withEndAction { fullscreenPlayerView.isGone = true }
+            .start()
+        return true
+    }
+
+
+    /* Splits "Artist - Title" metadata into song title and artist for the full screen player */
+    private fun updateFullscreenMetadata(metadata: String) {
+        val trimmed: String = metadata.trim()
+        val separatorIndex: Int = trimmed.indexOf(" - ")
+        if (trimmed.isEmpty() || trimmed == currentStationName) {
+            fullscreenTitleView.text = currentStationName
+            fullscreenArtistView.text = String()
+            fullscreenArtistView.isGone = true
+        } else if (separatorIndex > 0) {
+            fullscreenTitleView.text = trimmed.substring(separatorIndex + 3).trim()
+            fullscreenArtistView.text = trimmed.substring(0, separatorIndex).trim()
+            fullscreenArtistView.isVisible = true
+        } else {
+            fullscreenTitleView.text = trimmed
+            fullscreenArtistView.text = String()
+            fullscreenArtistView.isGone = true
+        }
+    }
+
+
     /* Hides the info views if they are visible */
     fun hidePlayerExtendedViewsIfVisible(): Boolean {
+        if (hideFullscreenPlayerIfVisible()) return true
         return if (playerExtendedViews.isVisible) {
             hidePlayerExtendedViews()
             true // = info view was visible had to be hidden (= no need to interpret back press as a navigation)
@@ -383,10 +481,24 @@ data class MainActivityLayoutHolder (var rootView: View) : MainFragmentLayoutHol
 
     /* Sets up the player */
     private fun setupPlayer() {
-        playerCardView.setOnClickListener { togglePlayerExtendedViews() }
-        stationImageView.setOnClickListener { togglePlayerExtendedViews() }
-        stationNameView.setOnClickListener { togglePlayerExtendedViews() }
-        metadataView.setOnClickListener { togglePlayerExtendedViews() }
+        // tap: open the full screen player - long press: show the details (stream link, metadata history, sleep timer)
+        playerCardView.setOnClickListener { showFullscreenPlayer() }
+        stationImageView.setOnClickListener { showFullscreenPlayer() }
+        stationNameView.setOnClickListener { showFullscreenPlayer() }
+        metadataView.setOnClickListener { showFullscreenPlayer() }
+        listOf(playerCardView, stationImageView, stationNameView, metadataView).forEach { view ->
+            view.setOnLongClickListener {
+                togglePlayerExtendedViews()
+                true
+            }
+        }
+        fullscreenCloseButtonView.setOnClickListener { hideFullscreenPlayerIfVisible() }
+        if (fullscreenSplitScreen) {
+            // split screen: the player is always there - nothing to close
+            fullscreenCloseButtonView.isGone = true
+            fullscreenPlayerView.isVisible = true
+        }
+        fullscreenArtistView.isGone = true
     }
 
 
@@ -425,6 +537,13 @@ data class MainActivityLayoutHolder (var rootView: View) : MainFragmentLayoutHol
             playerCardView.updateLayoutParams<FrameLayout.LayoutParams> {
                 bottomMargin = (Keys.PLAYER_BOTTOM_MARGIN * UiHelper.getDensityScalingFactor(rootView.context)).toInt() + systemBars.bottom
             }
+            // keep the full screen player clear of status bar, navigation bar and display cutout
+            val horizontalPadding: Int = (24 * UiHelper.getDensityScalingFactor(rootView.context)).toInt()
+            fullscreenPlayerView.setPadding(
+                if (fullscreenSplitScreen) horizontalPadding else horizontalPadding + systemBars.left,
+                systemBars.top,
+                horizontalPadding + systemBars.right,
+                systemBars.bottom)
             // return the insets
             insets
         }

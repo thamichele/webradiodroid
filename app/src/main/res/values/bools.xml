@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- true: the full screen player is always visible next to the station list (landscape split screen) -->
+    <bool name="player_split_screen">false</bool>
+</resources>

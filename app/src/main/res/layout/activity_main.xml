@@ -39,4 +39,11 @@
         android:visibility="gone"
         tools:visibility="visible" />
 
+    <!-- FULL SCREEN PLAYER (opened by tapping the player card) -->
+    <include
+        layout="@layout/player_fullscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
 </FrameLayout>
