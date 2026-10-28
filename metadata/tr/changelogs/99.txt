@@ -1,5 +1,0 @@
-# v4.1.9 - Modern Love
-
-**3 Mayıs 2024**
-- OGG ve HLS yayınları için şimdi oynatılıyor üst verileri
-- çeviriler güncellendi

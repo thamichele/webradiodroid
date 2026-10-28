@@ -1,4 +1,0 @@
-# v4.3.5 - The Width of a Circle
-
-**2025-11-16**
-- risolto un bug per cui rinominare una stazione causava il crash dell'app (grazie Ely)

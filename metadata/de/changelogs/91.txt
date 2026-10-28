@@ -1,8 +1,0 @@
-# v4.1.1 – Modern Love
-
-**12.05.2022**
-
-- neue Option zum Sichern (und Wiederherstellen) aller Radiosender inklusive der Logos
-- Fix für verschwommenes Standardsenderlogo
-- Korrektur der indonesischen Sprache
-- aktualisierte Übersetzungen

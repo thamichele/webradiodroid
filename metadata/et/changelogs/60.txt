@@ -1,6 +1,0 @@
-# versioon 3.0.10 - Oh! You Pretty Things
-
-**2018-09-27**
-
-- lisasime araabia keele tõlke
-- parandasime TalkBacki tuge

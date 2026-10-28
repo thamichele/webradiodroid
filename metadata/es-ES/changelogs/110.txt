@@ -1,5 +1,0 @@
-# v4.3.3 - El ancho de un círculo
-
-**25 de octubre de 2025**
-- Se ha corregido un error relacionado con la configuración manual de las imágenes de las emisoras
-- Se ha corregido un error de traducción en el título de la pantalla de configuración

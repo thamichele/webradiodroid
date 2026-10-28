@@ -1,6 +1,0 @@
-# v3.2.1 - Life on Mars?
-
-**2019-07-25**
-
-- traduzione in ceco
-- la funzione dei metadati "in riproduzione" mostra meglio i caratteri non latini (meno testo incomprensibile illeggibile)

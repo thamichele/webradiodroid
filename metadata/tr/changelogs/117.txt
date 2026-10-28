@@ -1,6 +1,0 @@
-v4.3.10 - Dairenin Genişliği
-14 Ekim 2026
-
-- oynatmayı artık denetleyemeyen üçüncü taraf widget'ları ve başlatıcı medya denetimleri düzeltildi
-- çeviriler güncellendi
-- yazılım kütüphaneleri güncellendi

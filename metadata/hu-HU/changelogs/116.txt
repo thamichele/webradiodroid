@@ -1,8 +1,0 @@
-v4.3.9 – Egy kör szélessége
-2026-09-18
-
-- az állomáslisták és a képek mostantól a Transistort azonosítják, ahelyett hogy felfednék az Android verzióját, az eszköz modelljét és az összeállítás azonosítóját
-- eltávolítva egy oda nem illő Mégse gomb, amely időnként megjelenhetett az Android Auto felületén
-- fordítások frissítése
-- szoftverkönyvtárak frissítése
-- korszerűsített összeállítási környezet

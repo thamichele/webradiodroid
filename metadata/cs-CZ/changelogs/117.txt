@@ -1,6 +1,0 @@
-v4.3.10 - The Width of a Circle
-2026-10-14
-
-- opravena chyba u widgetů třetích stran a ovládacích prvků přehrávání v launcheru, které již neumožňovaly ovládat přehrávání
-- aktualizovány překlady
-- aktualizovány softwarové knihovny

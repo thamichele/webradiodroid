@@ -1,1 +1,0 @@
-Tranzistor je aplikacija za slušanje radio stanica putem interneta.

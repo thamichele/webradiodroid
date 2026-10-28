@@ -1,8 +1,0 @@
-v4.3.9 - The Width of a Circle
-2026-09-18
-
-- station playlists and images now identify Transistor rather than disclosing the Android version, the device model and the build id
-- removed a stray Cancel button that could show up in Android Auto
-- updated translations
-- updated software libraries
-- modernised the build setup

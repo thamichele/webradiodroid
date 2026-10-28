@@ -1,6 +1,0 @@
-v4.3.10 – The Width of a Circle
-14.10.2026
-
-- Drittanbieter-Widgets und Mediensteuerungen im Launcher behoben, die die Wiedergabe nicht mehr steuern konnten
-- Übersetzungen aktualisiert
-- Softwarebibliotheken aktualisiert

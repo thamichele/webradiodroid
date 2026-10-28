@@ -1,1 +1,0 @@
-Transistor on sovellus radiokanavien kuunteluun internetistä.

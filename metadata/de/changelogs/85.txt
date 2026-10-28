@@ -1,6 +1,0 @@
-# v4.0.14 – Andy Warhol
-
-**20.03.2021**
-
-- kleine Änderung der Benachrichtigung
-- behebt einen weiteren seltenen Absturz

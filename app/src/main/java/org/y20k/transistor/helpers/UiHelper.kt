@@ -29,7 +29,6 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.createBitmap
-import androidx.core.graphics.drawable.toBitmap
 import androidx.core.graphics.toColorInt
 import androidx.palette.graphics.Palette
 import androidx.recyclerview.widget.ItemTouchHelper
@@ -158,17 +157,6 @@ object UiHelper {
     fun hideSoftKeyboard(context: Context, view: View) {
         val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.windowToken, 0)
-    }
-
-
-    /* Get the default station image as a ByteArray */
-    fun getDefaultStationImageAsByteArray(context: Context, size: Int = 512): ByteArray {
-        val stationImageBitmap: Bitmap = ContextCompat.getDrawable(context, R.drawable.ic_default_station_image_64dp)!!.toBitmap(size, size)
-        val stream = ByteArrayOutputStream()
-        stationImageBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
-        val coverByteArray: ByteArray = stream.toByteArray()
-        stationImageBitmap.recycle()
-        return coverByteArray
     }
 
 

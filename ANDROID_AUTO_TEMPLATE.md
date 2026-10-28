@@ -1,4 +1,4 @@
-# Transistor: player Android Auto a tutto schermo
+# WebRadioDroid: player Android Auto a tutto schermo
 
 Fork di Transistor 4.3.10 con l'esperienza Android Auto basata sulla Car App Library (media app con template).
 
@@ -27,7 +27,7 @@ Fork di Transistor 4.3.10 con l'esperienza Android Auto basata sulla Car App Lib
 ```
 ./gradlew assembleDebug
 ```
-L'APK debug ha id `org.y20k.transistor.debug`, quindi convive con il Transistor installato da F-Droid.
+L'app ha id `io.github.thamichele.webradiodroid` (debug: `.debug`), quindi convive con il Transistor originale.
 
 ## Provare in auto o con il DHU
 
@@ -36,7 +36,7 @@ L'APK debug ha id `org.y20k.transistor.debug`, quindi convive con il Transistor 
 3. Sempre lì, in fondo, attiva **Enable CAL Beta Features** (serve per le funzioni 1.9, utile comunque).
 4. Installa l'APK debug, apri l'app sul telefono una volta e aggiungi qualche stazione.
 5. In auto (o con il Desktop Head Unit: `adb forward tcp:5277 tcp:5277` e poi `desktop-head-unit`)
-   apri "Transistor (debug)".
+   apri "WebRadioDroid".
 
 ## Da verificare dal vivo
 

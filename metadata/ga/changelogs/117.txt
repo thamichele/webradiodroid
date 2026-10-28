@@ -1,6 +1,0 @@
-v4.3.10 - Leithead Ciorcail
-2026-10-14
-
-- socraíodh giuirléidí tríú páirtí agus rialuithe meán sa lainseálaí nach raibh in ann athsheinm a rialú a thuilleadh
-- nuashonraíodh aistriúcháin
-- nuashonraíodh leabharlanna bogearraí

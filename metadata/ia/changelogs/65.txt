@@ -1,8 +1,0 @@
-# v3.1.1 - John, I’m Only Dancing
-
-**2019-01-16**
-
-- supporta le equalisator de audio del systema Android
-- correctiones de defectos
-- traductiones actualisate
-- supporto meliorate de modo obscur

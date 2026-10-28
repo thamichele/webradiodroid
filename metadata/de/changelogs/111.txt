@@ -1,5 +1,0 @@
-# v4.3.4 – The Width of a Circle
-
-**13.11.2025**
-- Übersetzungen aktualisiert
-- Fehler behoben, durch den Transistor den neuen Inhaltstyp nicht speicherte, wenn die Streaming-Adresse eines Senders geändert wurde

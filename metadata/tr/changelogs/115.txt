@@ -1,6 +1,0 @@
-v4.3.8 - Dairenin Genişliği
-5 Ağustos 2026
-
-- Android Auto'da ve medya düğmeleriyle sonraki/önceki seçeneğinin istasyonları değiştirmemesi sorunu düzeltildi
-- Live365 istasyonlarının eklenememesi veya oynatılamaması sorunu düzeltildi
-- çeviriler güncellendi

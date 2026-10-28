@@ -1,7 +1,0 @@
-# v4.0.15 - Andy Warhol
-
-**2021-07-28**
-
-- nuova lingua: frisone
-- traduzioni aggiornate
-- ora Transistor interrompe immediatamente il buffering quando la riproduzione viene fermata

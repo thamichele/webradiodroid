@@ -1,9 +1,0 @@
-# v4.2.0 – Ashes to Ashes (Release #100)
-
-**04.10.2024**
-- Senderwechsel (über Benachrichtigung und Kopfhörer-Tasten) repariert
-- Fortsetzung der Wiedergabe aus der Benachrichtigung korrigiert
-- kleiner Fehlerkorrekturen
-- neue Übersetzung: Irisch (Danke Aindriú Mac Giolla Eoin)
-- neue Übersetzung: Walisisch (Danke Aled Powell)
-- verbesserte Übersetzungen

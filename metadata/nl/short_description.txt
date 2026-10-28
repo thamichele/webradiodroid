@@ -1,1 +1,0 @@
-Transistor is een app voor het beluisteren van radiozenders via het internet.

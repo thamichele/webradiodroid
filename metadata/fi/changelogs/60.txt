@@ -1,6 +1,0 @@
-# v3.0.10 - Voi! Te ihanuudet
-
- **2018-09-27**
-
-- Arabiankielinen versio
-- parannettu TalkBack tuki

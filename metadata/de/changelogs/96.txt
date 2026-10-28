@@ -1,7 +1,0 @@
-# v4.1.6 – Modern Love
-
-**10.07.2023**
-
-- Überarbeitung der Eingabemöglichkeit für direkte Streaming-URLs über den Suchdialog
-- Neue Option in den Einstellungen "Größeren Puffer verwenden"
-- Aktualisierte Übersetzungen

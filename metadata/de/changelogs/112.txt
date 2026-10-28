@@ -1,4 +1,0 @@
-# v4.3.5 – The Width of a Circle
-
-**16.11.2025**
-- Fehler behoben, durch den das Umbenennen eines Senders zum Absturz der App führte (Danke, Ely)
