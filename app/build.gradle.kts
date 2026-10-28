@@ -14,8 +14,11 @@ android {
         applicationId = "org.y20k.transistor"
         minSdk = 25
         targetSdk = 37
-        versionCode = 117
-        versionName = "4.3.10"
+        // GitHub Actions builds get a unique, increasing version so every APK installs as an update
+        // and the build number is visible in Settings > Apps
+        val ciRunNumber: Int = System.getenv("GITHUB_RUN_NUMBER")?.toIntOrNull() ?: 0
+        versionCode = 117 * 10000 + ciRunNumber
+        versionName = if (ciRunNumber > 0) "4.3.10-wrd.$ciRunNumber" else "4.3.10-wrd"
         manifestPlaceholders["appLabel"] = "@string/app_name"
     }
 
