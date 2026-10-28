@@ -135,6 +135,11 @@
     <string name="sample_text_sleep_timer_remaining_time" translatable="false">00:00</string>
     <!-- Google Cast -->
     <string name="cast_context_error">Failed to get Cast context. Try updating Google Play Services and restart the app.</string>
+    <!-- Full screen player -->
+    <string name="player_fullscreen_headline">Now playing</string>
+    <string name="descr_player_fullscreen_close_button">Close full screen player</string>
+    <string name="descr_player_fullscreen_previous_button">Previous station</string>
+    <string name="descr_player_fullscreen_next_button">Next station</string>
     <!-- Android Auto -->
     <string name="car_title_now_playing">Now playing</string>
     <string name="car_text_on_air">On air</string>

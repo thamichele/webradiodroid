@@ -27,6 +27,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.media3.common.PlaybackException
+import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.session.MediaController
 import androidx.media3.session.SessionResult
@@ -242,28 +243,58 @@ abstract class BaseMainActivity : AppCompatActivity(), SharedPreferences.OnShare
 
         // set up sleep timer start button
         layout.playerSleepTimerStartButtonView.setOnClickListener {
-            when (controller?.isPlaying) {
-                true -> {
-                    playerState.sleepTimerRunning = true
-                    controller?.startSleepTimer()
-                    togglePeriodicSleepTimerUpdateRequest()
-                }
-
-                else -> Toast.makeText(
-                    this,
-                    R.string.toast_message_sleep_timer_unable_to_start,
-                    Toast.LENGTH_LONG
-                ).show()
-            }
+            onSleepTimerStart()
         }
 
         // set up sleep timer cancel button
         layout.playerSleepTimerCancelButtonView.setOnClickListener {
-            layout.sheetSleepTimerRemainingTimeView.text = String()
-            playerState.sleepTimerRunning = false
-            controller?.cancelSleepTimer()
-            togglePeriodicSleepTimerUpdateRequest()
+            onSleepTimerCancel()
         }
+
+        // full screen player controls
+        layout.fullscreenPlayButtonView.setOnClickListener {
+            onPlayButtonTapped(playerState.stationPosition)
+        }
+        layout.fullscreenPreviousButtonView.setOnClickListener {
+            controller?.seekToPreviousMediaItem()
+        }
+        layout.fullscreenNextButtonView.setOnClickListener {
+            controller?.seekToNextMediaItem()
+        }
+        layout.fullscreenSleepTimerButtonView.setOnClickListener {
+            if (playerState.sleepTimerRunning) onSleepTimerCancel() else onSleepTimerStart()
+        }
+        layout.fullscreenSleepTimerRemainingView.setOnClickListener {
+            onSleepTimerCancel()
+        }
+    }
+
+
+    /* Starts the sleep timer, if playback is active */
+    private fun onSleepTimerStart() {
+        when (controller?.isPlaying) {
+            true -> {
+                playerState.sleepTimerRunning = true
+                controller?.startSleepTimer()
+                togglePeriodicSleepTimerUpdateRequest()
+            }
+
+            else -> Toast.makeText(
+                this,
+                R.string.toast_message_sleep_timer_unable_to_start,
+                Toast.LENGTH_LONG
+            ).show()
+        }
+    }
+
+
+    /* Cancels the sleep timer */
+    private fun onSleepTimerCancel() {
+        layout.sheetSleepTimerRemainingTimeView.text = String()
+        layout.fullscreenSleepTimerRemainingView.text = String()
+        playerState.sleepTimerRunning = false
+        controller?.cancelSleepTimer()
+        togglePeriodicSleepTimerUpdateRequest()
     }
 
 
@@ -400,6 +431,22 @@ abstract class BaseMainActivity : AppCompatActivity(), SharedPreferences.OnShare
             resultFuture?.addListener(kotlinx.coroutines.Runnable {
                 playerState.sleepTimerRunning = resultFuture.get().extras.getBoolean(Keys.EXTRA_SLEEP_TIMER_RUNNING, false)
             }, MoreExecutors.directExecutor())
+        }
+
+        override fun onMediaItemTransition(mediaItem: MediaItem?, reason: Int) {
+            super.onMediaItemTransition(mediaItem, reason)
+            // next / previous station: keep the player views in sync
+            val position: Int = controller?.currentMediaItemIndex ?: return
+            if (position < 0) return
+            playerState.stationPosition = position
+            CoroutineScope(IO).launch {
+                val collection: Collection = FileHelper.readCollection(getApplication())
+                withContext(Main) {
+                    if (position < collection.stations.size) {
+                        updatePlayerViews(collection.stations[position])
+                    }
+                }
+            }
         }
 
         override fun onPlayWhenReadyChanged(playWhenReady: Boolean, reason: Int) {

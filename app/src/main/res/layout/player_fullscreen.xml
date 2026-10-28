@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Full screen player: overlay on phones in portrait, right half of the screen in landscape -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/player_fullscreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <!-- TOP BAR -->
+    <ImageButton
+        android:id="@+id/player_fullscreen_close_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/descr_player_fullscreen_close_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_chevron_down_24dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/player_fullscreen_headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player_fullscreen_headline"
+        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        app:layout_constraintBottom_toBottomOf="@+id/player_fullscreen_close_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/player_fullscreen_close_button" />
+
+    <!-- STATION IMAGE - takes the space that is left -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/player_fullscreen_station_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/colorSurfaceContainerHigh"
+        android:contentDescription="@string/descr_player_station_image"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/player_fullscreen_equalizer"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player_fullscreen_close_button"
+        app:layout_constraintWidth_max="380dp"
+        app:shapeAppearanceOverlay="@style/FullscreenPlayerImage"
+        app:srcCompat="@drawable/ic_default_station_image_64dp" />
+
+    <!-- EQUALIZER BARS -->
+    <org.y20k.transistor.ui.EqualizerBarsView
+        android:id="@+id/player_fullscreen_equalizer"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/player_fullscreen_title"
+        app:layout_constraintEnd_toEndOf="@+id/player_fullscreen_station_image"
+        app:layout_constraintStart_toStartOf="@+id/player_fullscreen_station_image"
+        app:layout_constraintTop_toBottomOf="@+id/player_fullscreen_station_image" />
+
+    <!-- SONG, ARTIST, STATION -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/player_fullscreen_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+        android:textColor="?attr/colorOnSurface"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/player_fullscreen_artist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player_fullscreen_equalizer"
+        tools:text="Song title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/player_fullscreen_artist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        app:layout_constraintBottom_toTopOf="@+id/player_fullscreen_station_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player_fullscreen_title"
+        tools:text="Artist" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/player_fullscreen_station_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+        android:textColor="?attr/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/player_fullscreen_play_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player_fullscreen_artist"
+        tools:text="@string/sample_text_station_name" />
+
+    <!-- CONTROLS -->
+    <ImageButton
+        android:id="@+id/player_fullscreen_previous_button"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="24dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/descr_player_fullscreen_previous_button"
+        app:layout_constraintBottom_toBottomOf="@+id/player_fullscreen_play_button"
+        app:layout_constraintEnd_toStartOf="@+id/player_fullscreen_play_button"
+        app:layout_constraintTop_toTopOf="@+id/player_fullscreen_play_button"
+        app:srcCompat="@drawable/ic_notification_skip_to_previous_36dp"
+        app:tint="?attr/colorOnSurface" />
+
+    <ImageButton
+        android:id="@+id/player_fullscreen_play_button"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_fullscreen_play_button"
+        android:contentDescription="@string/descr_player_playback_button"
+        android:scaleType="center"
+        app:layout_constraintBottom_toTopOf="@+id/player_fullscreen_sleep_timer_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player_fullscreen_station_name"
+        app:srcCompat="@drawable/ic_player_play_symbol_48dp" />
+
+    <ProgressBar
+        android:id="@+id/player_fullscreen_buffering_indicator"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:indeterminateTint="?attr/colorPrimary"
+        android:indeterminateTintMode="src_in"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/player_fullscreen_play_button"
+        app:layout_constraintEnd_toEndOf="@+id/player_fullscreen_play_button"
+        app:layout_constraintStart_toStartOf="@+id/player_fullscreen_play_button"
+        app:layout_constraintTop_toTopOf="@+id/player_fullscreen_play_button" />
+
+    <ImageButton
+        android:id="@+id/player_fullscreen_next_button"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/descr_player_fullscreen_next_button"
+        app:layout_constraintBottom_toBottomOf="@+id/player_fullscreen_play_button"
+        app:layout_constraintStart_toEndOf="@+id/player_fullscreen_play_button"
+        app:layout_constraintTop_toTopOf="@+id/player_fullscreen_play_button"
+        app:srcCompat="@drawable/ic_notification_skip_to_next_36dp"
+        app:tint="?attr/colorOnSurface" />
+
+    <!-- SLEEP TIMER -->
+    <ImageButton
+        android:id="@+id/player_fullscreen_sleep_timer_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/descr_expanded_player_sleep_timer_start_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player_fullscreen_play_button"
+        app:srcCompat="@drawable/ic_player_extended_sleep_timer_24dp"
+        app:tint="?attr/colorOnSurfaceVariant" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/player_fullscreen_sleep_timer_remaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        app:layout_constraintBottom_toBottomOf="@+id/player_fullscreen_sleep_timer_button"
+        app:layout_constraintStart_toEndOf="@+id/player_fullscreen_sleep_timer_button"
+        app:layout_constraintTop_toTopOf="@+id/player_fullscreen_sleep_timer_button"
+        tools:text="@string/sample_text_sleep_timer_remaining_time" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
