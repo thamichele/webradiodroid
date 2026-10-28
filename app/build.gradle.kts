@@ -14,11 +14,14 @@ android {
         applicationId = "org.y20k.transistor"
         minSdk = 25
         targetSdk = 37
-        // GitHub Actions builds get a unique, increasing version so every APK installs as an update
-        // and the build number is visible in Settings > Apps
+        // WebRadioDroid's own version (based on Transistor 4.3.10): MAJOR.MINOR.<GitHub Actions build number>,
+        // so every CI build installs as an update and its number is visible in Settings > Apps.
+        // versionCode starts at 2000000 to stay above the codes of the earlier Transistor-based builds.
+        val appVersionMajor = 1
+        val appVersionMinor = 0
         val ciRunNumber: Int = System.getenv("GITHUB_RUN_NUMBER")?.toIntOrNull() ?: 0
-        versionCode = 117 * 10000 + ciRunNumber
-        versionName = if (ciRunNumber > 0) "4.3.10-wrd.$ciRunNumber" else "4.3.10-wrd"
+        versionCode = 2000000 + appVersionMajor * 100000 + appVersionMinor * 1000 + ciRunNumber
+        versionName = "$appVersionMajor.$appVersionMinor.$ciRunNumber"
         manifestPlaceholders["appLabel"] = "@string/app_name"
     }
 
