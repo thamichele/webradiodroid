@@ -269,6 +269,13 @@
                 android:resource="@xml/provider_paths"/>
         </provider>
 
+        <!-- serves station artwork to Android Auto (read-only, only the artwork cache folder) -->
+        <provider
+            android:name=".helpers.ArtworkProvider"
+            android:authorities="${applicationId}.artwork"
+            android:exported="true"
+            tools:ignore="ExportedContentProvider" />
+
     </application>
 
 

@@ -340,7 +340,11 @@ object CollectionHelper {
             setIsPlayable(true)
             /* check for "file://" prevents a crash when an old backup was restored */
             val stationImageFile: File? = if (station.image.isNotEmpty() && station.image.startsWith("file://") && station.image.toUri().toFile().exists()) station.image.toUri().toFile() else null
-            setArtworkData(UiHelper.createArtworkAsByteArray(context, stationImageFile, station.imageColor), MediaMetadata.PICTURE_TYPE_FRONT_COVER)
+            val artworkBytes: ByteArray = UiHelper.createArtworkAsByteArray(context, stationImageFile, station.imageColor)
+            setArtworkData(artworkBytes, MediaMetadata.PICTURE_TYPE_FRONT_COVER)
+            // Android Auto shows only artwork it can load from a content:// URI
+            val artworkName: String = "${station.uuid}-${stationImageFile?.lastModified() ?: 0L}-${station.imageColor}.jpg"
+            setArtworkUri(ArtworkProvider.getArtworkUri(context, artworkName) { artworkBytes })
             // keep original artwork URI for being included in Cast metadata
             val extras = Bundle()
             extras.putString(Keys.KEY_ORIGINAL_ARTWORK_URI, station.remoteImageLocation)
