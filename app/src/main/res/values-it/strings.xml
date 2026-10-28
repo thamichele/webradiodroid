@@ -14,7 +14,7 @@
     <string name="shortcut_last_station_short_label">Ultima stazione</string>
     <string name="shortcut_last_station_long_label">Riproduci ultima stazione</string>
     <string name="descr_app_icon">Icona dell\'app raffigurante una vecchia radio</string>
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="dialog_error_message_default">Si è verificato un errore</string>
     <string name="shortcut_last_station_disabled_message">Scorciatoia per la riproduzione dell\'ultima stazione disattivata.</string>
     <string name="toast_message_shortcut_created">Scorciatoia creata.</string>
@@ -118,7 +118,7 @@
     <string name="car_title_now_playing">In riproduzione</string>
     <string name="car_text_on_air">In onda</string>
     <string name="car_message_connecting_to_player">Connessione al lettore…</string>
-    <string name="car_message_no_stations">Nessuna stazione. Aggiungi le stazioni in Transistor sul telefono.</string>
+    <string name="car_message_no_stations">Nessuna stazione. Aggiungi le stazioni in WebRadioDroid sul telefono.</string>
     <string name="car_toast_player_not_ready">Il lettore non è ancora pronto</string>
 
 </resources>

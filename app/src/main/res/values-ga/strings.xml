@@ -12,7 +12,7 @@
     <string name="dialog_find_station_title">Aimsigh Stáisiún</string>
     <string name="dialog_generic_button_cancel">Cealaigh</string>
     <string name="dialog_generic_details_button">Taispeáin mionsonraí</string>
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="dialog_find_station_no_results">Níor aimsíodh aon torthaí.</string>
     <string name="dialog_yes_no_message_remove_station">Bain an stáisiún seo\?</string>
     <string name="dialog_opml_import_details_default">Níl mionsonraí ar fáil</string>

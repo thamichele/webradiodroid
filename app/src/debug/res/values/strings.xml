@@ -4,5 +4,5 @@
     Launcher name of the debug build.
 -->
 <resources>
-    <string name="app_name_debug" translatable="false">Transistor (debug)</string>
+    <string name="app_name_debug" translatable="false">WebRadioDroid (debug)</string>
 </resources>

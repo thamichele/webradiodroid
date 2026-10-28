@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="fragment_settings_title">Arventennoù</string>
     <string name="dialog_edit_station_name">Anv savlec\'h</string>
     <string name="dialog_edit_stream_uri">Chomlec\'h ar froud</string>

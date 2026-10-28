@@ -14,7 +14,7 @@
     <string name="shortcut_last_station_short_label">สถานีสุดท้าย</string>
     <string name="shortcut_last_station_long_label">เล่นสถานีสุดท้าย</string>
     <string name="descr_app_icon">ไอคอนแอพแสดงถึงวิทยุเก่า</string>
-    <string name="app_name">วิทยุทรานซิสเตอร์</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="dialog_error_message_default">เกิดข้อผิดพลาด</string>
     <string name="shortcut_last_station_disabled_message">ทางลัดสำหรับการเล่นสถานีสุดท้ายถูกปิดใช้งาน</string>
     <string name="dialog_rename_station_input_hint">ป้อนชื่อสถานีใหม่</string>

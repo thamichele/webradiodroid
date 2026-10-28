@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- App Name -->
-    <string name="app_name">晶体管收音机</string>
+    <string name="app_name">WebRadioDroid</string>
     <!-- please do not translate app_name - transcription into different alphabet types is fine though -->
     <string name="fragment_settings_title">设置</string>
     <string name="dialog_error_message_default">发生错误</string>

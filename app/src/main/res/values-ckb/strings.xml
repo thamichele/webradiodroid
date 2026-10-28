@@ -12,7 +12,7 @@
     <string name="dialog_generic_details_button">وردەکارییەکان پیشان بدە</string>
     <string name="toast_message_save_m3u">وێستگە ڕادیۆییەکان وەک M3U پاشەکەوت دەبن…</string>
     <string name="toast_message_station_duplicate">وێستگەی دووبارەبووەوە.</string>
-    <string name="app_name">ترانزستەر</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="fragment_settings_title">ڕێکخستنەکان</string>
     <string name="dialog_error_message_no_network">پەیوەست ببە بە ئینتەرنێتەوە.</string>
     <string name="dialog_edit_save_changes">ڕێکخستنەکان پاشەکەوت بکە</string>

@@ -87,7 +87,7 @@
     <string name="pref_general_title">일반</string>
     <string name="toast_message_collection_backup">라디오 방송국 백업 경로:</string>
     <string name="dialog_find_station_no_results">결과 없음.</string>
-    <string name="app_name">트랜지스터</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="dialog_yes_no_negative_button_cancel">취소</string>
     <string name="dialog_error_message_default">오류 발생</string>
     <string name="dialog_yes_no_message_remove_station">이 방송국을 지울까요\?</string>

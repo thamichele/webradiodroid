@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="shortcut_last_station_short_label">Última estação</string>
     <string name="shortcut_last_station_long_label">Sintonizar última estação</string>
     <string name="shortcut_last_station_disabled_message">Atalho para reproduzir última estação desabilitado.</string>

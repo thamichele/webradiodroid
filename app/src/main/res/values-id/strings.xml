@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="player_sheet_h2_station_metadata">Saat ini diputar</string>
     <string name="player_sheet_h2_stream_url">Tautan streaming</string>
     <string name="dialog_generic_button_okay">OKE</string>

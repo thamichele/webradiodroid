@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- App Name -->
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <!-- please do not translate app_name - transcription into different alphabet types is fine though -->
     <string name="app_version_name" translatable="false">\"The Width of a Circle\"</string>
     <!-- Fragment -->
@@ -139,7 +139,7 @@
     <string name="car_title_now_playing">Now playing</string>
     <string name="car_text_on_air">On air</string>
     <string name="car_message_connecting_to_player">Connecting to player…</string>
-    <string name="car_message_no_stations">No stations yet. Add stations in Transistor on your phone.</string>
+    <string name="car_message_no_stations">No stations yet. Add stations in WebRadioDroid on your phone.</string>
     <string name="car_toast_player_not_ready">Player is not ready yet</string>
 
 </resources>

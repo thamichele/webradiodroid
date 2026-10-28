@@ -2,7 +2,7 @@
 <resources>
     <string name="dialog_find_station_button_add">Lisää</string>
     <string name="dialog_generic_button_okay">OK</string>
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="dialog_edit_save_changes">Tallenna muutokset</string>
     <string name="dialog_edit_station_name">Kanavan nimi</string>
     <string name="dialog_error_message_default">Tapahtui virhe</string>
