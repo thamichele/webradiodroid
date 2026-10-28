@@ -99,7 +99,7 @@
     <string name="descr_card_small_play_button">Redare/oprire</string>
     <string name="descr_dialog_edit_place_on_home_screen_icon">Plasează pe ecranul de pornire</string>
     <string name="onboarding_app_description">Aplicație radio</string>
-    <string name="app_name">Tranzistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="pref_buffer_size_summary_disabled">Se utilizează dimensiunea implicită a tamponului pentru redarea unui flux radio.</string>
     <string name="cast_context_error">Nu s-a putut obține contextul Cast. Încearcă să actualizezi Serviciile Google Play și repornește aplicația.</string>
     <string name="pref_report_issue_summary">Raportează erori și sugerează îmbunătățiri pentru Codeberg.</string>

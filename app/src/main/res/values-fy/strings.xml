@@ -35,7 +35,7 @@
     <string name="dialog_error_title_no_network">Offline</string>
     <string name="dialog_error_message_no_network">Ferbine mei it Internet.</string>
     <string name="fragment_settings_title">Ynstellingen</string>
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="dialog_yes_no_message_update_station_images">Lêste ferzje fan alle stasjon ôfbyldingen delhelje\?</string>
     <string name="dialog_error_message_default">In flater die harren foar</string>
     <string name="notification_stop">Stopje</string>

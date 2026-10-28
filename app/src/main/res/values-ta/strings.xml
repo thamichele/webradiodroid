@@ -37,7 +37,7 @@
     <string name="onboarding_app_import_running">உங்கள் நிலையங்களை இறக்குமதி செய்தல்…</string>
     <string name="descr_expanded_player_sleep_timer_remaining_time">தூக்க டைமரில் மீதமுள்ள நேரம்</string>
     <string name="descr_expanded_player_sleep_timer_start_button">தூக்க டைமரைத் தொடங்குங்கள்</string>
-    <string name="app_name">டிரான்சிச்டர்</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="fragment_settings_title">அமைப்புகள்</string>
     <string name="dialog_add_station_title">நிலையத்தைச் சேர்க்கவும்</string>
     <string name="dialog_edit_save_changes">மாற்றங்களைச் சேமிக்கவும்</string>

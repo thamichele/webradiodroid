@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="dialog_edit_stream_uri">Адрес на потока</string>
-    <string name="app_name">Транзистор</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="dialog_edit_station_name">Наименование на станцията</string>
     <string name="fragment_settings_title">Настройки</string>
     <string name="dialog_edit_save_changes">Запазване</string>

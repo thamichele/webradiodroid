@@ -68,7 +68,7 @@
     <string name="dialog_error_message_no_network">נא להתחבר לאינטרנט.</string>
     <string name="dialog_error_message_default">התרחשה שגיאה</string>
     <string name="fragment_settings_title">הגדרות</string>
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="pref_m3u_export_title">ייצוא M3U</string>
     <string name="pref_m3u_export_summary">ניתן לשמור את תחנות הרדיו שלך לקובץ רשימת נגינה מסוג M3U כדי שניתן יהיה לייבא אותן לנגנים אחרים.</string>
     <string name="toast_message_save_m3u">תחנות הרדיו נשמרות כ־M3U…</string>

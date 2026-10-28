@@ -14,7 +14,7 @@
     <string name="onboarding_app_get_started">Dechrau arni</string>
     <string name="shortcut_last_station_short_label">Gorsaf diwethaf</string>
     <string name="shortcut_last_station_long_label">Chwarae\'r orsaf diwethaf</string>
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="fragment_settings_title">Gosodiadau</string>
     <string name="dialog_add_station_title">Ychwnegu Orsaf</string>
     <string name="dialog_error_message_no_network">Cysyllta â\'r rhyngrwyd.</string>

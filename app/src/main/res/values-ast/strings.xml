@@ -9,7 +9,7 @@
     <string name="dialog_find_station_no_results">Nun s\'atopó nengún resultáu.</string>
     <string name="dialog_find_station_title">Busca d\'emisores</string>
     <string name="dialog_generic_button_cancel">Encaboxar</string>
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="fragment_settings_title">Configuración</string>
     <string name="dialog_add_station_title">Amiestu d\'una emisora</string>
     <string name="dialog_edit_save_changes">Guardar los cambeos</string>

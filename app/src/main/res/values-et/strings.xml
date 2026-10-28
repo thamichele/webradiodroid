@@ -18,7 +18,7 @@
     <string name="toast_message_shortcut_created">Kiirlink on loodud.</string>
     <string name="toast_message_copied_to_clipboard">Kopeeritud lõikelauale.</string>
     <string name="fragment_settings_title">Seadistused</string>
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="dialog_edit_save_changes">Salvesta muudatused</string>
     <string name="dialog_error_message_default">Tekkis viga</string>
     <string name="dialog_find_station_button_add">Lisa</string>

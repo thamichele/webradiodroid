@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="fragment_settings_title">Beállítások</string>
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="toast_message_install_file_helper">Telepítsen egy fájlkezelőt.</string>
     <string name="toast_message_copied_to_clipboard">Vágólapra másolva.</string>
     <string name="toast_message_sleep_timer_unable_to_start">Először indítsa el a lejátszást.</string>

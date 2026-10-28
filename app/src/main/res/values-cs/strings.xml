@@ -14,7 +14,7 @@
     <string name="shortcut_last_station_short_label">Poslední přehrávaná stanice</string>
     <string name="shortcut_last_station_long_label">Znovu spustí naposledy přehrávanou stanici</string>
     <string name="descr_app_icon">Ikona aplikace znázorňuje staré rádio</string>
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="dialog_error_message_default">Vyskytla se chyba</string>
     <string name="shortcut_last_station_disabled_message">Zkratka na poslední přehrávanou stanici je zakázaná.</string>
     <string name="toast_message_shortcut_created">Odkaz vytvořený.</string>

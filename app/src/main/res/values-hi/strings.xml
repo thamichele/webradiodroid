@@ -59,7 +59,7 @@
     <string name="shortcut_last_station_long_label">अंतिम स्टेशन चलायें</string>
     <string name="dialog_error_title_no_network">ऑफलाइन</string>
     <string name="dialog_find_station_no_results">कोई परिणाम नहीं मिला।</string>
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="fragment_settings_title">सेटिंग्स</string>
     <string name="dialog_add_station_title">स्टेशन जोड़ें</string>
     <string name="dialog_error_message_no_network">इंटरनेट से कनेक्ट करें।</string>

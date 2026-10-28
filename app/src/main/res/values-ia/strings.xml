@@ -93,7 +93,7 @@
     <string name="descr_app_icon">Icone de application que monstra un radio ancian</string>
     <string name="pref_theme_selection_mode_device_default">Mesme que le apparato</string>
     <string name="pref_general_title">General</string>
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="toast_message_shortcut_not_created">Accesso directe non create. Iste apparato non permitte le creation de accessos directe.</string>
     <string name="dialog_error_message_default">Un error ocurreva</string>
     <string name="pref_edit_station_summary_disabled">Modification del information de station disactivate.</string>

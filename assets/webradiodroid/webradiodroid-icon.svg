@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 108 108" role="img" aria-label="WebRadioDroid">
+  <rect width="108" height="108" rx="24" fill="#1C1B1A"/>
+  <g transform="translate(15.6 14.8) scale(3.2)" fill="none" stroke="#E3845A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 10h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2zM8 10l9-5.5M8 12.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 1 0 0-5zM13.5 13.5h4M13.5 16.5h4"/>
+  </g>
+</svg>

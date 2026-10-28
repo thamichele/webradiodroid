@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Transistor</string>
+    <string name="app_name">WebRadioDroid</string>
     <string name="notification_stop">Haltigi</string>
     <string name="toast_message_copied_to_clipboard">Kopita al tondejo.</string>
     <string name="player_sheet_h2_station_metadata">Nun ludas</string>
