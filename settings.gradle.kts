@@ -13,3 +13,4 @@ dependencyResolutionManagement {
     }
 }
 include(":app")
+include(":freeplayer")

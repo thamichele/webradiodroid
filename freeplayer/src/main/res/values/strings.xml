@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WebRadioDroid Free</string>
+    <string name="free_player_not_connected">WebRadioDroid is not installed</string>
+    <string name="free_player_idle">Start a station in WebRadioDroid</string>
+</resources>

@@ -12,10 +12,13 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
     <!-- required for MediaPlaybackTemplate (Android Auto, Car App Library) -->
     <uses-permission android:name="androidx.car.app.MEDIA_TEMPLATES"/>
-    <!-- free player on Android Auto: the app draws its own player on the car screen (navigation app surface) -->
-    <uses-permission android:name="androidx.car.app.NAVIGATION_TEMPLATES"/>
-    <uses-permission android:name="androidx.car.app.ACCESS_SURFACE"/>
 
+
+    <!-- WebRadioDroid Libero, the companion app with the free player for Android Auto (see BasePlayerService.onConnectAsync) -->
+    <queries>
+        <package android:name="io.github.thamichele.webradiodroid.free" />
+        <package android:name="io.github.thamichele.webradiodroid.free.debug" />
+    </queries>
 
     <application
         android:name=".Transistor"
@@ -238,17 +241,6 @@
             <intent-filter>
                 <action android:name="androidx.car.app.CarAppService" />
                 <category android:name="androidx.car.app.category.MEDIA" />
-            </intent-filter>
-        </service>
-
-        <!-- Android Auto: WebRadioDroid's free player - a separate car app, because only navigation apps may draw on the car screen -->
-        <service
-            android:name=".car.FreePlayerCarAppService"
-            android:label="@string/car_free_player_name"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="androidx.car.app.CarAppService" />
-                <category android:name="androidx.car.app.category.NAVIGATION" />
             </intent-filter>
         </service>
 

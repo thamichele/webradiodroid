@@ -1,18 +1,15 @@
 /*
  * FreePlayerCarAppService.kt
  * Implements the FreePlayerCarAppService class
- * FreePlayerCarAppService is the entry point for WebRadioDroid's free player on Android Auto (runs as navigation app)
+ * FreePlayerCarAppService is the entry point of WebRadioDroid Libero on Android Auto (runs as navigation app)
  *
- * This file is part of
- * TRANSISTOR - Radio App for Android
- *
- * Copyright (c) 2015-26 - Y20K.org
+ * This file is part of WebRadioDroid Libero
  * Licensed under the MIT-License
  * http://opensource.org/licenses/MIT
  */
 
 
-package org.y20k.transistor.car
+package io.github.thamichele.webradiodroid.free
 
 import android.content.pm.ApplicationInfo
 import androidx.car.app.CarAppService
@@ -42,7 +39,7 @@ class FreePlayerCarAppService: CarAppService() {
 
     /* Overrides onCreateSession from CarAppService */
     override fun onCreateSession(sessionInfo: SessionInfo): Session {
-        return TransistorCarSession(freeMode = true)
+        return FreePlayerSession()
     }
 
 

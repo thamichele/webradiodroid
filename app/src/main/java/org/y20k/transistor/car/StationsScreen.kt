@@ -82,15 +82,9 @@ class StationsScreen(carContext: CarContext, private val session: TransistorCarS
             .setIcon(CarIcon.Builder(IconCompat.createWithResource(carContext, R.drawable.ic_music_note_24dp)).build())
             .setOnClickListener { session.showPlaybackScreen() }
             .build()
-        // header action that opens WebRadioDroid's free player (drawn by the app)
-        val freePlayerAction: Action = Action.Builder()
-            .setIcon(CarIcon.Builder(IconCompat.createWithResource(carContext, R.drawable.ic_car_free_player_24dp)).build())
-            .setOnClickListener { session.openFreePlayer() }
-            .build()
         val header: Header = Header.Builder()
             .setStartHeaderAction(Action.APP_ICON)
             .setTitle(carContext.getString(R.string.app_name))
-            .addEndHeaderAction(freePlayerAction)
             .addEndHeaderAction(nowPlayingAction)
             .build()
 

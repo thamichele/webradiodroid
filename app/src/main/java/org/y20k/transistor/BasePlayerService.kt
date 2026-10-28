@@ -14,6 +14,7 @@
 
 package org.y20k.transistor
 
+import android.content.pm.PackageManager
 import android.app.PendingIntent
 import android.app.TaskStackBuilder
 import android.content.BroadcastReceiver
@@ -362,8 +363,11 @@ abstract class BasePlayerService: MediaLibraryService() {
                 builder.add(SessionCommand(Keys.CMD_REQUEST_METADATA_HISTORY, Bundle.EMPTY))
                 builder.add(SessionCommand(Keys.CMD_REQUEST_PLATFORM_TOKEN, Bundle.EMPTY))
             }.build()
+            // WebRadioDroid Libero (Android Auto free player) is signed with the same key and gets full access
+            val isCompanionApp: Boolean = controller.packageName != packageName &&
+                    packageManager.checkSignatures(packageName, controller.packageName) == PackageManager.SIGNATURE_MATCH
             // let untrusted controllers (third-party widgets, launchers) play, pause and switch stations
-            val playerCommands: Player.Commands = if (controller.isTrusted) {
+            val playerCommands: Player.Commands = if (controller.isTrusted || isCompanionApp) {
                 MediaSession.ConnectionResult.DEFAULT_PLAYER_COMMANDS
             } else {
                 MediaSession.ConnectionResult.DEFAULT_UNTRUSTED_PLAYER_COMMANDS.buildUpon().addAll(

@@ -143,7 +143,5 @@
     <string name="car_message_connecting_to_player">Connecting to player…</string>
     <string name="car_message_no_stations">No stations yet. Add stations in WebRadioDroid on your phone.</string>
     <string name="car_toast_player_not_ready">Player is not ready yet</string>
-    <string name="car_free_player_name">WebRadioDroid Free</string>
-    <string name="car_toast_switch_failed">Unable to switch player</string>
 
 </resources>

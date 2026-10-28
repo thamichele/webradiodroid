@@ -4,16 +4,13 @@
  * FreePlayerScreen is WebRadioDroid's own "now playing" view on Android Auto: big artwork, song, station
  * and animated bars, drawn directly on the car screen (NavigationTemplate surface)
  *
- * This file is part of
- * TRANSISTOR - Radio App for Android
- *
- * Copyright (c) 2015-26 - Y20K.org
+ * This file is part of WebRadioDroid Libero
  * Licensed under the MIT-License
  * http://opensource.org/licenses/MIT
  */
 
 
-package org.y20k.transistor.car
+package io.github.thamichele.webradiodroid.free
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -44,7 +41,6 @@ import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.media3.common.MediaMetadata
 import androidx.media3.common.Player
-import org.y20k.transistor.R
 import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
@@ -54,7 +50,7 @@ import kotlin.random.Random
 /*
  * FreePlayerScreen class
  */
-class FreePlayerScreen(carContext: CarContext, private val session: TransistorCarSession): Screen(carContext) {
+class FreePlayerScreen(carContext: CarContext, private val session: FreePlayerSession): Screen(carContext) {
 
 
     /* Define log tag */
@@ -114,6 +110,14 @@ class FreePlayerScreen(carContext: CarContext, private val session: TransistorCa
     }
 
 
+    /* Called by the session once the connection to WebRadioDroid's player is ready - or has failed */
+    fun onControllerChanged() {
+        session.controller?.removeListener(playerListener)
+        session.controller?.addListener(playerListener)
+        updateFromPlayer()
+    }
+
+
     /* Overrides onGetTemplate from Screen */
     override fun onGetTemplate(): Template {
         val playPauseAction: Action = Action.Builder()
@@ -127,19 +131,14 @@ class FreePlayerScreen(carContext: CarContext, private val session: TransistorCa
             .setIcon(carIcon(R.drawable.ic_notification_skip_to_next_36dp))
             .setOnClickListener { session.controller?.seekToNextMediaItem() }
             .build()
-        val standardPlayerAction: Action = Action.Builder()
-            .setIcon(carIcon(R.drawable.ic_car_standard_player_24dp))
-            .setOnClickListener { session.openStandardPlayer() }
-            .build()
-        val stationsAction: Action = Action.Builder()
-            .setIcon(carIcon(R.drawable.ic_car_list_24dp))
-            .setOnClickListener { session.openStations() }
+        val previousAction: Action = Action.Builder()
+            .setIcon(carIcon(R.drawable.ic_notification_skip_to_previous_36dp))
+            .setOnClickListener { session.controller?.seekToPreviousMediaItem() }
             .build()
         val actionStrip: ActionStrip = ActionStrip.Builder()
-            .addAction(stationsAction)
+            .addAction(previousAction)
             .addAction(playPauseAction)
             .addAction(nextAction)
-            .addAction(standardPlayerAction)
             .build()
         return NavigationTemplate.Builder()
             .setActionStrip(actionStrip)
@@ -160,7 +159,11 @@ class FreePlayerScreen(carContext: CarContext, private val session: TransistorCa
         // radio streams send "Artist - Title" as title
         val title: String = metadata.title?.toString()?.trim() ?: String()
         val separator: Int = title.indexOf(" - ")
-        if (title.isEmpty() || title == stationName) {
+        if (title.isEmpty() && stationName.isEmpty()) {
+            // not connected to WebRadioDroid or no station started yet
+            songTitle = carContext.getString(if (session.isConnectionFailed) R.string.free_player_not_connected else R.string.free_player_idle)
+            songArtist = String()
+        } else if (title.isEmpty() || title == stationName) {
             songTitle = stationName
             songArtist = String()
         } else if (separator > 0) {
