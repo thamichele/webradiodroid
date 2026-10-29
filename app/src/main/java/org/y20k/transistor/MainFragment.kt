@@ -60,6 +60,7 @@ import org.y20k.transistor.helpers.DownloadHelper
 import org.y20k.transistor.helpers.FileHelper
 import org.y20k.transistor.helpers.NetworkHelper
 import org.y20k.transistor.helpers.PreferencesHelper
+import org.y20k.transistor.helpers.StationLogoFinder
 import org.y20k.transistor.helpers.UiHelper
 import org.y20k.transistor.helpers.UpdateHelper
 import org.y20k.transistor.ui.MainFragmentLayoutHolder
@@ -445,6 +446,9 @@ class MainFragment: Fragment(),
                         FileHelper.backupCollectionAsM3u(requireContext(), collection)
                     }
                 }
+
+                // look on the web for logos of stations without an image
+                StationLogoFinder.findMissingLogos(requireContext(), collection)
                 
                 // notify the activity about the updated collection
                 if (mainActivity != null && collection.stations.isNotEmpty()) {

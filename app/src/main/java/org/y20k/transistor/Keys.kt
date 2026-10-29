@@ -87,6 +87,7 @@ object Keys {
 
     // preferences
     const val PREF_RADIO_BROWSER_API: String = "RADIO_BROWSER_API"
+    const val PREF_LOGO_SEARCHED_STATIONS: String = "LOGO_SEARCHED_STATIONS"
     const val PREF_ONE_TIME_HOUSEKEEPING_NECESSARY: String = "ONE_TIME_HOUSEKEEPING_NECESSARY_VERSIONCODE_95" // increment to current app version code to trigger housekeeping that runs only once
     const val PREF_THEME_SELECTION: String= "THEME_SELECTION"
     const val PREF_USER_INTERFACE_TRANSPARENCY_EFFECT: String = "USER_INTERFACE_TRANSPARENCY_EFFECT"
