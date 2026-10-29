@@ -3,4 +3,9 @@
     <string name="app_name">WebRadioDroid Libero</string>
     <string name="free_player_not_connected">WebRadioDroid non è installata</string>
     <string name="free_player_idle">Avvia una stazione in WebRadioDroid</string>
+    <string name="main_explanation">Il player libero funziona su Android Auto: apri WebRadioDroid Libero dall\'elenco delle app in auto. Le stazioni si avviano e si scelgono in WebRadioDroid.</string>
+    <string name="main_status_checking">Verifica del collegamento a WebRadioDroid…</string>
+    <string name="main_status_connected">Collegata a WebRadioDroid ✓</string>
+    <string name="main_status_failed">Non collegata a WebRadioDroid: %1$s</string>
+    <string name="main_open_webradiodroid">Apri WebRadioDroid</string>
 </resources>

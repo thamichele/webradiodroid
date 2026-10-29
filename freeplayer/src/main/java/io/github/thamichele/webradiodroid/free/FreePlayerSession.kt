@@ -34,6 +34,13 @@ class FreePlayerSession: Session() {
     private val TAG: String = FreePlayerSession::class.java.simpleName
 
 
+    /* Companion object */
+    companion object {
+        // PlayerService of WebRadioDroid (its classes keep the package name of Transistor)
+        const val PLAYER_SERVICE: String = "org.y20k.transistor.PlayerService"
+    }
+
+
     /* Main class variables */
     private var controllerFuture: ListenableFuture<MediaController>? = null
     private var screen: FreePlayerScreen? = null
@@ -68,8 +75,15 @@ class FreePlayerSession: Session() {
 
     /* Connects to the PlayerService of WebRadioDroid - binding to it also starts the player if needed */
     private fun initializeController() {
-        val token = SessionToken(carContext, ComponentName(BuildConfig.MAIN_APP_ID, "org.y20k.transistor.PlayerService"))
-        val future: ListenableFuture<MediaController> = MediaController.Builder(carContext, token).buildAsync()
+        val future: ListenableFuture<MediaController> = try {
+            MediaController.Builder(carContext, SessionToken(carContext, ComponentName(BuildConfig.MAIN_APP_ID, PLAYER_SERVICE))).buildAsync()
+        } catch (e: Exception) {
+            // WebRadioDroid not installed (or not visible): show the hint instead of crashing
+            Log.e(TAG, "Unable to find WebRadioDroid's player.", e)
+            isConnectionFailed = true
+            screen?.onControllerChanged()
+            return
+        }
         controllerFuture = future
         future.addListener({
             if (controller == null) {

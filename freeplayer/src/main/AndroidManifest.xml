@@ -21,6 +21,17 @@
         <meta-data android:name="androidx.car.app.minCarApiLevel"
             android:value="1"/>
 
+        <!-- phone screen: explains where the player is and checks the connection to WebRadioDroid -->
+        <activity
+            android:name=".MainActivity"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <!-- Android Auto: WebRadioDroid's free player, running as navigation app -->
         <service
             android:name=".FreePlayerCarAppService"
