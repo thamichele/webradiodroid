@@ -33,7 +33,6 @@ import androidx.core.app.NotificationCompat
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.C
-import androidx.media3.common.ForwardingPlayer
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
 import androidx.media3.common.PlaybackException
@@ -629,26 +628,8 @@ abstract class BasePlayerService: MediaLibraryService() {
         exoPlayer.addAnalyticsListener(analyticsListener)
         exoPlayer.addListener(playerListener)
         exoPlayer.repeatMode = Player.REPEAT_MODE_ALL
-        // manually add seek to next and seek to previous since headphones issue them and they are translated to next and previous station
-        val player = object : ForwardingPlayer(exoPlayer) {
-            override fun getAvailableCommands(): Player.Commands {
-                return super.getAvailableCommands().buildUpon()
-                    .add(COMMAND_SEEK_TO_NEXT)
-                    .add(COMMAND_SEEK_TO_PREVIOUS).build()
-            }
-            override fun isCommandAvailable(command: Int): Boolean {
-                return availableCommands.contains(command)
-            }
-            override fun seekToNext() {
-                seekToNextMediaItem()
-            }
-            override fun seekToPrevious() {
-                seekToPreviousMediaItem()
-            }
-            override fun getDuration(): Long {
-                return C.TIME_UNSET // this will hide progress bar for HLS stations in the notification
-            }
-        }
+        // stations instead of seeking (headphones), fixed song progress for the system media notification
+        val player = RadioForwardingPlayer(exoPlayer)
         player
     }
     /*
