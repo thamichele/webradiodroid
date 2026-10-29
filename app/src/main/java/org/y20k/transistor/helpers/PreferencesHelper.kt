@@ -57,6 +57,21 @@ object PreferencesHelper {
     }
 
 
+    /* Loads the UUIDs of stations whose logo has already been searched on the web */
+    fun loadLogoSearchedStations(): Set<String> {
+        return sharedPreferences.getStringSet(Keys.PREF_LOGO_SEARCHED_STATIONS, emptySet())?.toSet() ?: emptySet()
+    }
+
+
+    /* Remembers that the logo of a station has been searched on the web */
+    fun addLogoSearchedStation(stationUuid: String) {
+        val searched: Set<String> = loadLogoSearchedStations() + stationUuid
+        sharedPreferences.edit {
+            putStringSet(Keys.PREF_LOGO_SEARCHED_STATIONS, searched)
+        }
+    }
+
+
     /* Loads keepDebugLog true or false */
     fun loadKeepDebugLog(): Boolean {
         return sharedPreferences.getBoolean(Keys.PREF_KEEP_DEBUG_LOG, false)
