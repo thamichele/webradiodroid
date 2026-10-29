@@ -31,12 +31,17 @@ jobs:
             "$AAPT2" dump badging "$apk" | grep -E "^(package|application-label|application-icon-160|launchable-activity)"
           done
 
+      # both APKs side by side at the top of the zip, with names that say which app they are
+      - name: Collect APKs
+        run: |
+          mkdir dist
+          cp app/build/outputs/apk/debug/*.apk dist/WebRadioDroid-debug.apk
+          cp freeplayer/build/outputs/apk/debug/*.apk dist/WebRadioDroidLibero-debug.apk
+
       - uses: actions/upload-artifact@v4
         with:
           name: webradiodroid-debug-apk
-          path: |
-            app/build/outputs/apk/debug/*.apk
-            freeplayer/build/outputs/apk/debug/*.apk
+          path: dist/*.apk
           if-no-files-found: error
 
   # Builds the signed release APK and publishes it to WebRadioDroid's own F-Droid repository
