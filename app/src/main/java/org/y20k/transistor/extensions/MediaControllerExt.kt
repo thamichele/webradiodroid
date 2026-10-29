@@ -29,8 +29,8 @@ import org.y20k.transistor.R
 private val TAG: String = "MediaControllerExt"
 
 /* Starts the sleep timer */
-fun MediaController.startSleepTimer() {
-    sendCustomCommand(SessionCommand(Keys.CMD_START_SLEEP_TIMER, Bundle.EMPTY), Bundle.EMPTY)
+fun MediaController.startSleepTimer(durationMillis: Long) {
+    sendCustomCommand(SessionCommand(Keys.CMD_START_SLEEP_TIMER, Bundle.EMPTY), Bundle().apply { putLong(Keys.EXTRA_SLEEP_TIMER_DURATION, durationMillis) })
 }
 
 
