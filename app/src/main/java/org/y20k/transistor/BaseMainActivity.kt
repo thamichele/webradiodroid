@@ -30,11 +30,13 @@ import androidx.media3.common.PlaybackException
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.session.MediaController
+import androidx.media3.session.SessionCommand
 import androidx.media3.session.SessionResult
 import androidx.media3.session.SessionToken
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
+import com.google.common.util.concurrent.Futures
 import com.google.common.util.concurrent.ListenableFuture
 import com.google.common.util.concurrent.MoreExecutors
 import kotlinx.coroutines.CoroutineScope
@@ -44,6 +46,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.y20k.transistor.core.Collection
 import org.y20k.transistor.core.Station
+import org.y20k.transistor.dialogs.SleepTimerDialog
 import org.y20k.transistor.extensions.cancelSleepTimer
 import org.y20k.transistor.extensions.play
 import org.y20k.transistor.extensions.playStreamDirectly
@@ -209,7 +212,9 @@ abstract class BaseMainActivity : AppCompatActivity(), SharedPreferences.OnShare
 
     /* Initializes the MediaController - handles connection to PlayerService under the hood */
     private fun initializeController() {
-        controllerFuture = MediaController.Builder(this, SessionToken(this, ComponentName(this, PlayerService::class.java))).buildAsync()
+        controllerFuture = MediaController.Builder(this, SessionToken(this, ComponentName(this, PlayerService::class.java)))
+            .setListener(controllerListener)
+            .buildAsync()
         controllerFuture.addListener({ setupController() }, MoreExecutors.directExecutor())
     }
 
@@ -262,22 +267,18 @@ abstract class BaseMainActivity : AppCompatActivity(), SharedPreferences.OnShare
             controller?.seekToNextMediaItem()
         }
         layout.fullscreenSleepTimerButtonView.setOnClickListener {
-            if (playerState.sleepTimerRunning) onSleepTimerCancel() else onSleepTimerStart()
+            onSleepTimerStart()
         }
         layout.fullscreenSleepTimerRemainingView.setOnClickListener {
-            onSleepTimerCancel()
+            onSleepTimerStart()
         }
     }
 
 
-    /* Starts the sleep timer, if playback is active */
+    /* Lets the user pick the sleep timer duration, if playback is active */
     private fun onSleepTimerStart() {
         when (controller?.isPlaying) {
-            true -> {
-                playerState.sleepTimerRunning = true
-                controller?.startSleepTimer()
-                togglePeriodicSleepTimerUpdateRequest()
-            }
+            true -> SleepTimerDialog(sleepTimerDialogListener).show(this, playerState.sleepTimerRunning)
 
             else -> Toast.makeText(
                 this,
@@ -286,6 +287,46 @@ abstract class BaseMainActivity : AppCompatActivity(), SharedPreferences.OnShare
             ).show()
         }
     }
+
+
+    /* Starts (or restarts) the sleep timer with the chosen duration */
+    private fun startSleepTimer(durationMinutes: Int) {
+        playerState.sleepTimerRunning = true
+        controller?.startSleepTimer(durationMinutes * 60000L)
+        togglePeriodicSleepTimerUpdateRequest()
+    }
+
+
+    /*
+     * SleepTimerDialogListener: duration picked or timer stopped in the sleep timer sheet
+     */
+    private val sleepTimerDialogListener = object: SleepTimerDialog.SleepTimerDialogListener {
+        override fun onSleepTimerDurationSelected(durationMinutes: Int) {
+            startSleepTimer(durationMinutes)
+        }
+        override fun onSleepTimerStopSelected() {
+            onSleepTimerCancel()
+        }
+    }
+    /*
+     * End of declaration
+     */
+
+
+    /*
+     * MediaController.Listener: closes the app when the sleep timer has stopped playback for good
+     */
+    private val controllerListener = object: MediaController.Listener {
+        override fun onCustomCommand(controller: MediaController, command: SessionCommand, args: Bundle): ListenableFuture<SessionResult> {
+            if (command.customAction == Keys.CMD_SLEEP_TIMER_FINISHED) {
+                finishAndRemoveTask()
+            }
+            return Futures.immediateFuture(SessionResult(SessionResult.RESULT_SUCCESS))
+        }
+    }
+    /*
+     * End of declaration
+     */
 
 
     /* Cancels the sleep timer */

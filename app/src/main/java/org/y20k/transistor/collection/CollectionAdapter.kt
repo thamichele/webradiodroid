@@ -18,6 +18,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.Gravity
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
@@ -25,6 +26,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -41,7 +43,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.signature.ObjectKey
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.Dispatchers.Main
@@ -320,14 +324,9 @@ class CollectionAdapter(private val context: Context, private val collectionAdap
                 collectionAdapterListener.onStationCardTapped()
             }
         }
-        stationViewHolder.stationCardView.setOnLongClickListener {
-            if (editStationsEnabled) {
-                val position: Int = stationViewHolder.adapterPosition
-                toggleEditViews(position, station.uuid)
-                return@setOnLongClickListener true
-            } else {
-                return@setOnLongClickListener false
-            }
+        stationViewHolder.stationCardView.setOnLongClickListener { view ->
+            showStationMenu(view, stationViewHolder.adapterPosition)
+            return@setOnLongClickListener true
         }
         stationViewHolder.stationCardView.setOnKeyListener { _, keyCode, event ->
             if (event.action == KeyEvent.ACTION_DOWN) {
@@ -454,6 +453,77 @@ class CollectionAdapter(private val context: Context, private val collectionAdap
     fun showDeleteStationDialog(yesNoDialogListener: YesNoDialog.YesNoDialogListener, position: Int) {
         val dialogMessage: String = "${context.getString(R.string.dialog_yes_no_message_remove_station)}\n\n- ${collection.stations[position].name}"
         YesNoDialog(yesNoDialogListener).show(context = context, type = Keys.DIALOG_REMOVE_STATION, messageString = dialogMessage, yesButton = R.string.dialog_yes_no_positive_button_remove_station, payload = position)
+    }
+
+
+    /* Shows the long press menu of a station: pin to the top, rename, edit, remove */
+    private fun showStationMenu(anchor: View, position: Int) {
+        if (position == RecyclerView.NO_POSITION || position >= collection.stations.size) return
+        val station: Station = collection.stations[position]
+        val popupMenu = PopupMenu(context, anchor, Gravity.END)
+        popupMenu.menu.add(0, R.id.menu_station_pin, 0, if (station.starred) R.string.station_menu_unpin else R.string.station_menu_pin)
+        popupMenu.menu.add(0, R.id.menu_station_rename, 1, R.string.station_menu_rename)
+        if (editStationsEnabled) popupMenu.menu.add(0, R.id.menu_station_edit, 2, R.string.station_menu_edit)
+        popupMenu.menu.add(0, R.id.menu_station_remove, 3, R.string.station_menu_remove)
+        popupMenu.setOnMenuItemClickListener { item ->
+            // the list may have changed while the menu was open
+            val currentPosition: Int = CollectionHelper.getStationPosition(collection, station.uuid)
+            if (currentPosition == -1) return@setOnMenuItemClickListener true
+            when (item.itemId) {
+                R.id.menu_station_pin -> toggleStarredStation(context, currentPosition)
+                R.id.menu_station_rename -> showRenameStationDialog(currentPosition)
+                R.id.menu_station_edit -> toggleEditViews(currentPosition, station.uuid)
+                R.id.menu_station_remove -> showDeleteStationDialog(yesNoDialogListener, currentPosition)
+            }
+            true
+        }
+        popupMenu.show()
+    }
+
+
+    /* Asks for a custom name of a station - an empty name restores the original one on the next update */
+    private fun showRenameStationDialog(position: Int) {
+        val station: Station = collection.stations[position]
+        val inputLayout = TextInputLayout(context).apply {
+            val padding: Int = (24 * context.resources.displayMetrics.density).toInt()
+            setPadding(padding, padding / 2, padding, 0)
+        }
+        val input = TextInputEditText(inputLayout.context).apply {
+            setText(station.name)
+            setSelection(text?.length ?: 0)
+            isSingleLine = true
+            imeOptions = EditorInfo.IME_ACTION_DONE
+        }
+        inputLayout.addView(input)
+        MaterialAlertDialogBuilder(context)
+            .setTitle(R.string.station_menu_rename)
+            .setView(inputLayout)
+            .setNegativeButton(R.string.dialog_generic_button_cancel, null)
+            .setPositiveButton(R.string.station_dialog_rename_button) { _, _ ->
+                renameStation(station.uuid, input.text?.toString()?.trim() ?: String())
+            }
+            .show()
+        input.requestFocus()
+    }
+
+
+    /* Saves the custom name of a station */
+    private fun renameStation(stationUuid: String, newName: String) {
+        val position: Int = CollectionHelper.getStationPosition(collection, stationUuid)
+        if (position == -1) return
+        val station: Station = collection.stations[position]
+        if (newName.isEmpty()) {
+            station.nameManuallySet = false
+        } else {
+            station.name = newName
+            station.nameManuallySet = true
+        }
+        station.modificationDate = GregorianCalendar.getInstance().time
+        collection = CollectionHelper.sortCollection(collection)
+        val newPosition: Int = CollectionHelper.getStationPosition(collection, stationUuid)
+        if (newPosition != position && newPosition != -1) notifyItemMoved(position, newPosition)
+        notifyItemChanged(newPosition)
+        CollectionHelper.saveCollection(context, collection)
     }
 
 

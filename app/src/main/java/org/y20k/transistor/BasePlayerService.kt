@@ -207,7 +207,7 @@ abstract class BasePlayerService: MediaLibraryService() {
 
 
     /* Starts sleep timer / adds default duration to running sleeptimer */
-    private fun startSleepTimer(continueWithPreviousTimerDuration: Boolean) {
+    private fun startSleepTimer(continueWithPreviousTimerDuration: Boolean, chosenDuration: Long = 0L) {
         // stop running timer
         if (sleepTimerTimeRemaining > 0L && this::sleepTimer.isInitialized) {
             handler.removeCallbacksAndMessages(null)
@@ -217,6 +217,9 @@ abstract class BasePlayerService: MediaLibraryService() {
         val duration: Long
         if (continueWithPreviousTimerDuration) {
             duration = sleepTimerTimeRemaining
+        } else if (chosenDuration > 0L) {
+            // duration picked in the sleep timer dialog replaces the running timer
+            duration = chosenDuration
         } else {
             duration = Keys.SLEEP_TIMER_DURATION + sleepTimerTimeRemaining
         }
@@ -225,7 +228,7 @@ abstract class BasePlayerService: MediaLibraryService() {
                 Log.v(TAG, "Sleep timer finished. Sweet dreams.")
                 sleepTimerTimeRemaining = 0L
                 sleepTimerRunning = false
-                player.pause() // todo may use player.stop() here
+                stopCompletely()
             }
             override fun onTick(millisUntilFinished: Long) {
                 sleepTimerRunning = true
@@ -236,6 +239,14 @@ abstract class BasePlayerService: MediaLibraryService() {
         sleepTimer.start()
         // store timer state
         PreferencesHelper.saveSleepTimerRunning(isRunning = true)
+    }
+
+
+    /* Ends playback for good when the sleep timer runs out: stops the stream, closes the app and stops the service (saves battery) */
+    private fun stopCompletely() {
+        player.stop()
+        mediaLibrarySession.broadcastCustomCommand(SessionCommand(Keys.CMD_SLEEP_TIMER_FINISHED, Bundle.EMPTY), Bundle.EMPTY)
+        pauseAllPlayersAndStopSelf()
     }
 
 
@@ -407,7 +418,7 @@ abstract class BasePlayerService: MediaLibraryService() {
         override fun onCustomCommand(session: MediaSession, controller: MediaSession.ControllerInfo, customCommand: SessionCommand, args: Bundle): ListenableFuture<SessionResult> {
             when (customCommand.customAction) {
                 Keys.CMD_START_SLEEP_TIMER -> {
-                    startSleepTimer(continueWithPreviousTimerDuration = false)
+                    startSleepTimer(continueWithPreviousTimerDuration = false, chosenDuration = args.getLong(Keys.EXTRA_SLEEP_TIMER_DURATION, 0L))
                 }
                 Keys.CMD_CANCEL_SLEEP_TIMER -> {
                     cancelSleepTimer(delayedReset = false)

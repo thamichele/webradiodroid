@@ -123,5 +123,17 @@
     <string name="car_message_connecting_to_player">Connessione al lettore…</string>
     <string name="car_message_no_stations">Nessuna stazione. Aggiungi le stazioni in WebRadioDroid sul telefono.</string>
     <string name="car_toast_player_not_ready">Il lettore non è ancora pronto</string>
+    <string name="station_menu_pin">Fissa in cima</string>
+    <string name="station_menu_unpin">Togli dalla cima</string>
+    <string name="station_menu_rename">Rinomina</string>
+    <string name="station_menu_edit">Modifica stream</string>
+    <string name="station_menu_remove">Rimuovi</string>
+    <string name="station_dialog_rename_button">Salva</string>
+    <string name="sleep_timer_dialog_title">Timer di spegnimento</string>
+    <string name="sleep_timer_dialog_minutes">%1$d min</string>
+    <string name="sleep_timer_dialog_hint">Allo scadere la riproduzione si ferma e WebRadioDroid si chiude.</string>
+    <string name="sleep_timer_dialog_start">Avvia</string>
+    <string name="sleep_timer_dialog_update">Imposta nuovo tempo</string>
+    <string name="sleep_timer_dialog_stop">Ferma timer</string>
 
 </resources>

@@ -57,6 +57,20 @@ object PreferencesHelper {
     }
 
 
+    /* Loads the last chosen sleep timer duration in minutes */
+    fun loadSleepTimerDuration(): Int {
+        return sharedPreferences.getInt(Keys.PREF_SLEEP_TIMER_DURATION, 30)
+    }
+
+
+    /* Saves the chosen sleep timer duration in minutes */
+    fun saveSleepTimerDuration(minutes: Int) {
+        sharedPreferences.edit {
+            putInt(Keys.PREF_SLEEP_TIMER_DURATION, minutes)
+        }
+    }
+
+
     /* Loads the UUIDs of stations whose logo has already been searched on the web */
     fun loadLogoSearchedStations(): Set<String> {
         return sharedPreferences.getStringSet(Keys.PREF_LOGO_SEARCHED_STATIONS, emptySet())?.toSet() ?: emptySet()

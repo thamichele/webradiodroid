@@ -143,5 +143,17 @@
     <string name="car_message_connecting_to_player">Connecting to player…</string>
     <string name="car_message_no_stations">No stations yet. Add stations in WebRadioDroid on your phone.</string>
     <string name="car_toast_player_not_ready">Player is not ready yet</string>
+    <string name="station_menu_pin">Pin to top</string>
+    <string name="station_menu_unpin">Unpin</string>
+    <string name="station_menu_rename">Rename</string>
+    <string name="station_menu_edit">Edit stream</string>
+    <string name="station_menu_remove">Remove</string>
+    <string name="station_dialog_rename_button">Save</string>
+    <string name="sleep_timer_dialog_title">Sleep timer</string>
+    <string name="sleep_timer_dialog_minutes">%1$d min</string>
+    <string name="sleep_timer_dialog_hint">Playback stops and WebRadioDroid closes when the time is up.</string>
+    <string name="sleep_timer_dialog_start">Start</string>
+    <string name="sleep_timer_dialog_update">Set new time</string>
+    <string name="sleep_timer_dialog_stop">Stop timer</string>
 
 </resources>
