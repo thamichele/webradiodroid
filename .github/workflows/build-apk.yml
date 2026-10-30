@@ -49,18 +49,25 @@ jobs:
       RELEASE_KEYSTORE_BASE64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
       RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
     steps:
-      - name: Check signing secrets
+      - uses: actions/checkout@v5
+
+      # the version is set by hand in app/build.gradle.kts - publish only versions that have no release yet
+      - name: Check signing secrets and version
         id: secrets
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          VERSION=$(sed -n 's/.*val appVersionMajor = \([0-9]*\).*/\1/p' app/build.gradle.kts).$(sed -n 's/.*val appVersionMinor = \([0-9]*\).*/\1/p' app/build.gradle.kts).$(sed -n 's/.*val appVersionPatch = \([0-9]*\).*/\1/p' app/build.gradle.kts)
+          echo "Version in app/build.gradle.kts: $VERSION"
           if [ -z "$RELEASE_KEYSTORE_BASE64" ] || [ -z "$RELEASE_KEYSTORE_PASSWORD" ]; then
             echo "::notice::Release secrets not set - F-Droid repository not updated"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          elif gh release view "v$VERSION" --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
+            echo "::notice::Version $VERSION has already been released - bump the version in app/build.gradle.kts to publish a new release"
             echo "ready=false" >> "$GITHUB_OUTPUT"
           else
             echo "ready=true" >> "$GITHUB_OUTPUT"
           fi
-
-      - uses: actions/checkout@v5
-        if: steps.secrets.outputs.ready == 'true'
 
       - uses: actions/setup-java@v5
         if: steps.secrets.outputs.ready == 'true'

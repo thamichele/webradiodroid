@@ -15,14 +15,17 @@ android {
         applicationId = "io.github.thamichele.webradiodroid"
         minSdk = 25
         targetSdk = 37
-        // WebRadioDroid's own version (based on Transistor 4.3.10): MAJOR.MINOR.<GitHub Actions build number>,
-        // so every CI build installs as an update and its number is visible in Settings > Apps.
+        // WebRadioDroid's own version (based on Transistor 4.3.10): MAJOR.MINOR.PATCH, bumped by hand
+        // - new feature or behavior change: MINOR + 1 (PATCH back to 0)
+        // - small fix without new features: PATCH + 1
+        // - MAJOR + 1 only when the app is declared mature
+        // Every push to main publishes a release, unless this version has been released already.
         // versionCode starts at 2000000 to stay above the codes of the earlier Transistor-based builds.
         val appVersionMajor = 1
         val appVersionMinor = 0
-        val ciRunNumber: Int = System.getenv("GITHUB_RUN_NUMBER")?.toIntOrNull() ?: 0
-        versionCode = 2000000 + appVersionMajor * 100000 + appVersionMinor * 1000 + ciRunNumber
-        versionName = "$appVersionMajor.$appVersionMinor.$ciRunNumber"
+        val appVersionPatch = 39
+        versionCode = 2000000 + appVersionMajor * 100000 + appVersionMinor * 1000 + appVersionPatch
+        versionName = "$appVersionMajor.$appVersionMinor.$appVersionPatch"
         manifestPlaceholders["appLabel"] = "@string/app_name"
     }
 
