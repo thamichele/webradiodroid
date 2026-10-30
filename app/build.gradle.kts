@@ -84,7 +84,7 @@ android {
         // CI prints the findings in the log, they do not stop the build
         abortOnError = false
         textReport = true
-        textOutput = file("stdout")
+        textOutput = java.io.File("stdout")
     }
 
     dependenciesInfo {
