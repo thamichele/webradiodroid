@@ -30,7 +30,9 @@ jobs:
       # code quality report - does not block the build, the findings are listed in the log
       - name: Lint
         continue-on-error: true
-        run: ./gradlew --no-daemon lintDebug
+        run: |
+          ./gradlew --no-daemon lintDebug
+          jq -r '.runs[].results[] | "\(.level): \(.ruleId): \(.locations[0].physicalLocation.artifactLocation.uri):\(.locations[0].physicalLocation.region.startLine // 0) \(.message.text)"' app/build/reports/lint-results-debug.sarif
 
       - name: Show APK name, id and version
         run: |
