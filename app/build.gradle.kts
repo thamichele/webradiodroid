@@ -21,9 +21,9 @@ android {
         // - MAJOR + 1 only when the app is declared mature
         // Every push to main publishes a release, unless this version has been released already.
         // versionCode starts at 2000000 to stay above the codes of the earlier Transistor-based builds.
-        val appVersionMajor = 1
+        val appVersionMajor = 2
         val appVersionMinor = 0
-        val appVersionPatch = 39
+        val appVersionPatch = 0
         versionCode = 2000000 + appVersionMajor * 100000 + appVersionMinor * 1000 + appVersionPatch
         versionName = "$appVersionMajor.$appVersionMinor.$appVersionPatch"
         manifestPlaceholders["appLabel"] = "@string/app_name"
@@ -81,6 +81,8 @@ android {
 
     lint {
         disable += "MissingTranslation"
+        // CI prints the findings in the log, they do not stop the build
+        abortOnError = false
     }
 
     dependenciesInfo {

@@ -6,6 +6,10 @@ on:
   pull_request:
   workflow_dispatch:
 
+# read-only token by default - only the release job below may write
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,6 +26,13 @@ jobs:
       # the runner image ships the Android SDK (ANDROID_HOME), missing platforms are fetched by AGP
       - name: Build debug APK
         run: ./gradlew --no-daemon assembleDebug
+
+      # code quality report - does not block the build, the findings are listed in the log
+      - name: Lint
+        continue-on-error: true
+        run: |
+          ./gradlew --no-daemon lintDebug
+          jq -r '.runs[].results[] | "\(.level): \(.ruleId): \(.locations[0].physicalLocation.artifactLocation.uri):\(.locations[0].physicalLocation.region.startLine // 0) \(.message.text)"' app/build/reports/lint-results-debug.sarif
 
       - name: Show APK name, id and version
         run: |

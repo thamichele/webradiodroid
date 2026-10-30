@@ -44,7 +44,8 @@ object StationLogoFinder {
     /* Main class variables */
     private const val MIN_LOGO_SIZE: Int = 64
     private const val MAX_LOGO_BYTES: Int = 2 * 1024 * 1024
-    private var isRunning: Boolean = false
+    private const val MAX_SEARCH_RESPONSE_BYTES: Int = 1024 * 1024
+    @Volatile private var isRunning: Boolean = false
 
 
     /* Searches logos for all stations without an image - each station is searched only once */
@@ -153,11 +154,11 @@ object StationLogoFinder {
     }
 
 
-    /* Reads a web address as text */
+    /* Reads a web address as text - at most 1 MB, so that a broken server can not fill the memory */
     private fun readText(address: String): String? {
         val connection: HttpURLConnection = openConnection(address) ?: return null
         return try {
-            if (connection.responseCode == HttpURLConnection.HTTP_OK) connection.inputStream.bufferedReader().use { it.readText() } else null
+            if (connection.responseCode == HttpURLConnection.HTTP_OK) connection.inputStream.use { it.readNBytesCompat(MAX_SEARCH_RESPONSE_BYTES).toString(Charsets.UTF_8) } else null
         } finally {
             connection.disconnect()
         }
