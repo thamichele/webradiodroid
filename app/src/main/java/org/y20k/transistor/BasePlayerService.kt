@@ -363,14 +363,18 @@ abstract class BasePlayerService: MediaLibraryService() {
         }
 
         override fun onConnectAsync(session: MediaSession, controller: MediaSession.ControllerInfo): ListenableFuture<MediaSession.ConnectionResult> {
-            // add custom commands
+            // add custom commands - only for WebRadioDroid's own controllers (app, notification, car screen):
+            // other apps must not read the song history or control the sleep timer
+            val ownController: Boolean = controller.packageName == packageName
             val mediaNotificationSessionCommands = MediaSession.ConnectionResult.DEFAULT_SESSION_AND_LIBRARY_COMMANDS.buildUpon().also { builder ->
-                builder.add(SessionCommand(Keys.CMD_START_SLEEP_TIMER, Bundle.EMPTY))
-                builder.add(SessionCommand(Keys.CMD_CANCEL_SLEEP_TIMER, Bundle.EMPTY))
-                builder.add(SessionCommand(Keys.CMD_REQUEST_SLEEP_TIMER_RUNNING, Bundle.EMPTY))
-                builder.add(SessionCommand(Keys.CMD_REQUEST_SLEEP_TIMER_REMAINING, Bundle.EMPTY))
-                builder.add(SessionCommand(Keys.CMD_REQUEST_METADATA_HISTORY, Bundle.EMPTY))
-                builder.add(SessionCommand(Keys.CMD_REQUEST_PLATFORM_TOKEN, Bundle.EMPTY))
+                if (ownController) {
+                    builder.add(SessionCommand(Keys.CMD_START_SLEEP_TIMER, Bundle.EMPTY))
+                    builder.add(SessionCommand(Keys.CMD_CANCEL_SLEEP_TIMER, Bundle.EMPTY))
+                    builder.add(SessionCommand(Keys.CMD_REQUEST_SLEEP_TIMER_RUNNING, Bundle.EMPTY))
+                    builder.add(SessionCommand(Keys.CMD_REQUEST_SLEEP_TIMER_REMAINING, Bundle.EMPTY))
+                    builder.add(SessionCommand(Keys.CMD_REQUEST_METADATA_HISTORY, Bundle.EMPTY))
+                    builder.add(SessionCommand(Keys.CMD_REQUEST_PLATFORM_TOKEN, Bundle.EMPTY))
+                }
             }.build()
             // let untrusted controllers (third-party widgets, launchers) play, pause and switch stations
             val playerCommands: Player.Commands = if (controller.isTrusted) {
