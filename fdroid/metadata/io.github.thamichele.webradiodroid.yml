@@ -1,0 +1,26 @@
+Categories:
+  - Multimedia
+  - Internet
+License: MIT
+AuthorName: Michele
+WebSite: https://github.com/thamichele/webradiodroid
+SourceCode: https://github.com/thamichele/webradiodroid
+IssueTracker: https://github.com/thamichele/webradiodroid/issues
+Changelog: https://github.com/thamichele/webradiodroid/releases
+
+Name: WebRadioDroid
+Summary: Webradio per telefono e Android Auto, con loghi automatici e tema arancione
+Description: |-
+  Ascolta le tue webradio dal telefono e in auto con Android Auto. WebRadioDroid nasce da Transistor
+  (Y20K, licenza MIT) e aggiunge loghi delle stazioni in Android Auto, preferiti, nomi personalizzati
+  e un timer di spegnimento più comodo.
+
+  Funzioni principali:
+  * ricerca delle stazioni nell'archivio radio-browser.info oppure aggiunta di un link di streaming
+  * loghi delle stazioni cercati in automatico sul web quando mancano
+  * tieni premuto su una stazione per fissarla in cima ai preferiti o darle un nome a tuo piacere
+  * timer di spegnimento con scelta rapida della durata: allo scadere l'app si chiude del tutto, per risparmiare batteria
+  * notifica con barra di avanzamento per ogni brano e cambio stazione con i tasti avanti e indietro
+  * tema arancione
+
+  Nessuna pubblicità e nessun tracciamento.
