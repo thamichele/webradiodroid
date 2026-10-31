@@ -9,10 +9,11 @@ IssueTracker: https://github.com/thamichele/webradiodroid/issues
 Changelog: https://github.com/thamichele/webradiodroid/releases
 
 Name: WebRadioDroid
-Summary: Webradio con player Android Auto a tutto schermo e tema arancione
+Summary: Webradio per telefono e Android Auto, con loghi automatici e tema arancione
 Description: |-
-  Ascolta le tue webradio dal telefono e in auto. WebRadioDroid nasce da Transistor (Y20K, licenza MIT)
-  e aggiunge un player Android Auto a tutto schermo, con copertina grande e comandi a portata di mano.
+  Ascolta le tue webradio dal telefono e in auto con Android Auto. WebRadioDroid nasce da Transistor
+  (Y20K, licenza MIT) e aggiunge loghi delle stazioni in Android Auto, preferiti, nomi personalizzati
+  e un timer di spegnimento più comodo.
 
   Funzioni principali:
   * ricerca delle stazioni nell'archivio radio-browser.info oppure aggiunta di un link di streaming

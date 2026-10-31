@@ -139,7 +139,7 @@ jobs:
           sdk_path: $ANDROID_HOME
           repo_url: https://raw.githubusercontent.com/thamichele/webradiodroid/fdroid/repo
           repo_name: WebRadioDroid
-          repo_description: Repository F-Droid personale di WebRadioDroid, la webradio con il player Android Auto a tutto schermo
+          repo_description: Repository F-Droid personale di WebRadioDroid, la webradio per telefono e Android Auto
           repo_icon: icon.png
           archive_older: 3
           keystore: keystore.p12
