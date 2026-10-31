@@ -15,11 +15,7 @@ android {
         applicationId = "io.github.thamichele.webradiodroid"
         minSdk = 25
         targetSdk = 37
-        // WebRadioDroid's own version (based on Transistor 4.3.10): MAJOR.MINOR.PATCH, bumped by hand
-        // - new feature or behavior change: MINOR + 1 (PATCH back to 0)
-        // - small fix without new features: PATCH + 1
-        // - MAJOR + 1 only when the app is declared mature
-        // Every push to main publishes a release, unless this version has been released already.
+        // WebRadioDroid's own version (based on Transistor 4.3.10): MAJOR.MINOR.PATCH
         // versionCode starts at 2000000 to stay above the codes of the earlier Transistor-based builds.
         val appVersionMajor = 2
         val appVersionMinor = 0
