@@ -62,7 +62,8 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      # the version is set by hand in app/build.gradle.kts - publish only versions that have no release yet
+      # the version is set by hand in app/build.gradle.kts - a new release is built only for a version that has none yet,
+      # the F-Droid repository is refreshed on every push (so changes to its description and icons go out right away)
       - name: Check signing secrets and version
         id: secrets
         env:
@@ -71,13 +72,16 @@ jobs:
           VERSION=$(sed -n 's/.*val appVersionMajor = \([0-9]*\).*/\1/p' app/build.gradle.kts).$(sed -n 's/.*val appVersionMinor = \([0-9]*\).*/\1/p' app/build.gradle.kts).$(sed -n 's/.*val appVersionPatch = \([0-9]*\).*/\1/p' app/build.gradle.kts)
           echo "Version in app/build.gradle.kts: $VERSION"
           if [ -z "$RELEASE_KEYSTORE_BASE64" ] || [ -z "$RELEASE_KEYSTORE_PASSWORD" ]; then
-            echo "::notice::Release secrets not set - F-Droid repository not updated"
+            echo "::notice::Release secrets not set - no release, F-Droid repository not updated"
             echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "release=false" >> "$GITHUB_OUTPUT"
           elif gh release view "v$VERSION" --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
-            echo "::notice::Version $VERSION has already been released - bump the version in app/build.gradle.kts to publish a new release"
-            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Version $VERSION has already been released - only the F-Droid repository is refreshed"
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+            echo "release=false" >> "$GITHUB_OUTPUT"
           else
             echo "ready=true" >> "$GITHUB_OUTPUT"
+            echo "release=true" >> "$GITHUB_OUTPUT"
           fi
 
       - uses: actions/setup-java@v5
@@ -87,10 +91,10 @@ jobs:
           java-version: '21'
 
       - uses: gradle/actions/setup-gradle@v5
-        if: steps.secrets.outputs.ready == 'true'
+        if: steps.secrets.outputs.release == 'true'
 
       - name: Build release APK
-        if: steps.secrets.outputs.ready == 'true'
+        if: steps.secrets.outputs.release == 'true'
         run: |
           export RELEASE_KEYSTORE_FILE="$RUNNER_TEMP/release.p12"
           echo "$RELEASE_KEYSTORE_BASE64" | base64 -d > "$RELEASE_KEYSTORE_FILE"
@@ -98,36 +102,46 @@ jobs:
           AAPT2=$(ls -d "$ANDROID_HOME"/build-tools/*/aapt2 | sort -V | tail -1)
           "$AAPT2" dump badging app/build/outputs/apk/release/*.apk | grep -E "^(package|application-label:)"
           VERSION=$("$AAPT2" dump badging app/build/outputs/apk/release/*.apk | sed -n "s/.*versionName='\([^']*\)'.*/\1/p")
-          cp app/build/outputs/apk/release/*.apk "$RUNNER_TEMP/WebRadioDroid-$VERSION.apk"
+          cd "$RUNNER_TEMP"
+          cp "$GITHUB_WORKSPACE"/app/build/outputs/apk/release/*.apk "WebRadioDroid-$VERSION.apk"
+          sha256sum "WebRadioDroid-$VERSION.apk" > "WebRadioDroid-$VERSION.apk.sha256"
           echo "VERSION=$VERSION" >> "$GITHUB_ENV"
 
-      # every build of main becomes a GitHub release with the signed APK attached
+      # every new version becomes a GitHub release with the signed APK and its SHA-256 attached
       - name: Create GitHub release
+        if: steps.secrets.outputs.release == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "v$VERSION" "$RUNNER_TEMP/WebRadioDroid-$VERSION.apk" "$RUNNER_TEMP/WebRadioDroid-$VERSION.apk.sha256" \
+            --title "WebRadioDroid $VERSION" \
+            --notes "APK firmato. Gli aggiornamenti arrivano anche dal repository F-Droid https://raw.githubusercontent.com/thamichele/webradiodroid/fdroid/repo - impronta SHA-256 del certificato di firma: 6f:57:e2:9c:92:99:49:18:23:e1:9d:a5:e6:88:17:5f:62:2a:e1:4a:40:4b:7f:bb:2f:42:90:42:21:40:05:b0"
+
+      # the F-Droid repository offers the latest three releases, with the description and icon from fdroid/metadata
+      - name: Update F-Droid repository
         if: steps.secrets.outputs.ready == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "v$VERSION" "$RUNNER_TEMP/WebRadioDroid-$VERSION.apk" \
-            --title "WebRadioDroid $VERSION" \
-            --notes "Signed release APK. Updates are also available through the F-Droid repository https://raw.githubusercontent.com/thamichele/webradiodroid/fdroid/repo"
-
-      - name: Update F-Droid repository
-        if: steps.secrets.outputs.ready == 'true'
-        run: |
           python3 -m venv "$RUNNER_TEMP/venv"
           "$RUNNER_TEMP/venv/bin/pip" install --quiet fdroidserver
-          mkdir -p fdroid-repo/repo/icons fdroid-repo/metadata
-          cp "$RUNNER_TEMP/release.p12" fdroid-repo/keystore.p12
-          cp app/src/main/res/mipmap-xxxhdpi/ic_launcher.png fdroid-repo/repo/icons/icon.png
-          cp app/build/outputs/apk/release/*.apk fdroid-repo/repo/
+          mkdir -p fdroid-repo/repo
+          for tag in $(gh release list --repo "$GITHUB_REPOSITORY" --limit 3 --json tagName --jq '.[].tagName'); do
+            gh release download "$tag" --repo "$GITHUB_REPOSITORY" --pattern '*.apk' --dir fdroid-repo/repo
+          done
+          ls -l fdroid-repo/repo
+          cp -r fdroid/metadata fdroid-repo/metadata
+          # fdroid looks for repo_icon in its working folder and copies it to repo/icons/
+          cp assets/webradiodroid/webradiodroid-icon-512.png fdroid-repo/icon.png
+          echo "$RELEASE_KEYSTORE_BASE64" | base64 -d > fdroid-repo/keystore.p12
           cd fdroid-repo
           cat > config.yml <<CONFIG
           sdk_path: $ANDROID_HOME
           repo_url: https://raw.githubusercontent.com/thamichele/webradiodroid/fdroid/repo
           repo_name: WebRadioDroid
-          repo_description: Personal F-Droid repository of WebRadioDroid
+          repo_description: Repository F-Droid personale di WebRadioDroid, la webradio con il player Android Auto a tutto schermo
           repo_icon: icon.png
-          archive_older: 0
+          archive_older: 3
           keystore: keystore.p12
           repo_keyalias: repo
           keystorepass: $RELEASE_KEYSTORE_PASSWORD
@@ -135,7 +149,7 @@ jobs:
           keydname: CN=WebRadioDroid F-Droid repo, O=thamichele
           CONFIG
           chmod 600 config.yml
-          "$RUNNER_TEMP/venv/bin/fdroid" update --create-metadata --pretty
+          "$RUNNER_TEMP/venv/bin/fdroid" update --pretty
           echo "== repo fingerprint"
           keytool -list -v -storetype pkcs12 -keystore keystore.p12 -storepass "$RELEASE_KEYSTORE_PASSWORD" -alias repo | grep "SHA256:"
 
