@@ -1,0 +1,224 @@
+{
+  "repo": {
+    "timestamp": 1793419421000,
+    "version": 20002,
+    "name": "WebRadioDroid",
+    "icon": "icon.png",
+    "address": "https://raw.githubusercontent.com/thamichele/webradiodroid/fdroid/repo",
+    "description": "Repository F-Droid personale di WebRadioDroid, la webradio per telefono e Android Auto"
+  },
+  "requests": {
+    "install": [],
+    "uninstall": []
+  },
+  "apps": [
+    {
+      "authorName": "Michele",
+      "categories": [
+        "Multimedia",
+        "Internet"
+      ],
+      "changelog": "https://github.com/thamichele/webradiodroid/releases",
+      "suggestedVersionCode": "2200000",
+      "description": "Ascolta le tue webradio dal telefono e in auto con Android Auto. WebRadioDroid nasce da Transistor\n(Y20K, licenza MIT) e aggiunge loghi delle stazioni in Android Auto, preferiti, nomi personalizzati\ne un timer di spegnimento pi\u00f9 comodo.\n\nFunzioni principali:\n* ricerca delle stazioni nell'archivio radio-browser.info oppure aggiunta di un link di streaming\n* loghi delle stazioni cercati in automatico sul web quando mancano\n* tieni premuto su una stazione per fissarla in cima ai preferiti o darle un nome a tuo piacere\n* timer di spegnimento con scelta rapida della durata: allo scadere l'app si chiude del tutto, per risparmiare batteria\n* notifica con barra di avanzamento per ogni brano e cambio stazione con i tasti avanti e indietro\n* tema arancione\n\nNessuna pubblicit\u00e0 e nessun tracciamento.",
+      "issueTracker": "https://github.com/thamichele/webradiodroid/issues",
+      "license": "MIT",
+      "name": "WebRadioDroid",
+      "sourceCode": "https://github.com/thamichele/webradiodroid",
+      "summary": "Webradio per telefono e Android Auto, con loghi automatici e tema arancione",
+      "webSite": "https://github.com/thamichele/webradiodroid",
+      "added": 1793419417000,
+      "packageName": "io.github.thamichele.webradiodroid",
+      "lastUpdated": 1793419418000,
+      "localized": {
+        "en-US": {
+          "icon": "icon_ebbZ1AcqIo7kPGJtzd5f5LEi7MDaMg6U3DBgPJTtiM0=.png"
+        }
+      }
+    }
+  ],
+  "packages": {
+    "io.github.thamichele.webradiodroid": [
+      {
+        "added": 1793419418000,
+        "apkName": "WebRadioDroid-2.0.0.apk",
+        "hash": "b6ccf360ad562935a38774ba767b30be2f5104c565c94a40c5cde6577abb04c4",
+        "hashType": "sha256",
+        "minSdkVersion": 25,
+        "packageName": "io.github.thamichele.webradiodroid",
+        "sig": "f5c6313cad11625467121d0206ed111a",
+        "signer": "6f57e29c9299491823e19da5e688175f622ae14a404b7fbb2f429042214005b0",
+        "size": 3589274,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "androidx.car.app.MEDIA_TEMPLATES",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "io.github.thamichele.webradiodroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 2200000,
+        "versionName": "2.0.0"
+      },
+      {
+        "added": 1793419417000,
+        "apkName": "WebRadioDroid-1.0.39.apk",
+        "hash": "c916cc11e88c074f297139804b3450a4f1e7dc9f801506180f431167fa0403dc",
+        "hashType": "sha256",
+        "minSdkVersion": 25,
+        "packageName": "io.github.thamichele.webradiodroid",
+        "sig": "f5c6313cad11625467121d0206ed111a",
+        "signer": "6f57e29c9299491823e19da5e688175f622ae14a404b7fbb2f429042214005b0",
+        "size": 3589326,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "androidx.car.app.MEDIA_TEMPLATES",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "io.github.thamichele.webradiodroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 2100039,
+        "versionName": "1.0.39"
+      },
+      {
+        "added": 1793419417000,
+        "apkName": "WebRadioDroid-1.0.37.apk",
+        "hash": "8e569e4becb3a704a4cb7ea154047b60fe5e03e3f650cc565cdb3dc9cbdabbe2",
+        "hashType": "sha256",
+        "minSdkVersion": 25,
+        "packageName": "io.github.thamichele.webradiodroid",
+        "sig": "f5c6313cad11625467121d0206ed111a",
+        "signer": "6f57e29c9299491823e19da5e688175f622ae14a404b7fbb2f429042214005b0",
+        "size": 3588422,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            null
+          ],
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.ACCESS_WIFI_STATE",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.READ_EXTERNAL_STORAGE",
+            null
+          ],
+          [
+            "android.permission.VIBRATE",
+            null
+          ],
+          [
+            "androidx.car.app.MEDIA_TEMPLATES",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "io.github.thamichele.webradiodroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 2100037,
+        "versionName": "1.0.37"
+      }
+    ]
+  }
+}

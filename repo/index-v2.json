@@ -1,0 +1,236 @@
+{
+  "repo": {
+    "name": {
+      "en-US": "WebRadioDroid"
+    },
+    "description": {
+      "en-US": "Repository F-Droid personale di WebRadioDroid, la webradio per telefono e Android Auto"
+    },
+    "icon": {
+      "en-US": {
+        "name": "/icons/icon.png",
+        "sha256": "714c2ac085694e7a7707963b114fbf3d9c0d56ac4d864160865d300617d03de3",
+        "size": 16448
+      }
+    },
+    "address": "https://raw.githubusercontent.com/thamichele/webradiodroid/fdroid/repo",
+    "timestamp": 1793419421000,
+    "categories": {
+      "Internet": {
+        "name": {
+          "en-US": "Internet"
+        }
+      },
+      "Multimedia": {
+        "name": {
+          "en-US": "Multimedia"
+        }
+      }
+    }
+  },
+  "packages": {
+    "io.github.thamichele.webradiodroid": {
+      "metadata": {
+        "added": 1793419417000,
+        "categories": [
+          "Multimedia",
+          "Internet"
+        ],
+        "changelog": "https://github.com/thamichele/webradiodroid/releases",
+        "issueTracker": "https://github.com/thamichele/webradiodroid/issues",
+        "lastUpdated": 1793419418000,
+        "license": "MIT",
+        "sourceCode": "https://github.com/thamichele/webradiodroid",
+        "webSite": "https://github.com/thamichele/webradiodroid",
+        "authorName": "Michele",
+        "name": {
+          "en-US": "WebRadioDroid"
+        },
+        "summary": {
+          "en-US": "Webradio per telefono e Android Auto, con loghi automatici e tema arancione"
+        },
+        "description": {
+          "en-US": "Ascolta le tue webradio dal telefono e in auto con Android Auto. WebRadioDroid nasce da Transistor\n(Y20K, licenza MIT) e aggiunge loghi delle stazioni in Android Auto, preferiti, nomi personalizzati\ne un timer di spegnimento più comodo.\n\nFunzioni principali:\n* ricerca delle stazioni nell'archivio radio-browser.info oppure aggiunta di un link di streaming\n* loghi delle stazioni cercati in automatico sul web quando mancano\n* tieni premuto su una stazione per fissarla in cima ai preferiti o darle un nome a tuo piacere\n* timer di spegnimento con scelta rapida della durata: allo scadere l'app si chiude del tutto, per risparmiare batteria\n* notifica con barra di avanzamento per ogni brano e cambio stazione con i tasti avanti e indietro\n* tema arancione\n\nNessuna pubblicità e nessun tracciamento."
+        },
+        "icon": {
+          "en-US": {
+            "name": "/io.github.thamichele.webradiodroid/en-US/icon_ebbZ1AcqIo7kPGJtzd5f5LEi7MDaMg6U3DBgPJTtiM0=.png",
+            "sha256": "79b6d9d4072a228ee43c626dcdde5fe4b122ecc0da320e94dc30603c94ed88cd",
+            "size": 16426
+          }
+        },
+        "preferredSigner": "6f57e29c9299491823e19da5e688175f622ae14a404b7fbb2f429042214005b0"
+      },
+      "versions": {
+        "b6ccf360ad562935a38774ba767b30be2f5104c565c94a40c5cde6577abb04c4": {
+          "added": 1793419418000,
+          "file": {
+            "name": "/WebRadioDroid-2.0.0.apk",
+            "sha256": "b6ccf360ad562935a38774ba767b30be2f5104c565c94a40c5cde6577abb04c4",
+            "size": 3589274
+          },
+          "manifest": {
+            "versionName": "2.0.0",
+            "versionCode": 2200000,
+            "usesSdk": {
+              "minSdkVersion": 25,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "6f57e29c9299491823e19da5e688175f622ae14a404b7fbb2f429042214005b0"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+              },
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.ACCESS_WIFI_STATE"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.VIBRATE"
+              },
+              {
+                "name": "androidx.car.app.MEDIA_TEMPLATES"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "io.github.thamichele.webradiodroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
+        "c916cc11e88c074f297139804b3450a4f1e7dc9f801506180f431167fa0403dc": {
+          "added": 1793419417000,
+          "file": {
+            "name": "/WebRadioDroid-1.0.39.apk",
+            "sha256": "c916cc11e88c074f297139804b3450a4f1e7dc9f801506180f431167fa0403dc",
+            "size": 3589326
+          },
+          "manifest": {
+            "versionName": "1.0.39",
+            "versionCode": 2100039,
+            "usesSdk": {
+              "minSdkVersion": 25,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "6f57e29c9299491823e19da5e688175f622ae14a404b7fbb2f429042214005b0"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+              },
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.ACCESS_WIFI_STATE"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.VIBRATE"
+              },
+              {
+                "name": "androidx.car.app.MEDIA_TEMPLATES"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "io.github.thamichele.webradiodroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
+        "8e569e4becb3a704a4cb7ea154047b60fe5e03e3f650cc565cdb3dc9cbdabbe2": {
+          "added": 1793419417000,
+          "file": {
+            "name": "/WebRadioDroid-1.0.37.apk",
+            "sha256": "8e569e4becb3a704a4cb7ea154047b60fe5e03e3f650cc565cdb3dc9cbdabbe2",
+            "size": 3588422
+          },
+          "manifest": {
+            "versionName": "1.0.37",
+            "versionCode": 2100037,
+            "usesSdk": {
+              "minSdkVersion": 25,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "6f57e29c9299491823e19da5e688175f622ae14a404b7fbb2f429042214005b0"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+              },
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.ACCESS_WIFI_STATE"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.READ_EXTERNAL_STORAGE"
+              },
+              {
+                "name": "android.permission.VIBRATE"
+              },
+              {
+                "name": "androidx.car.app.MEDIA_TEMPLATES"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "io.github.thamichele.webradiodroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

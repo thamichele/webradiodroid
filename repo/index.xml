@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fdroid>
+	<repo icon="icon.png" name="WebRadioDroid" pubkey="3082051a30820302a003020102020900b318f63822c4ee7c300d06092a864886f70d01010c0500303a31133011060355040a130a7468616d696368656c65312330210603550403131a576562526164696f44726f696420462d44726f6964207265706f3020170d3236313032383132333231385a180f32303534303331353132333231385a303a31133011060355040a130a7468616d696368656c65312330210603550403131a576562526164696f44726f696420462d44726f6964207265706f30820222300d06092a864886f70d01010105000382020f003082020a0282020100c4b4ea6139c398ff984f8c2e93f7ff7eadf856c21ba44421545adc41014cff0ada8ccd5a35c085d51f4289e6f8194f60cd2317d2ee0ab93c946bfa8cc6be8eba946f43000e92f2223907907d36b363c5e908d3516fbff29d9f72ca7025135732fda8a40a3809a31de5de701b1e79e215592bb118fcb3eb9e2a6189ee7fd75d03eb470b39c960dc19460ce54effb20073d3af267b02eeda858735a66f01bdfcc9ac3da31916ed6afb37fd35f367dbf4e5ffc05f5f7279784f4bf11770ca667d2d8f696800dfde12e447fb8391eb88fec75bfea04e030bcadb801069afd4ea818a383c3116e4b13216ac355f50ebdc40d592ea078ee197b77b825321ea2fb08711a0342c1d0b82d54beeb7210bc5e5e403d9073e9ecddd101e3c21b867a57476458fa94bb9cbc3d573555de5c59afef62acfec33a497ee3bd98fa75ee9938e96b02d09e400756e02936577d59bd0db8c171d5b159338d40a31f03be1cd5f559b4d285cae39b1571050036282a065dca6df4a239873de4026c8087419dd6a562ef24fd27574ea6306fd42b017efd36f48561991c3865e38a7463d40e356cf7a6c493acbc1cd26d4886f32d041417d4030d21701f1f021ad054b1df2469d7ffc45c244d3efedaacf6c08d00bd8d508d2faa48815260266bdd9aed03490a2036c0ad25c2b025e8cd73dda7867c75884eddea8a4fe0f72c561cda259efb33af2f70bad0203010001a321301f301d0603551d0e04160414b77a8a5bf04fa6970a2ef344b202cb60807c033b300d06092a864886f70d01010c05000382020100546d3726fadf1d9384cf71fd3751281771aa31f432f1ea121f97d049b051aadf7b4ccd768a15e9af2e3f7846ab09746e03948a8cbeaf34b6c8e51298ff064c2fb7097f5317295ce057be99567ca13b6c31b49365fb94d7d40ba3ac5f99f7e0e991dca73d38b262fb396c3b7da72f38afd13fd96acaa092fc5ef2aaa1811175bf11da2ac0853610064c609e53f6834948a8cfb286143fc90af99a33c61e8fd44b009f00d2af38bb23b242cf99a2b53b6323776ed5cb2c4c3bccba0463e3d7dcac841206afa206d6abea1cb13f3673b46d073e82be032c516e406589a8f20716f15534bccf93f712b30ef0347650e31ac0db52e0ad65577bc2a6617f24aa8e573511cfa81d118cfc494be21caea459094c0a401588dad94b73b90832734177c40ee3a7b65e63c56d3f2205a922725b75e1892f48dfdca9237e9d5b9812e53702a96a55dd8f0704601176384721ff55c4ddf4437c633853d9b372f42676c29746171d74523faa8e5e79979fdefd4d6915738ebb393a7dec3e401b523f6c38490499f34e6ed369429e4e3b6339ed29b19c8e4eb303382277f54b91168b37fd41ad3c200078a120afc0f67f4eb5b2d3ecb7bdee39dd01de9bfacf1fa3fe073b3d3a1375956818171939709533348b7de1bf5ac536ca7fe14060da900e8559de9c1a2927a9579b5e95ded998d478c7c685ced58e6614132f099342ab08dd168216408e" timestamp="1793419421" url="https://raw.githubusercontent.com/thamichele/webradiodroid/fdroid/repo" version="20002">
+		<description>Repository F-Droid personale di WebRadioDroid, la webradio per telefono e Android Auto</description>
+	</repo>
+	<application id="io.github.thamichele.webradiodroid">
+		<id>io.github.thamichele.webradiodroid</id>
+		<added>2026-10-31</added>
+		<lastupdated>2026-10-31</lastupdated>
+		<name>WebRadioDroid</name>
+		<summary>Webradio per telefono e Android Auto, con loghi automatici e tema arancione</summary>
+		<desc>Ascolta le tue webradio dal telefono e in auto con Android Auto. WebRadioDroid nasce da Transistor
+(Y20K, licenza MIT) e aggiunge loghi delle stazioni in Android Auto, preferiti, nomi personalizzati
+e un timer di spegnimento più comodo.
+
+Funzioni principali:
+* ricerca delle stazioni nell'archivio radio-browser.info oppure aggiunta di un link di streaming
+* loghi delle stazioni cercati in automatico sul web quando mancano
+* tieni premuto su una stazione per fissarla in cima ai preferiti o darle un nome a tuo piacere
+* timer di spegnimento con scelta rapida della durata: allo scadere l'app si chiude del tutto, per risparmiare batteria
+* notifica con barra di avanzamento per ogni brano e cambio stazione con i tasti avanti e indietro
+* tema arancione
+
+Nessuna pubblicità e nessun tracciamento.</desc>
+		<license>MIT</license>
+		<categories>Multimedia,Internet</categories>
+		<category>Multimedia</category>
+		<web>https://github.com/thamichele/webradiodroid</web>
+		<source>https://github.com/thamichele/webradiodroid</source>
+		<tracker>https://github.com/thamichele/webradiodroid/issues</tracker>
+		<changelog>https://github.com/thamichele/webradiodroid/releases</changelog>
+		<author>Michele</author>
+		<marketversion></marketversion>
+		<marketvercode>2200000</marketvercode>
+		<package>
+			<version>2.0.0</version>
+			<versioncode>2200000</versioncode>
+			<apkname>WebRadioDroid-2.0.0.apk</apkname>
+			<hash type="sha256">b6ccf360ad562935a38774ba767b30be2f5104c565c94a40c5cde6577abb04c4</hash>
+			<size>3589274</size>
+			<sdkver>25</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-10-31</added>
+			<sig>f5c6313cad11625467121d0206ed111a</sig>
+			<permissions>ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_MEDIA_PLAYBACK,INTERNET,READ_EXTERNAL_STORAGE,RECEIVE_BOOT_COMPLETED,VIBRATE,WAKE_LOCK,androidx.car.app.MEDIA_TEMPLATES,io.github.thamichele.webradiodroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+		</package>
+		<package>
+			<version>1.0.39</version>
+			<versioncode>2100039</versioncode>
+			<apkname>WebRadioDroid-1.0.39.apk</apkname>
+			<hash type="sha256">c916cc11e88c074f297139804b3450a4f1e7dc9f801506180f431167fa0403dc</hash>
+			<size>3589326</size>
+			<sdkver>25</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-10-31</added>
+			<sig>f5c6313cad11625467121d0206ed111a</sig>
+			<permissions>ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_MEDIA_PLAYBACK,INTERNET,READ_EXTERNAL_STORAGE,RECEIVE_BOOT_COMPLETED,VIBRATE,WAKE_LOCK,androidx.car.app.MEDIA_TEMPLATES,io.github.thamichele.webradiodroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+		</package>
+		<package>
+			<version>1.0.37</version>
+			<versioncode>2100037</versioncode>
+			<apkname>WebRadioDroid-1.0.37.apk</apkname>
+			<hash type="sha256">8e569e4becb3a704a4cb7ea154047b60fe5e03e3f650cc565cdb3dc9cbdabbe2</hash>
+			<size>3588422</size>
+			<sdkver>25</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-10-31</added>
+			<sig>f5c6313cad11625467121d0206ed111a</sig>
+			<permissions>ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_MEDIA_PLAYBACK,INTERNET,READ_EXTERNAL_STORAGE,RECEIVE_BOOT_COMPLETED,VIBRATE,WAKE_LOCK,androidx.car.app.MEDIA_TEMPLATES,io.github.thamichele.webradiodroid.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+		</package>
+	</application>
+</fdroid>
