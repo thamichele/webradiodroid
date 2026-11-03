@@ -18,7 +18,7 @@ android {
         // WebRadioDroid's own version (based on Transistor 4.3.10): MAJOR.MINOR.PATCH
         // versionCode starts at 2000000 to stay above the codes of the earlier Transistor-based builds.
         val appVersionMajor = 2
-        val appVersionMinor = 0
+        val appVersionMinor = 1
         val appVersionPatch = 0
         versionCode = 2000000 + appVersionMajor * 100000 + appVersionMinor * 1000 + appVersionPatch
         versionName = "$appVersionMajor.$appVersionMinor.$appVersionPatch"
