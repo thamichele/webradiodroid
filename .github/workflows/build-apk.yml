@@ -1,4 +1,4 @@
-name: Build APK
+name: Build
 
 on:
   push:
@@ -48,11 +48,73 @@ jobs:
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
 
+  # WebRadioDroid for computers (desktop/): Windows installer + portable exe, Linux AppImage + deb.
+  # Same version as the Android app, read from app/build.gradle.kts.
+  desktop:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            target: linux
+          - os: windows-latest
+            target: win
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+        working-directory: desktop
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: desktop/package-lock.json
+
+      - name: Set version
+        run: |
+          VERSION=$(sed -n 's/.*val appVersionMajor = \([0-9]*\).*/\1/p' ../app/build.gradle.kts).$(sed -n 's/.*val appVersionMinor = \([0-9]*\).*/\1/p' ../app/build.gradle.kts).$(sed -n 's/.*val appVersionPatch = \([0-9]*\).*/\1/p' ../app/build.gradle.kts)
+          echo "Version: $VERSION"
+          npm version "$VERSION" --no-git-tag-version --allow-same-version
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build packages
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+        run: npm run dist:${{ matrix.target }}
+
+      - name: SHA-256 of the packages
+        run: |
+          cd dist
+          for file in WebRadioDroid-*.exe WebRadioDroid-*.AppImage WebRadioDroid-*.deb; do
+            [ -f "$file" ] || continue
+            sha256sum "$file" > "$file.sha256"
+            cat "$file.sha256"
+          done
+          ls -l
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: webradiodroid-desktop-${{ matrix.target }}
+          path: |
+            desktop/dist/WebRadioDroid-*.exe
+            desktop/dist/WebRadioDroid-*.AppImage
+            desktop/dist/WebRadioDroid-*.deb
+            desktop/dist/WebRadioDroid-*.sha256
+          if-no-files-found: error
+
   # Builds the signed release APK and publishes it to WebRadioDroid's own F-Droid repository
   # (branch "fdroid", served at https://raw.githubusercontent.com/thamichele/webradiodroid/fdroid/repo).
   # Needs the repository secrets RELEASE_KEYSTORE_BASE64 and RELEASE_KEYSTORE_PASSWORD; skipped without them.
   fdroid:
-    if: github.event_name != 'pull_request'
+    # waits for the Windows and Linux packages to attach them to a new release,
+    # but runs even if they failed: the Android release and the F-Droid repository never depend on them
+    needs: desktop
+    if: ${{ !cancelled() && github.event_name != 'pull_request' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -107,15 +169,35 @@ jobs:
           sha256sum "WebRadioDroid-$VERSION.apk" > "WebRadioDroid-$VERSION.apk.sha256"
           echo "VERSION=$VERSION" >> "$GITHUB_ENV"
 
-      # every new version becomes a GitHub release with the signed APK and its SHA-256 attached
+      - uses: actions/download-artifact@v5
+        if: steps.secrets.outputs.release == 'true'
+        continue-on-error: true
+        with:
+          pattern: webradiodroid-desktop-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/desktop
+
+      # every new version becomes a GitHub release with the signed APK, the Windows and Linux packages and their SHA-256
       - name: Create GitHub release
         if: steps.secrets.outputs.release == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "v$VERSION" "$RUNNER_TEMP/WebRadioDroid-$VERSION.apk" "$RUNNER_TEMP/WebRadioDroid-$VERSION.apk.sha256" \
+          shopt -s nullglob
+          DESKTOP_FILES=("$RUNNER_TEMP"/desktop/WebRadioDroid-*)
+          if [ ${#DESKTOP_FILES[@]} -eq 0 ]; then echo "::warning::Windows/Linux packages missing - release with the APK only"; fi
+          gh release create "v$VERSION" "$RUNNER_TEMP/WebRadioDroid-$VERSION.apk" "$RUNNER_TEMP/WebRadioDroid-$VERSION.apk.sha256" "${DESKTOP_FILES[@]}" \
             --title "WebRadioDroid $VERSION" \
-            --notes "APK firmato. Gli aggiornamenti arrivano anche dal repository F-Droid https://raw.githubusercontent.com/thamichele/webradiodroid/fdroid/repo - impronta SHA-256 del certificato di firma: 6f:57:e2:9c:92:99:49:18:23:e1:9d:a5:e6:88:17:5f:62:2a:e1:4a:40:4b:7f:bb:2f:42:90:42:21:40:05:b0"
+            --notes "$(cat <<NOTES
+          **Android**: \`WebRadioDroid-$VERSION.apk\` (APK firmato). Gli aggiornamenti arrivano anche dal repository F-Droid https://raw.githubusercontent.com/thamichele/webradiodroid/fdroid/repo - impronta SHA-256 del certificato di firma: 6f:57:e2:9c:92:99:49:18:23:e1:9d:a5:e6:88:17:5f:62:2a:e1:4a:40:4b:7f:bb:2f:42:90:42:21:40:05:b0
+
+          **Windows**: \`WebRadioDroid-$VERSION-windows-setup.exe\` (installazione) oppure \`WebRadioDroid-$VERSION-windows-portable.exe\` (senza installazione).
+
+          **Linux**: \`WebRadioDroid-$VERSION-linux-x86_64.AppImage\` (tutte le distribuzioni) oppure \`WebRadioDroid-$VERSION-linux-amd64.deb\` (Debian, Ubuntu, Mint).
+
+          Ogni file ha la sua impronta SHA-256 nel file \`.sha256\` con lo stesso nome.
+          NOTES
+          )"
 
       # the F-Droid repository offers the latest three releases, with the description and icon from fdroid/metadata
       - name: Update F-Droid repository
