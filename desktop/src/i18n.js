@@ -50,7 +50,15 @@ const STRINGS = {
     selectStation: 'Scegli una stazione',
     aboutText: 'Webradio per computer, gemella dell\'app Android WebRadioDroid. Basata su Transistor (licenza MIT). Stazioni da radio-browser.info.',
     version: 'Versione {v}',
-    pinned: 'Fissata'
+    pinned: 'Fissata',
+    accentColor: 'Colore principale',
+    accentHelp: 'Grigi e colori di stato restano uguali, cambia solo il colore principale.',
+    accent_arancio: 'Arancio',
+    accent_viola: 'Viola',
+    accent_rosso: 'Rosso',
+    accent_giallo: 'Giallo',
+    accent_blu: 'Blu',
+    accent_verde: 'Verde'
   },
   en: {
     addStation: 'Add station',
@@ -102,7 +110,15 @@ const STRINGS = {
     selectStation: 'Choose a station',
     aboutText: 'Web radio for your computer, twin of the WebRadioDroid Android app. Based on Transistor (MIT license). Stations from radio-browser.info.',
     version: 'Version {v}',
-    pinned: 'Pinned'
+    pinned: 'Pinned',
+    accentColor: 'Main color',
+    accentHelp: 'Greys and status colors stay the same, only the main color changes.',
+    accent_arancio: 'Orange',
+    accent_viola: 'Purple',
+    accent_rosso: 'Red',
+    accent_giallo: 'Yellow',
+    accent_blu: 'Blue',
+    accent_verde: 'Green'
   }
 }
 

@@ -136,4 +136,11 @@
     <string name="sleep_timer_dialog_update">Imposta nuovo tempo</string>
     <string name="sleep_timer_dialog_stop">Ferma timer</string>
 
+    <string name="pref_accent_color_title">Colore principale</string>
+    <string name="pref_accent_color_arancio">Arancio</string>
+    <string name="pref_accent_color_viola">Viola</string>
+    <string name="pref_accent_color_rosso">Rosso</string>
+    <string name="pref_accent_color_giallo">Giallo</string>
+    <string name="pref_accent_color_blu">Blu</string>
+    <string name="pref_accent_color_verde">Verde</string>
 </resources>

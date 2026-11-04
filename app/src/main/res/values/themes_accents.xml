@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Accent overlays: applied on top of AppTheme, chosen in Settings (main color) -->
+<resources>
+    <style name="ThemeOverlay.WebRadioDroid.Accent.Arancio" parent="">
+        <item name="colorPrimary">@color/accent_arancio_primary</item>
+        <item name="colorOnPrimary">@color/accent_arancio_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/accent_arancio_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/accent_arancio_onPrimaryContainer</item>
+        <item name="colorPrimaryInverse">@color/accent_arancio_inversePrimary</item>
+        <item name="colorPrimaryFixed">@color/accent_arancio_primaryFixed</item>
+        <item name="colorOnPrimaryFixed">@color/accent_arancio_onPrimaryFixed</item>
+        <item name="colorPrimaryFixedDim">@color/accent_arancio_primaryFixedDim</item>
+        <item name="colorOnPrimaryFixedVariant">@color/accent_arancio_onPrimaryFixedVariant</item>
+    </style>
+    <style name="ThemeOverlay.WebRadioDroid.Accent.Viola" parent="">
+        <item name="colorPrimary">@color/accent_viola_primary</item>
+        <item name="colorOnPrimary">@color/accent_viola_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/accent_viola_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/accent_viola_onPrimaryContainer</item>
+        <item name="colorPrimaryInverse">@color/accent_viola_inversePrimary</item>
+        <item name="colorPrimaryFixed">@color/accent_viola_primaryFixed</item>
+        <item name="colorOnPrimaryFixed">@color/accent_viola_onPrimaryFixed</item>
+        <item name="colorPrimaryFixedDim">@color/accent_viola_primaryFixedDim</item>
+        <item name="colorOnPrimaryFixedVariant">@color/accent_viola_onPrimaryFixedVariant</item>
+    </style>
+    <style name="ThemeOverlay.WebRadioDroid.Accent.Rosso" parent="">
+        <item name="colorPrimary">@color/accent_rosso_primary</item>
+        <item name="colorOnPrimary">@color/accent_rosso_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/accent_rosso_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/accent_rosso_onPrimaryContainer</item>
+        <item name="colorPrimaryInverse">@color/accent_rosso_inversePrimary</item>
+        <item name="colorPrimaryFixed">@color/accent_rosso_primaryFixed</item>
+        <item name="colorOnPrimaryFixed">@color/accent_rosso_onPrimaryFixed</item>
+        <item name="colorPrimaryFixedDim">@color/accent_rosso_primaryFixedDim</item>
+        <item name="colorOnPrimaryFixedVariant">@color/accent_rosso_onPrimaryFixedVariant</item>
+    </style>
+    <style name="ThemeOverlay.WebRadioDroid.Accent.Giallo" parent="">
+        <item name="colorPrimary">@color/accent_giallo_primary</item>
+        <item name="colorOnPrimary">@color/accent_giallo_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/accent_giallo_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/accent_giallo_onPrimaryContainer</item>
+        <item name="colorPrimaryInverse">@color/accent_giallo_inversePrimary</item>
+        <item name="colorPrimaryFixed">@color/accent_giallo_primaryFixed</item>
+        <item name="colorOnPrimaryFixed">@color/accent_giallo_onPrimaryFixed</item>
+        <item name="colorPrimaryFixedDim">@color/accent_giallo_primaryFixedDim</item>
+        <item name="colorOnPrimaryFixedVariant">@color/accent_giallo_onPrimaryFixedVariant</item>
+    </style>
+    <style name="ThemeOverlay.WebRadioDroid.Accent.Blu" parent="">
+        <item name="colorPrimary">@color/accent_blu_primary</item>
+        <item name="colorOnPrimary">@color/accent_blu_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/accent_blu_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/accent_blu_onPrimaryContainer</item>
+        <item name="colorPrimaryInverse">@color/accent_blu_inversePrimary</item>
+        <item name="colorPrimaryFixed">@color/accent_blu_primaryFixed</item>
+        <item name="colorOnPrimaryFixed">@color/accent_blu_onPrimaryFixed</item>
+        <item name="colorPrimaryFixedDim">@color/accent_blu_primaryFixedDim</item>
+        <item name="colorOnPrimaryFixedVariant">@color/accent_blu_onPrimaryFixedVariant</item>
+    </style>
+    <style name="ThemeOverlay.WebRadioDroid.Accent.Verde" parent="">
+        <item name="colorPrimary">@color/accent_verde_primary</item>
+        <item name="colorOnPrimary">@color/accent_verde_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/accent_verde_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/accent_verde_onPrimaryContainer</item>
+        <item name="colorPrimaryInverse">@color/accent_verde_inversePrimary</item>
+        <item name="colorPrimaryFixed">@color/accent_verde_primaryFixed</item>
+        <item name="colorOnPrimaryFixed">@color/accent_verde_onPrimaryFixed</item>
+        <item name="colorPrimaryFixedDim">@color/accent_verde_primaryFixedDim</item>
+        <item name="colorOnPrimaryFixedVariant">@color/accent_verde_onPrimaryFixedVariant</item>
+    </style>
+</resources>

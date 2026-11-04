@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Arancio UI type scale: Material 3 sizes, JetBrains Mono (titles 500-600, body 400) -->
+<resources>
+    <style name="TextAppearance.WebRadioDroid.DisplayLarge" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="fontFamily">@font/jetbrains_mono_headline</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_headline</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+    <style name="TextAppearance.WebRadioDroid.DisplayMedium" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="fontFamily">@font/jetbrains_mono_headline</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_headline</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+    <style name="TextAppearance.WebRadioDroid.DisplaySmall" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="fontFamily">@font/jetbrains_mono_headline</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_headline</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+    <style name="TextAppearance.WebRadioDroid.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/jetbrains_mono_headline</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_headline</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+    <style name="TextAppearance.WebRadioDroid.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/jetbrains_mono_headline</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_headline</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+    <style name="TextAppearance.WebRadioDroid.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="fontFamily">@font/jetbrains_mono_headline</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_headline</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+    <style name="TextAppearance.WebRadioDroid.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/jetbrains_mono_title</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_title</item>
+    </style>
+    <style name="TextAppearance.WebRadioDroid.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/jetbrains_mono_title</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_title</item>
+    </style>
+    <style name="TextAppearance.WebRadioDroid.TitleSmall" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/jetbrains_mono_title</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_title</item>
+    </style>
+    <style name="TextAppearance.WebRadioDroid.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/jetbrains_mono</item>
+        <item name="android:fontFamily">@font/jetbrains_mono</item>
+    </style>
+    <style name="TextAppearance.WebRadioDroid.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/jetbrains_mono</item>
+        <item name="android:fontFamily">@font/jetbrains_mono</item>
+    </style>
+    <style name="TextAppearance.WebRadioDroid.BodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/jetbrains_mono</item>
+        <item name="android:fontFamily">@font/jetbrains_mono</item>
+    </style>
+    <style name="TextAppearance.WebRadioDroid.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/jetbrains_mono_title</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_title</item>
+    </style>
+    <style name="TextAppearance.WebRadioDroid.LabelMedium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/jetbrains_mono_title</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_title</item>
+    </style>
+    <style name="TextAppearance.WebRadioDroid.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/jetbrains_mono_title</item>
+        <item name="android:fontFamily">@font/jetbrains_mono_title</item>
+    </style>
+</resources>

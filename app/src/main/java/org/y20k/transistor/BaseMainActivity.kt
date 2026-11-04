@@ -84,6 +84,7 @@ abstract class BaseMainActivity : AppCompatActivity(), SharedPreferences.OnShare
 
     /* Overrides onCreate from AppCompatActivity */
     override fun onCreate(savedInstanceState: Bundle?) {
+        AppThemeHelper.applyAccentColor(this)
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
 

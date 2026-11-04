@@ -8,6 +8,8 @@ Contributing developer(s): [azixMcAze](https://github.com/azixMcAze) & [meonwax]
 
 Icon Design: [Munadi Kiehl](https://github.com/munadikieh)
 
+Typeface: [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) by JetBrains, SIL Open Font License 1.1 (see `assets/fonts/JetBrainsMono-OFL.txt`)
+
 ### Translations
 Arabic version: [ButterflyOfFire](https://hosted.weblate.org/user/boffire/) | [weblate version history](https://hosted.weblate.org/changes/?lang=ar&project=transistor)
 

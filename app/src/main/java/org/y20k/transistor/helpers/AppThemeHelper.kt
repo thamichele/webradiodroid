@@ -86,6 +86,45 @@ object AppThemeHelper {
     }
 
 
+    /* All main (accent) colors, in the order shown in the settings */
+    val accentColors: List<String> = listOf(Keys.ACCENT_ARANCIO, Keys.ACCENT_VIOLA, Keys.ACCENT_ROSSO, Keys.ACCENT_GIALLO, Keys.ACCENT_BLU, Keys.ACCENT_VERDE)
+
+
+    /* Returns the theme overlay of a main (accent) color */
+    private fun accentOverlay(accent: String): Int {
+        return when (accent) {
+            Keys.ACCENT_VIOLA -> R.style.ThemeOverlay_WebRadioDroid_Accent_Viola
+            Keys.ACCENT_ROSSO -> R.style.ThemeOverlay_WebRadioDroid_Accent_Rosso
+            Keys.ACCENT_GIALLO -> R.style.ThemeOverlay_WebRadioDroid_Accent_Giallo
+            Keys.ACCENT_BLU -> R.style.ThemeOverlay_WebRadioDroid_Accent_Blu
+            Keys.ACCENT_VERDE -> R.style.ThemeOverlay_WebRadioDroid_Accent_Verde
+            else -> R.style.ThemeOverlay_WebRadioDroid_Accent_Arancio
+        }
+    }
+
+
+    /* Returns the readable names of the main (accent) colors */
+    fun accentColorNames(context: Context): Array<String> {
+        return accentColors.map { accent ->
+            when (accent) {
+                Keys.ACCENT_VIOLA -> context.getString(R.string.pref_accent_color_viola)
+                Keys.ACCENT_ROSSO -> context.getString(R.string.pref_accent_color_rosso)
+                Keys.ACCENT_GIALLO -> context.getString(R.string.pref_accent_color_giallo)
+                Keys.ACCENT_BLU -> context.getString(R.string.pref_accent_color_blu)
+                Keys.ACCENT_VERDE -> context.getString(R.string.pref_accent_color_verde)
+                else -> context.getString(R.string.pref_accent_color_arancio)
+            }
+        }.toTypedArray()
+    }
+
+
+    /* Applies the chosen main (accent) color - call before super.onCreate(), skipped while Dynamic Colors are on */
+    fun applyAccentColor(activity: Activity) {
+        if (DynamicColors.isDynamicColorAvailable() && PreferencesHelper.loadDynamicColorsEnabled()) return
+        activity.theme.applyStyle(accentOverlay(PreferencesHelper.loadAccentColor()), true)
+    }
+
+
     /* Sets up Dynamic Colors based on user preferences */
     fun setupDynamicColors(application: Application) {
         val dynamicColorsEnabled = PreferencesHelper.loadDynamicColorsEnabled()

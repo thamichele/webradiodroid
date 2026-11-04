@@ -9,7 +9,7 @@
     </style>
 
     <!-- Base application theme -->
-    <style name="AppTheme.Base" parent="Theme.Material3Expressive.DayNight.NoActionBar">
+    <style name="AppTheme.Base" parent="AppTheme.Arancio">
         <!-- inject custom layout for preferences -->
         <!-- credit: https://medium.com/@JakobUlbrich/sure-you-can-use-a-custom-layout-for-your-preferencefragmentcompat-318b7fa06e29 -->
         <item name="preferenceFragmentCompatStyle">
@@ -66,7 +66,12 @@
 
     <style name="FullscreenPlayerImage" parent="">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">24dp</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="StationImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
     </style>
 
     <style name="Circle" parent="">

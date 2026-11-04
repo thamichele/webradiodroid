@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Arancio UI: typeface, type scale and shapes shared by the light and the dark theme -->
+<resources>
+
+    <style name="AppTheme.Arancio" parent="Theme.Material3Expressive.DayNight.NoActionBar">
+        <item name="fontFamily">@font/jetbrains_mono</item>
+        <item name="android:fontFamily">@font/jetbrains_mono</item>
+        <item name="textAppearanceDisplayLarge">@style/TextAppearance.WebRadioDroid.DisplayLarge</item>
+        <item name="textAppearanceDisplayMedium">@style/TextAppearance.WebRadioDroid.DisplayMedium</item>
+        <item name="textAppearanceDisplaySmall">@style/TextAppearance.WebRadioDroid.DisplaySmall</item>
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.WebRadioDroid.HeadlineLarge</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.WebRadioDroid.HeadlineMedium</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.WebRadioDroid.HeadlineSmall</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.WebRadioDroid.TitleLarge</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.WebRadioDroid.TitleMedium</item>
+        <item name="textAppearanceTitleSmall">@style/TextAppearance.WebRadioDroid.TitleSmall</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.WebRadioDroid.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.WebRadioDroid.BodyMedium</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.WebRadioDroid.BodySmall</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.WebRadioDroid.LabelLarge</item>
+        <item name="textAppearanceLabelMedium">@style/TextAppearance.WebRadioDroid.LabelMedium</item>
+        <item name="textAppearanceLabelSmall">@style/TextAppearance.WebRadioDroid.LabelSmall</item>
+        <!-- shapes: buttons 4dp, cards 12dp -->
+        <item name="shapeAppearanceCornerExtraSmall">@style/ShapeAppearance.WebRadioDroid.Button</item>
+        <item name="shapeAppearanceCornerSmall">@style/ShapeAppearance.WebRadioDroid.Small</item>
+        <item name="shapeAppearanceCornerMedium">@style/ShapeAppearance.WebRadioDroid.Card</item>
+        <item name="shapeAppearanceCornerLarge">@style/ShapeAppearance.WebRadioDroid.Card</item>
+        <item name="shapeAppearanceCornerExtraLarge">@style/ShapeAppearance.WebRadioDroid.Card</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.WebRadioDroid.Button</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.WebRadioDroid.Card</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.WebRadioDroid.Card</item>
+        <item name="materialButtonStyle">@style/Widget.WebRadioDroid.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.WebRadioDroid.Button.Outlined</item>
+        <item name="borderlessButtonStyle">@style/Widget.WebRadioDroid.Button.Text</item>
+        <item name="materialCardViewStyle">@style/Widget.WebRadioDroid.Card</item>
+        <item name="chipStyle">@style/Widget.WebRadioDroid.Chip</item>
+    </style>
+
+    <style name="ShapeAppearance.WebRadioDroid.Button" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
+    <style name="ShapeAppearance.WebRadioDroid.Small" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShapeAppearance.WebRadioDroid.Card" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="Widget.WebRadioDroid.Button" parent="Widget.Material3.Button">
+        <item name="shapeAppearance">@style/ShapeAppearance.WebRadioDroid.Button</item>
+        <item name="android:textAppearance">@style/TextAppearance.WebRadioDroid.LabelLarge</item>
+        <item name="android:minHeight">44dp</item>
+    </style>
+
+    <!-- secondary button of the design: raised grey with a thin border -->
+    <style name="Widget.WebRadioDroid.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="shapeAppearance">@style/ShapeAppearance.WebRadioDroid.Button</item>
+        <item name="android:textAppearance">@style/TextAppearance.WebRadioDroid.LabelLarge</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="iconTint">?attr/colorOnSurface</item>
+        <item name="backgroundTint">?attr/colorSurfaceContainerHigh</item>
+        <item name="strokeColor">?attr/colorOutline</item>
+        <item name="android:minHeight">44dp</item>
+    </style>
+
+    <style name="Widget.WebRadioDroid.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="shapeAppearance">@style/ShapeAppearance.WebRadioDroid.Button</item>
+        <item name="android:textAppearance">@style/TextAppearance.WebRadioDroid.LabelLarge</item>
+    </style>
+
+    <style name="Widget.WebRadioDroid.Card" parent="Widget.Material3.CardView.Filled">
+        <item name="shapeAppearance">@style/ShapeAppearance.WebRadioDroid.Card</item>
+    </style>
+
+    <!-- labels of the design are pills -->
+    <style name="Widget.WebRadioDroid.Chip" parent="Widget.Material3.Chip.Assist">
+        <item name="shapeAppearance">@style/ShapeAppearance.WebRadioDroid.Button</item>
+    </style>
+
+</resources>
