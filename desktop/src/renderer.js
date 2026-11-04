@@ -99,7 +99,9 @@ function renderCollection () {
   if (state.stations.length === 0) {
     const empty = el('div', 'empty')
     const art = el('div', 'empty-art')
-    art.appendChild(icon('radio'))
+    const appIcon = icon('app')
+    appIcon.setAttribute('class', 'app-icon')
+    art.appendChild(appIcon)
     empty.append(art, el('h2', '', t('emptyTitle')), el('p', '', t('emptyText')))
     const actions = el('div', 'empty-actions')
     const add = el('button', 'btn btn-filled')

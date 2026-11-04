@@ -11,6 +11,7 @@
   <svg xmlns="http://www.w3.org/2000/svg" class="sprite" width="0" height="0" aria-hidden="true">
     <defs>
       <symbol id="i-radio" viewBox="0 0 24 24"><path d="M5 10h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2zM8 10l9-5.5M8 12.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 1 0 0-5zM13.5 13.5h4M13.5 16.5h4"/></symbol>
+      <symbol id="i-app" viewBox="0 0 50 50"><rect width="50" height="50" rx="6" fill="#1C1B1A" stroke="none"/><g transform="translate(1.970 1.490) scale(1.9192)" stroke-width="1.8"><path d="M5 10h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2zM8 10l9-5.5M8 12.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 1 0 0-5zM13.5 13.5h4M13.5 16.5h4"/></g></symbol>
       <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor" stroke="none"/></symbol>
       <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor" stroke="none"/></symbol>
       <symbol id="i-prev" viewBox="0 0 24 24"><path d="M18 6v12l-9-6zM6 6v12"/></symbol>
@@ -38,7 +39,7 @@
 
   <header class="topbar">
     <div class="brand">
-      <img src="../assets/icon.png" alt="" class="brand-icon">
+      <svg class="brand-icon app-icon" aria-hidden="true"><use href="#i-app"/></svg>
       <span class="brand-name">WebRadioDroid</span>
     </div>
     <div class="topbar-actions">
@@ -172,7 +173,7 @@
   <!-- about -->
   <dialog id="about-dialog" class="dialog">
     <form method="dialog" class="dialog-inner about">
-      <img src="../assets/icon.png" alt="" class="about-icon">
+      <svg class="about-icon app-icon" aria-hidden="true"><use href="#i-app"/></svg>
       <h2>WebRadioDroid</h2>
       <p class="hint" id="about-version"></p>
       <p data-i18n="aboutText"></p>
