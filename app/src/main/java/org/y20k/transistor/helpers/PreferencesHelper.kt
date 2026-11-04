@@ -331,6 +331,12 @@ object PreferencesHelper {
     }
 
 
+    /* Loads the main (accent) color */
+    fun loadAccentColor(): String {
+        return sharedPreferences.getString(Keys.PREF_ACCENT_COLOR, Keys.ACCENT_ARANCIO) ?: Keys.ACCENT_ARANCIO
+    }
+
+
     /* Loads value of the option: UI Transparency Effect */
     fun loadUserInterfaceTransparencyEffect(): Boolean {
         return sharedPreferences.getBoolean(Keys.PREF_USER_INTERFACE_TRANSPARENCY_EFFECT, false)

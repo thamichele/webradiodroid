@@ -33,7 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:shapeAppearanceOverlay="@style/Circle"
+        app:shapeAppearanceOverlay="@style/StationImage"
         app:srcCompat="@drawable/ic_default_station_image_64dp" />
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="@+id/station_icon"
         app:layout_constraintStart_toStartOf="@+id/station_icon"
         app:layout_constraintTop_toTopOf="@+id/station_icon"
-        app:shapeAppearanceOverlay="@style/Circle"
+        app:shapeAppearanceOverlay="@style/StationImage"
         app:srcCompat="@drawable/ic_image_white_36dp" />
 
     <ImageView
@@ -77,7 +77,7 @@
         android:paddingEnd="8dp"
         android:paddingBottom="8dp"
         android:singleLine="true"
-        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        android:textAppearance="@style/TextAppearance.WebRadioDroid.TitleMedium"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/station_icon"
         app:layout_constraintEnd_toStartOf="@+id/playback_button"
@@ -108,7 +108,7 @@
         android:layout_marginEnd="24dp"
         android:hint="@string/dialog_edit_station_name"
         android:singleLine="true"
-        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        android:textAppearance="@style/TextAppearance.WebRadioDroid.TitleMedium"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/station_name"
         app:layout_constraintEnd_toStartOf="@+id/playback_button"
@@ -121,7 +121,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/dialog_edit_stream_uri"
         android:singleLine="true"
-        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        android:textAppearance="@style/TextAppearance.WebRadioDroid.TitleMedium"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/edit_station_name"
         app:layout_constraintStart_toStartOf="@+id/edit_station_name"
@@ -140,7 +140,7 @@
 
     <Button
         android:id="@+id/save_button"
-        style="@style/Widget.Material3.Button.TextButton"
+        style="@style/Widget.WebRadioDroid.Button.Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -153,7 +153,7 @@
 
     <Button
         android:id="@+id/cancel_button"
-        style="@style/Widget.Material3.Button.TextButton"
+        style="@style/Widget.WebRadioDroid.Button.Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/dialog_yes_no_negative_button_cancel"

@@ -5,5 +5,5 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+    android:textAppearance="@style/TextAppearance.WebRadioDroid.BodyLarge"
     android:text="@string/cast_context_error"/>

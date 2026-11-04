@@ -99,7 +99,9 @@ function renderCollection () {
   if (state.stations.length === 0) {
     const empty = el('div', 'empty')
     const art = el('div', 'empty-art')
-    art.appendChild(icon('radio'))
+    const appIcon = icon('app')
+    appIcon.setAttribute('class', 'app-icon')
+    art.appendChild(appIcon)
     empty.append(art, el('h2', '', t('emptyTitle')), el('p', '', t('emptyText')))
     const actions = el('div', 'empty-actions')
     const add = el('button', 'btn btn-filled')
@@ -597,8 +599,41 @@ $('app-menu').addEventListener('click', (event) => {
   closeMenus()
   if (action === 'import') importM3u()
   else if (action === 'export') exportM3u()
+  else if (action === 'accent') openAccentDialog()
   else if (action === 'about') $('about-dialog').showModal()
 })
+
+// ---------- main color (accent of the Arancio UI design) ----------
+
+const ACCENTS = ['arancio', 'viola', 'rosso', 'giallo', 'blu', 'verde']
+
+function applyAccent () {
+  const accent = ACCENTS.includes(state.settings.accent) ? state.settings.accent : 'arancio'
+  document.documentElement.dataset.accent = accent
+}
+
+function openAccentDialog () {
+  const options = $('accent-options')
+  options.replaceChildren()
+  const current = document.documentElement.dataset.accent || 'arancio'
+  for (const accent of ACCENTS) {
+    const button = el('button', 'accent-option')
+    button.type = 'button'
+    button.dataset.accent = accent
+    button.setAttribute('role', 'radio')
+    button.setAttribute('aria-checked', String(accent === current))
+    button.appendChild(el('span', 'accent-swatch'))
+    button.appendChild(el('span', 'accent-name', t('accent_' + accent)))
+    button.addEventListener('click', () => {
+      state.settings.accent = accent
+      applyAccent()
+      saveSettings()
+      options.querySelectorAll('.accent-option').forEach((b) => b.setAttribute('aria-checked', String(b === button)))
+    })
+    options.appendChild(button)
+  }
+  $('accent-dialog').showModal()
+}
 
 $('station-menu').addEventListener('click', (event) => {
   const action = event.target.closest('button')?.dataset.action
@@ -702,6 +737,7 @@ async function start () {
   state.stations = Array.isArray(collection.stations) ? collection.stations : []
   state.settings = { ...state.settings, ...(await radio.loadSettings()) }
   state.current = state.stations.find((s) => s.uuid === state.settings.lastStation) || null
+  applyAccent()
   applyVolume()
   renderSleepLabel()
   renderCollection()

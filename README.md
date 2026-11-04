@@ -6,7 +6,7 @@
 
 <p align="center">
   Webradio semplice per <b>telefono Android</b>, <b>Android Auto</b>, <b>Windows</b> e <b>Linux</b>.<br>
-  Migliaia di stazioni da radio-browser.info, titolo del brano in onda, timer di spegnimento, tema arancione chiaro e scuro.
+  Migliaia di stazioni da radio-browser.info, titolo del brano in onda, timer di spegnimento, tema chiaro e scuro con il colore principale che preferisci.
 </p>
 
 <p align="center">
@@ -26,6 +26,7 @@
 - **Mostra il brano in onda** (titolo e artista) quando la stazione lo trasmette.
 - **Loghi delle stazioni** cercati in automatico quando mancano, visibili anche in Android Auto.
 - **Preferiti a modo tuo**: fissa in cima le stazioni che ascolti di più, rinominale o rimuovile.
+- **Colore a scelta**: arancio, viola, rosso, giallo, blu o verde, dalle impostazioni (telefono) o dal menu ⋮ (computer).
 - **Timer di spegnimento**: allo scadere la radio si ferma (sul telefono l'app si chiude del tutto, per risparmiare batteria).
 - **Android Auto** con il player standard dell'auto, nei colori dell'app.
 - **Notifica** con barra di avanzamento per ogni brano (telefono) e **tasti multimediali** della tastiera (computer).
@@ -33,7 +34,7 @@
 
 ## Scaricare l'app
 Tutti i file sono nella pagina [**Releases**](https://github.com/thamichele/webradiodroid/releases/latest), sotto *Assets*.
-Al posto di `<versione>` trovi il numero della versione, per esempio `2.1.0`.
+Al posto di `<versione>` trovi il numero della versione, per esempio `2.2.0`.
 
 | Dispositivo | File da scaricare | Come installarlo |
 |---|---|---|

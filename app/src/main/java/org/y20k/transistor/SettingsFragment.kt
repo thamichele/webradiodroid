@@ -145,6 +145,25 @@ class SettingsFragment: PreferenceFragmentCompat(), YesNoDialog.YesNoDialogListe
             true
         }
 
+        // set up "Main color" preference (accent color of the Arancio UI design)
+        val preferenceAccentColor: ListPreference = ListPreference(activity as Context)
+        val accentNames: Array<String> = AppThemeHelper.accentColorNames(activity as Context)
+        preferenceAccentColor.title = getString(R.string.pref_accent_color_title)
+        preferenceAccentColor.setIcon(R.drawable.ic_color_palette_24dp)
+        preferenceAccentColor.key = Keys.PREF_ACCENT_COLOR
+        preferenceAccentColor.entries = accentNames
+        preferenceAccentColor.entryValues = AppThemeHelper.accentColors.toTypedArray()
+        preferenceAccentColor.setDefaultValue(Keys.ACCENT_ARANCIO)
+        preferenceAccentColor.summary = accentNames[AppThemeHelper.accentColors.indexOf(PreferencesHelper.loadAccentColor()).coerceAtLeast(0)]
+        preferenceAccentColor.isEnabled = !(DynamicColors.isDynamicColorAvailable() && PreferencesHelper.loadDynamicColorsEnabled())
+        preferenceAccentColor.setOnPreferenceChangeListener { _, newValue ->
+            val index: Int = AppThemeHelper.accentColors.indexOf(newValue as String).coerceAtLeast(0)
+            preferenceAccentColor.summary = accentNames[index]
+            // rebuild the screen with the new color once the value is stored
+            view?.post { requireActivity().recreate() }
+            true
+        }
+
         // set up "User Interface Transparency Effect" preference
         val preferenceUserInterfaceTransparencyEffect: SwitchPreferenceCompat = SwitchPreferenceCompat(activity as Context)
         preferenceUserInterfaceTransparencyEffect.title = getString(R.string.pref_user_interface_transparency_effect_title)
@@ -303,6 +322,7 @@ class SettingsFragment: PreferenceFragmentCompat(), YesNoDialog.YesNoDialogListe
         screen.addPreference(preferenceCategoryGeneral)
         screen.addPreference(preferenceThemeSelection)
         screen.addPreference(preferenceEnableDynamicColors)
+        screen.addPreference(preferenceAccentColor)
         screen.addPreference(preferenceUserInterfaceTransparencyEffect)
         screen.addPreference(preferenceEnableTapAnywherePlayback)
         screen.addPreference(preferenceCategoryMaintenance)

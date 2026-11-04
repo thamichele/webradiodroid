@@ -112,6 +112,7 @@ object Keys {
     const val PREF_PLAYER_STATE_SLEEP_TIMER_RUNNING: String = "PLAYER_STATE_SLEEP_TIMER_RUNNING"
     const val PREF_TAP_ANYWHERE_PLAYBACK: String = "TAP_ANYWHERE_PLAYBACK"
     const val PREF_DYNAMIC_COLORS: String = "DYNAMIC_COLORS"
+    const val PREF_ACCENT_COLOR: String = "ACCENT_COLOR"
     const val PREF_LARGE_BUFFER_SIZE: String = "LARGE_BUFFER_SIZE"
     const val PREF_EDIT_STATIONS: String = "EDIT_STATIONS"
     const val PREF_EDIT_STREAMS_URIS: String = "EDIT_STREAMS_URIS"
@@ -246,6 +247,14 @@ object Keys {
     const val STATE_THEME_FOLLOW_SYSTEM: String = "stateFollowSystem"
     const val STATE_THEME_LIGHT_MODE: String = "stateLightMode"
     const val STATE_THEME_DARK_MODE: String = "stateDarkMode"
+
+    // main (accent) colors of the Arancio UI design
+    const val ACCENT_ARANCIO: String = "arancio"
+    const val ACCENT_VIOLA: String = "viola"
+    const val ACCENT_ROSSO: String = "rosso"
+    const val ACCENT_GIALLO: String = "giallo"
+    const val ACCENT_BLU: String = "blu"
+    const val ACCENT_VERDE: String = "verde"
 
     // unique names
     const val NAME_PERIODIC_COLLECTION_UPDATE_WORK: String = "PERIODIC_COLLECTION_UPDATE_WORK"
