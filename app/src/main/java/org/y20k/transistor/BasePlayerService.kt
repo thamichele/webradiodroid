@@ -66,6 +66,7 @@ import com.google.common.util.concurrent.SettableFuture
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.launch
+import org.y20k.transistor.audio.VisualizerRenderersFactory
 import org.y20k.transistor.core.Collection
 import org.y20k.transistor.helpers.AudioHelper
 import org.y20k.transistor.helpers.CollectionHelper
@@ -623,7 +624,8 @@ abstract class BasePlayerService: MediaLibraryService() {
      */
     val localPlayer: Player by lazy {
         // create the local player
-        val exoPlayer: ExoPlayer = ExoPlayer.Builder(this).apply {
+        // the renderers feed the real time audio visualizer (AudioSpectrum) from the app's own audio output
+        val exoPlayer: ExoPlayer = ExoPlayer.Builder(this, VisualizerRenderersFactory(this)).apply {
             setAudioAttributes(AudioAttributes.DEFAULT, true)
             setHandleAudioBecomingNoisy(true)
             setLoadControl(loadControl)

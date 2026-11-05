@@ -24,6 +24,7 @@
 ## Cosa fa
 - **Cerca le stazioni per nome** nell'archivio libero [radio-browser.info](https://www.radio-browser.info), oppure aggiungi un link di streaming (anche playlist `.m3u` e `.pls`).
 - **Mostra il brano in onda** (titolo e artista) quando la stazione lo trasmette.
+- **Visualizzatore audio in tempo reale** nel player: le barre seguono la musica che stai ascoltando, dai bassi agli acuti (senza chiedere il permesso del microfono).
 - **Loghi delle stazioni** cercati in automatico quando mancano, visibili anche in Android Auto.
 - **Preferiti a modo tuo**: fissa in cima le stazioni che ascolti di più, rinominale o rimuovile.
 - **Colore a scelta**: arancio, viola, rosso, giallo, blu o verde, dalle impostazioni (telefono) o dal menu ⋮ (computer).

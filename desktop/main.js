@@ -344,7 +344,9 @@ function startProxy () {
     const body = upstream.body
     res.writeHead(200, {
       'Content-Type': upstream.headers['content-type'] || 'audio/mpeg',
-      'Cache-Control': 'no-store'
+      'Cache-Control': 'no-store',
+      // the page reads the audio for the visualizer (Web Audio needs CORS for that)
+      'Access-Control-Allow-Origin': '*'
     })
     const close = () => upstream.destroy()
     req.on('close', close)
