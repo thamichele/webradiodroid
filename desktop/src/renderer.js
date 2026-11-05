@@ -20,6 +20,138 @@ const state = {
   menuStation: null
 }
 
+// ---------- real time audio visualizer ----------
+// One bar per frequency band (bass left, treble right), read from the audio that is heard right now.
+// Same look and math as the Android app: logarithmic bands, +3 dB per octave for the treble, slow auto gain.
+const visualizer = (() => {
+  const BANDS = 32
+  const RESTING = 0.06
+  const DB_RANGE = 42
+  const MIN_PEAK_DB = -36
+  const canvas = $('visualizer')
+  const levels = new Float32Array(BANDS).fill(RESTING)
+  const peaks = new Float32Array(BANDS).fill(RESTING)
+  let context = null
+  let analyser = null
+  let spectrum = null
+  let bandBins = []
+  let tilt = []
+  let peakDb = MIN_PEAK_DB
+  let running = false
+
+  function setup () {
+    if (context) return
+    try {
+      context = new AudioContext()
+      const source = context.createMediaElementSource(audio)
+      analyser = context.createAnalyser()
+      analyser.fftSize = 2048
+      analyser.smoothingTimeConstant = 0
+      source.connect(analyser)
+      analyser.connect(context.destination)
+      spectrum = new Float32Array(analyser.frequencyBinCount)
+      const binWidth = context.sampleRate / analyser.fftSize
+      const highest = Math.min(16000, context.sampleRate / 2 - binWidth)
+      const ratio = Math.log(highest / 50)
+      bandBins = []
+      tilt = []
+      for (let band = 0; band < BANDS; band++) {
+        const low = 50 * Math.exp(ratio * band / BANDS)
+        const high = 50 * Math.exp(ratio * (band + 1) / BANDS)
+        const first = Math.max(1, Math.floor(low / binWidth))
+        bandBins.push([first, Math.max(first, Math.floor(high / binWidth))])
+        tilt.push(3 * Math.log2(50 * Math.exp(ratio * (band + 0.5) / BANDS) / 1000))
+      }
+    } catch (error) {
+      console.warn('Audio visualizer not available', error)
+      analyser = null
+    }
+  }
+
+  // band levels 0..1 of the audio heard right now, or null
+  function readBands () {
+    if (!analyser || state.status !== 'playing') return null
+    analyser.getFloatFrequencyData(spectrum)
+    const db = new Float32Array(BANDS)
+    let loudest = -140
+    for (let band = 0; band < BANDS; band++) {
+      const [first, last] = bandBins[band]
+      let max = -Infinity
+      for (let bin = first; bin <= last; bin++) if (spectrum[bin] > max) max = spectrum[bin]
+      // +13.5 dB: a full scale sine reads 0 dB (Blackman window of the AnalyserNode)
+      db[band] = (Number.isFinite(max) ? max + 13.5 : -140) + tilt[band]
+      if (db[band] > loudest) loudest = db[band]
+    }
+    if (loudest < -100) return null // silence or no data
+    peakDb = loudest > peakDb ? loudest : Math.max(MIN_PEAK_DB, peakDb - 0.05)
+    const floor = peakDb - DB_RANGE
+    return db.map((value) => {
+      const level = Math.min(1, Math.max(0, (value - floor) / DB_RANGE))
+      return level * Math.sqrt(level)
+    })
+  }
+
+  function draw () {
+    const ratio = window.devicePixelRatio || 1
+    const width = Math.round(canvas.clientWidth * ratio)
+    const height = Math.round(canvas.clientHeight * ratio)
+    if (canvas.width !== width || canvas.height !== height) {
+      canvas.width = width
+      canvas.height = height
+    }
+    const g = canvas.getContext('2d')
+    g.clearRect(0, 0, width, height)
+    const bands = readBands()
+    const slot = width / BANDS
+    const barWidth = slot * 0.6
+    const peakHeight = Math.max(2 * ratio, barWidth / 2.5)
+    const usable = height - peakHeight * 2
+    g.fillStyle = getComputedStyle(canvas).getPropertyValue('--primary').trim() || '#D96D00'
+    let moving = false
+    for (let i = 0; i < BANDS; i++) {
+      const target = bands ? RESTING + bands[i] * (1 - RESTING) : RESTING
+      levels[i] += (target - levels[i]) * (target > levels[i] ? 0.6 : 0.18)
+      peaks[i] = levels[i] >= peaks[i] ? levels[i] : Math.max(levels[i], peaks[i] - 0.012)
+      if (Math.abs(target - levels[i]) > 0.003 || peaks[i] - levels[i] > 0.003) moving = true
+      const left = i * slot + (slot - barWidth) / 2
+      const barHeight = Math.max(barWidth, usable * levels[i])
+      g.globalAlpha = 1
+      g.beginPath()
+      g.roundRect(left, height - barHeight, barWidth, barHeight, barWidth / 2)
+      g.fill()
+      if (peaks[i] > RESTING + 0.03) {
+        const bottom = height - usable * peaks[i] - peakHeight
+        g.globalAlpha = 0.55
+        g.beginPath()
+        g.roundRect(left, bottom - peakHeight, barWidth, peakHeight, peakHeight / 2)
+        g.fill()
+      }
+    }
+    g.globalAlpha = 1
+    if (state.status === 'playing' || moving) {
+      requestAnimationFrame(draw)
+    } else {
+      running = false
+    }
+  }
+
+  function start () {
+    if (running) return
+    running = true
+    requestAnimationFrame(draw)
+  }
+
+  return {
+    // call before playback starts: builds the audio graph once and wakes the drawing
+    connect () {
+      setup()
+      if (context && context.state === 'suspended') context.resume().catch(() => {})
+      start()
+    },
+    start
+  }
+})()
+
 // ---------- helpers ----------
 
 function uuid () {
@@ -220,6 +352,7 @@ function detachAudio () {
   }
   audio.pause()
   audio.removeAttribute('src')
+  audio.removeAttribute('crossorigin')
   audio.load()
 }
 
@@ -247,8 +380,11 @@ async function playStation (station, isRetry = false) {
       hls.loadSource(stream.url)
       hls.attachMedia(audio)
     } else {
+      // the local proxy allows CORS, so the visualizer can read the audio
+      audio.crossOrigin = 'anonymous'
       audio.src = stream.url
     }
+    visualizer.connect()
     await audio.play()
   } catch (error) {
     if (playId !== state.playId) return
@@ -304,6 +440,7 @@ function skip (direction) {
 audio.addEventListener('playing', () => {
   state.retries = 0
   setStatus('playing')
+  visualizer.start()
 })
 audio.addEventListener('waiting', () => {
   if (state.status === 'playing') setStatus('buffering')

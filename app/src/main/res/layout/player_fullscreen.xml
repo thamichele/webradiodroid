@@ -57,11 +57,11 @@
         app:shapeAppearanceOverlay="@style/FullscreenPlayerImage"
         app:srcCompat="@drawable/ic_default_station_image_64dp" />
 
-    <!-- EQUALIZER BARS -->
+    <!-- REAL TIME AUDIO VISUALIZER -->
     <org.y20k.transistor.ui.EqualizerBarsView
         android:id="@+id/player_fullscreen_equalizer"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="56dp"
         android:layout_marginTop="20dp"
         app:layout_constraintBottom_toTopOf="@+id/player_fullscreen_title"
         app:layout_constraintEnd_toEndOf="@+id/player_fullscreen_station_image"

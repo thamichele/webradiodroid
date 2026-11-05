@@ -400,37 +400,16 @@ body.is-playing .play-btn { border-radius: 50%; }
 }
 .player-art .placeholder-icon { width: 45%; height: 45%; }
 
-.equalizer {
+/* real time audio visualizer: one bar per frequency band, drawn by renderer.js */
+.visualizer {
   flex: none;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 5px;
-  height: 32px;
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  height: 48px;
   margin-top: 18px;
 }
-.equalizer span {
-  width: 6px;
-  height: 4px;
-  border-radius: 3px;
-  background: var(--primary);
-  opacity: 0.35;
-  transition: height 0.3s, opacity 0.3s;
-}
-body.is-playing .equalizer span { opacity: 1; animation: eq 1s ease-in-out infinite alternate; }
-body.is-playing .equalizer span:nth-child(2) { animation-duration: 0.7s; }
-body.is-playing .equalizer span:nth-child(3) { animation-duration: 1.2s; }
-body.is-playing .equalizer span:nth-child(4) { animation-duration: 0.8s; }
-body.is-playing .equalizer span:nth-child(5) { animation-duration: 1.1s; }
-body.is-playing .equalizer span:nth-child(6) { animation-duration: 0.65s; }
-body.is-playing .equalizer span:nth-child(7) { animation-duration: 0.95s; }
-@keyframes eq {
-  0% { height: 4px; }
-  50% { height: 26px; }
-  100% { height: 12px; }
-}
 @media (prefers-reduced-motion: reduce) {
-  body.is-playing .equalizer span { animation: none; height: 16px; }
   .play-btn.busy .spinner { animation-duration: 3s; }
 }
 
