@@ -1,0 +1,38 @@
+{
+  "/etc/issue.net": "Ubuntu 24.04.5 LTS",
+  "antiFeatures": {},
+  "apksigner": "/usr/local/lib/android/sdk/build-tools/37.0.0/apksigner",
+  "archivePolicy0": [],
+  "commandLine": [
+    "/home/runner/work/_temp/venv/bin/fdroid update",
+    "--pretty"
+  ],
+  "disabled": [],
+  "endTimestamp": 1793895594769,
+  "failedBuilds": {},
+  "jarsigner": "/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64/bin/jarsigner",
+  "keytool": "/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64/bin/keytool",
+  "needsUpdate": [
+    "io.github.thamichele.webradiodroid"
+  ],
+  "noPackages": [
+    "io.github.thamichele.webradiodroid"
+  ],
+  "noUpdateCheck": [
+    "io.github.thamichele.webradiodroid"
+  ],
+  "stages": {
+    "archive_old_apks archive": 1793895587531,
+    "delete_disabled_builds": 1793895585348,
+    "index.make archive": 1793895587532,
+    "index.make repo": 1793895591536,
+    "prepare_apps archive": 1793895587532,
+    "prepare_apps repo": 1793895591501,
+    "process_apks": 1793895585348,
+    "read_added_date_from_all_apks": 1793895587531,
+    "remove_apks": 1793895587530,
+    "scan_repo_files": 1793895587528
+  },
+  "startTimestamp": 1793895585000,
+  "subcommand": "update"
+}
