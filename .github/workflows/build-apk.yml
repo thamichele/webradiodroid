@@ -137,7 +137,7 @@ jobs:
             echo "::notice::Release secrets not set - no release, F-Droid repository not updated"
             echo "ready=false" >> "$GITHUB_OUTPUT"
             echo "release=false" >> "$GITHUB_OUTPUT"
-          elif gh release view "v$VERSION" --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
+          elif [ "$(gh release view "v$VERSION" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft 2>/dev/null)" = "false" ]; then
             echo "::notice::Version $VERSION has already been released - only the F-Droid repository is refreshed"
             echo "ready=true" >> "$GITHUB_OUTPUT"
             echo "release=false" >> "$GITHUB_OUTPUT"
@@ -186,6 +186,8 @@ jobs:
           shopt -s nullglob
           DESKTOP_FILES=("$RUNNER_TEMP"/desktop/WebRadioDroid-*)
           if [ ${#DESKTOP_FILES[@]} -eq 0 ]; then echo "::warning::Windows/Linux packages missing - release with the APK only"; fi
+          # a draft left over from an interrupted upload would block the new release: remove it first
+          if gh release view "v$VERSION" > /dev/null 2>&1; then gh release delete "v$VERSION" --yes --cleanup-tag; fi
           gh release create "v$VERSION" "$RUNNER_TEMP/WebRadioDroid-$VERSION.apk" "$RUNNER_TEMP/WebRadioDroid-$VERSION.apk.sha256" "${DESKTOP_FILES[@]}" \
             --title "WebRadioDroid $VERSION" \
             --notes "$(cat <<NOTES
